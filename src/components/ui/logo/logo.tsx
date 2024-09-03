@@ -1,10 +1,14 @@
 import Link from 'next/link';
 
+import clsx from 'clsx';
+
 import LogoIcon from '@/../public/assets/images/icons/logo.svg';
 
-export const Logo = () => {
+import { LogoProps } from './types';
+
+export const Logo = ({ className }: LogoProps) => {
   return (
-    <Link href="/" className="inline-block">
+    <Link href="/" className={clsx('inline-block', className)}>
       <LogoIcon
         width={142}
         height={60}
