@@ -28,8 +28,8 @@ export default function Home() {
           repellendus molestiae esse eveniet?
         </p>
 
-        <h2 className='section-title'>Title h2</h2>
-        <h3 className='subsection-title'>Title h3</h3>
+        <h2 className="section-title">Title h2</h2>
+        <h3 className="subsection-title">Title h3</h3>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab,
           architecto minima. Nihil inventore tempora minus similique eaque ea
