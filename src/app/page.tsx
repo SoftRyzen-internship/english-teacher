@@ -21,7 +21,6 @@ export default function Home() {
           Безплатна консультація
         </ScrollButton>
 
-
         <p className="font-montserrat bg-accent1">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab,
           architecto minima. Nihil inventore tempora minus similique eaque ea
@@ -37,7 +36,6 @@ export default function Home() {
           voluptate, laboriosam quis quia molestias deserunt fugiat asperiores
           repellendus molestiae esse eveniet?
         </p>
-
       </div>
     </main>
   );
