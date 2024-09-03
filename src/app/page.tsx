@@ -7,17 +7,13 @@ export default function Home() {
     <main>
       <div className="container font-montserrat">
         <Logo />
-        <br />
 
-        <ScrollButton section="header" href="contacts">
+        <br />
+        <ScrollButton borderButton={true} href="contacts">
           Записатись
         </ScrollButton>
         <br />
-        <ScrollButton section="mobile-menu" href="contacts">
-          Записатись
-        </ScrollButton>
-        <br />
-        <ScrollButton section="hero" href="contacts">
+        <ScrollButton colorButton={true} href="contacts">
           Безплатна консультація
         </ScrollButton>
 
