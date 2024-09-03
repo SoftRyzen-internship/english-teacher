@@ -3,7 +3,7 @@ import { ScrollButton } from '@/components/ui/scroll-button/scroll-button';
 export default function Home() {
   return (
     <main>
-      <div className="container font-montserrat text-base">
+      <div className="container font-montserrat ">
         <ScrollButton section="header" href="contacts">
           Записатись
         </ScrollButton>
