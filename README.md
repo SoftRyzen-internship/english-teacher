@@ -34,3 +34,19 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+- #### component Logo
+
+| Prop        | Default  | Description                                                              |
+| ----------- | -------- | ------------------------------------------------------------------------ |
+| `className` | `string` | optional, additional CSS classes for customizing the component's styles. |
+
+- #### component ScrollButton
+
+| Prop           | Type      | Description                                                                                               |
+| -------------- | --------- | --------------------------------------------------------------------------------------------------------- |
+| `href`         | string    | required, unique identifier used to pinpoint sections of a page that need to be scrolled to.              |
+| `className`    | string    | optional, additional classes for custom styling.                                                          |
+| `children`     | ReactNode | required, button content, can be text or element.                                                         |
+| `colorButton`  | boolean   | optional, determines whether the button has a colored border and background with hover and focus effects. |
+| `borderButton` | boolean   | optional, applies a solid border and color styling to the button with hover and focus effects.            |
