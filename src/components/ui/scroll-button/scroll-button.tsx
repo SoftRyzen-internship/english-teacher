@@ -6,31 +6,22 @@ import clsx from 'clsx';
 
 export const ScrollButton = ({
   children,
-  section,
+  colorButton,
+  borderButton,
   href,
+  className,
 }: ScrollButtonProps) => {
-  let styles = '';
-  switch (section) {
-    case 'header':
-      styles =
-        'border solid  px-[60px] border-text1Icon3 hover:bg-buttonHoverPink hover:border-buttonHoverPink focus:bg-buttonClickPink focus:border-buttonClickPink';
-      break;
-    case 'mobile-menu':
-      styles =
-        'px-[60px] border solid  border-text1Icon3  smOnly:w-full md:w-[351px] hover:bg-buttonHoverPink hover:border-buttonHoverPink focus:bg-buttonClickPink focus:border-buttonClickPink';
-      break;
-    case 'hero':
-      styles =
-        'px-[25px]  bg-accent1 smOnly:w-full hover:bg-buttonHover focus:bg-buttonClickYellow';
-      break;
-    case 'about':
-      styles =
-        'px-[25px] bg-accent1 smOnly:w-full hover:bg-buttonHover focus:bg-buttonClickYellow';
-      break;
-    default:
-      styles = '';
-      break;
-  }
+  const styles = clsx(
+    'h-[56px] inline-flex justify-center cursor-pointer smOnly:w-full items-center min-w-[221px] rounded-[20px] text-base font-bold leading-normal transition-colors duration-300',
+    className,
+    {
+      'border solid px-[60px] border-text1Icon3 mdOnly:w-[351px] hover:bg-buttonHoverPink hover:border-buttonHoverPink focus:bg-buttonClickPink focus:border-buttonClickPink':
+        borderButton,
+      'px-[25px] w-[261px] bg-accent1 hover:bg-buttonHover focus:bg-buttonClickYellow':
+        colorButton,
+    }
+  );
+
   return (
     <ScrollLink
       to={href}
@@ -38,10 +29,7 @@ export const ScrollButton = ({
       smooth={true}
       offset={0}
       duration={500}
-      className={clsx(
-        styles,
-        'h-[56px] inline-flex justify-center cursor-pointer items-center min-w-[221px] rounded-[20px] text-base font-bold leading-normal transition-colors duration-300'
-      )}
+      className={styles}
     >
       {children}
     </ScrollLink>

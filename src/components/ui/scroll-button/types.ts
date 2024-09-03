@@ -1,5 +1,7 @@
 export type ScrollButtonProps = {
   href: string;
-  section: string;
+  colorButton?: boolean;
+  borderButton?: boolean;
   children: React.ReactNode;
+  className?: string;
 };

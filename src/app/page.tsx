@@ -61,7 +61,7 @@ export default async function Home() {
 
   return (
     <main>
-      <div className="container font-montserrat">
+      <div className="container">
         <div>
           <h1>{result.privacyPolicyPage.title}</h1>
           <StructuredText
@@ -80,17 +80,13 @@ export default async function Home() {
         </div>
 
         <Logo />
-        <br />
 
-        <ScrollButton section="header" href="contacts">
+        <br />
+        <ScrollButton borderButton={true} href="contacts">
           Записатись
         </ScrollButton>
         <br />
-        <ScrollButton section="mobile-menu" href="contacts">
-          Записатись
-        </ScrollButton>
-        <br />
-        <ScrollButton section="hero" href="contacts">
+        <ScrollButton colorButton={true} href="contacts">
           Безплатна консультація
         </ScrollButton>
 
@@ -101,8 +97,8 @@ export default async function Home() {
           repellendus molestiae esse eveniet?
         </p>
 
-        <h2>Title h2</h2>
-        <h3>Title h3</h3>
+        <h2 className="section-title">Title h2</h2>
+        <h3 className="section-subtitle">Title h3</h3>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab,
           architecto minima. Nihil inventore tempora minus similique eaque ea

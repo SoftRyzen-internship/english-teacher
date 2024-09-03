@@ -35,10 +35,18 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
+- #### component Logo
+
+| Prop        | Default  | Description                                                              |
+| ----------- | -------- | ------------------------------------------------------------------------ |
+| `className` | `string` | optional, additional CSS classes for customizing the component's styles. |
+
 - #### component ScrollButton
 
-| Prop       | Type      | Description                                                                                  |
-| ---------- | --------- | -------------------------------------------------------------------------------------------- |
-| `href`     | string    | required, unique identifier used to pinpoint sections of a page that need to be scrolled to. |
-| `section`  | string    | optional, `string`, determines the color scheme based on the section (e.g., 'footer').       |
-| `children` | ReactNode | required, button content, can be text or element.                                            |
+| Prop           | Type      | Description                                                                                               |
+| -------------- | --------- | --------------------------------------------------------------------------------------------------------- |
+| `href`         | string    | required, unique identifier used to pinpoint sections of a page that need to be scrolled to.              |
+| `className`    | string    | optional, additional classes for custom styling.                                                          |
+| `children`     | ReactNode | required, button content, can be text or element.                                                         |
+| `colorButton`  | boolean   | optional, determines whether the button has a colored border and background with hover and focus effects. |
+| `borderButton` | boolean   | optional, applies a solid border and color styling to the button with hover and focus effects.            |
