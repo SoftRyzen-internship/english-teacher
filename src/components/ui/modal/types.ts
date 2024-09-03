@@ -4,4 +4,4 @@ export type ModalProps = {
   children: ReactNode;
   isOpen: boolean;
   setIsOpen: (open: boolean) => void;
-}
+};

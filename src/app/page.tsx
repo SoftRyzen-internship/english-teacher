@@ -33,10 +33,11 @@ export default function Home() {
           voluptate, laboriosam quis quia molestias deserunt fugiat asperiores
           repellendus molestiae esse eveniet?
         </p>
-        
-        
 
-        <button onClick={() => setIsModalOpen(true)} className="btn w-100 h-100 text-buttonFocusPink my-10">
+        <button
+          onClick={() => setIsModalOpen(true)}
+          className="btn w-100 h-100 text-buttonFocusPink my-10"
+        >
           Открыть модальное окно
         </button>
         <Modal isOpen={isModalOpen} setIsOpen={setIsModalOpen}>
