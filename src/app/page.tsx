@@ -7,17 +7,13 @@ export default function Home() {
     <main>
       <div className="container">
         <Logo />
-        <br />
 
-        <ScrollButton section="header" href="contacts">
+        <br />
+        <ScrollButton borderButton={true} href="contacts">
           Записатись
         </ScrollButton>
         <br />
-        <ScrollButton section="mobile-menu" href="contacts">
-          Записатись
-        </ScrollButton>
-        <br />
-        <ScrollButton section="hero" href="contacts">
+        <ScrollButton colorButton={true} href="contacts">
           Безплатна консультація
         </ScrollButton>
 
@@ -29,7 +25,7 @@ export default function Home() {
         </p>
 
         <h2 className="section-title">Title h2</h2>
-        <h3 className="subsection-title">Title h3</h3>
+        <h3 className="section-subtitle">Title h3</h3>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab,
           architecto minima. Nihil inventore tempora minus similique eaque ea
