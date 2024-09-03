@@ -8,6 +8,7 @@ export default function Home() {
       <div className="container font-montserrat">
         <Logo />
         <br />
+
         <ScrollButton section="header" href="contacts">
           Записатись
         </ScrollButton>
@@ -19,6 +20,24 @@ export default function Home() {
         <ScrollButton section="hero" href="contacts">
           Безплатна консультація
         </ScrollButton>
+
+
+        <p className="font-montserrat bg-accent1">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab,
+          architecto minima. Nihil inventore tempora minus similique eaque ea
+          voluptate, laboriosam quis quia molestias deserunt fugiat asperiores
+          repellendus molestiae esse eveniet?
+        </p>
+
+        <h2>Title h2</h2>
+        <h3>Title h3</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab,
+          architecto minima. Nihil inventore tempora minus similique eaque ea
+          voluptate, laboriosam quis quia molestias deserunt fugiat asperiores
+          repellendus molestiae esse eveniet?
+        </p>
+
       </div>
     </main>
   );
