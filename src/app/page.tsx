@@ -42,7 +42,10 @@ export default function Home() {
         </button>
         <Modal isOpen={isModalOpen} setIsOpen={setIsModalOpen}>
           <h2 className="text-lg font-semibold">Заголовок модального окна</h2>
-          <p>Это описание модального окна.</p>
+          <p>
+            Это описание модального окна.s sssssss sssssssssss ssss dssd fdvdf
+            efv v edf gf dfs
+          </p>
         </Modal>
       </div>
     </main>
