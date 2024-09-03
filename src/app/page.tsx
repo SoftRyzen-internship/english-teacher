@@ -1,13 +1,14 @@
 import { ScrollButton } from '@/components/ui/scroll-button/scroll-button';
 
 import { Logo } from '@/components/ui/logo/logo';
+import { Navigation } from '@/components/ui/navigation/navigation';
 
 export default function Home() {
   return (
     <main>
       <div className="container">
         <Logo />
-
+        <Navigation />
         <br />
         <ScrollButton borderButton={true} href="contacts">
           Записатись

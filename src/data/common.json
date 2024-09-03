@@ -1,0 +1,25 @@
+{
+  "navList": [
+    {
+      "id": 1,
+      "to": "advantages",
+      "name": "Переваги"
+    },
+    {
+      "id": 2,
+      "to": "about",
+      "name": "Про мене"
+    },
+
+    {
+      "id": 3,
+      "to": "reviews",
+      "name": "Відгуки"
+    },
+    {
+      "id": 4,
+      "to": "contacts",
+      "name": "Контакти"
+    }
+  ]
+}
