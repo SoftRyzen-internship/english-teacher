@@ -16,13 +16,14 @@ export const SocialLink: React.FC<SocialLinkProps> = ({
         aria-label={ariaLabel}
         target="_blank"
         rel="noopener noreferrer nofollow"
-        className="inline-flex items-center gap-4 text-accent5Icon1 transition-all duration-300 hover:text-buttonClickPink group"
+        className="inline-flex items-center gap-4 text-accent5Icon1 transition-all duration-300 hover:text-buttonClickPink"
       >
         <IconComponent
           className={clsx(
             section === 'footer'
               ? 'w-[30px] h-[30px] md:w-[50px] md:h-[50px]'
-              : 'w-[50px] h-[50px]'
+              : section === 'contacts' ? 'w-[40px] h-[40px]'
+              :  'w-[50px] h-[50px]'
           )}
         />
         {section === 'contacts' && (
