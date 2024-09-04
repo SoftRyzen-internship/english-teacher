@@ -2,7 +2,13 @@ import React from 'react';
 import clsx from 'clsx';
 import { SocialLinkProps } from './types';
 
-export const SocialLink: React.FC<SocialLinkProps> = ({  icon: IconComponent, link, ariaLabel, displayText, section }) => {
+export const SocialLink: React.FC<SocialLinkProps> = ({
+  icon: IconComponent,
+  link,
+  ariaLabel,
+  displayText,
+  section,
+}) => {
   return (
     <li>
       <a
@@ -14,10 +20,16 @@ export const SocialLink: React.FC<SocialLinkProps> = ({  icon: IconComponent, li
       >
         <IconComponent
           className={clsx(
-            section === 'footer' ? 'w-[30px] h-[30px] md:w-[50px] md:h-[50px]' : 'w-[50px] h-[50px]'
+            section === 'footer'
+              ? 'w-[30px] h-[30px] md:w-[50px] md:h-[50px]'
+              : 'w-[50px] h-[50px]'
           )}
         />
-        {section === 'contacts' && <span className="text-text2 group-hover:text-buttonClickPink transition-all duration-300">{displayText}</span>}
+        {section === 'contacts' && (
+          <span className="text-text2 group-hover:text-buttonClickPink transition-all duration-300">
+            {displayText}
+          </span>
+        )}
       </a>
     </li>
   );

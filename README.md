@@ -53,17 +53,16 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 - #### component SocialLinks
 
-| Prop        | Type      | Description                                                                   |
-| ----------- | --------- | ----------------------------------------------------------------------------- |
-| `section`   | string    | optional, determines the style and layout depending on which page section is. |
-
+| Prop      | Type   | Description                                                                   |
+| --------- | ------ | ----------------------------------------------------------------------------- |
+| `section` | string | optional, determines the style and layout depending on which page section is. |
 
 - #### component SocialLink
 
-| Prop          | Type                                    | Description                                                                         |
-| ------------- | --------------------------------------- | ----------------------------------------------------------------------------------- |
-| `icon`        | React.FC<React.SVGProps<SVGSVGElement>> | required, the SVG icon component for the social media platform.                     |
-| `link`        | string                                  | required, the URL to the social media page.                                         |
-| `ariaLabel`   | string                                  | required, the ARIA label for the link, used for accessibility purposes.             |
-| `displayText` | string                                  | optional, the text to display alongside the icon, used in the 'contacts' section.   |
-| `section`     | string                                  | optional, defines which section (e.g., 'contacts', 'footer') affects styling.       |
+| Prop          | Type                                    | Description                                                                       |
+| ------------- | --------------------------------------- | --------------------------------------------------------------------------------- |
+| `icon`        | React.FC<React.SVGProps<SVGSVGElement>> | required, the SVG icon component for the social media platform.                   |
+| `link`        | string                                  | required, the URL to the social media page.                                       |
+| `ariaLabel`   | string                                  | required, the ARIA label for the link, used for accessibility purposes.           |
+| `displayText` | string                                  | optional, the text to display alongside the icon, used in the 'contacts' section. |
+| `section`     | string                                  | optional, defines which section (e.g., 'contacts', 'footer') affects styling.     |

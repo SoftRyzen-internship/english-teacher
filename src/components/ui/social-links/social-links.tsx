@@ -14,12 +14,12 @@ const iconMap = {
 
 export const SocialLinks: React.FC<SocialLinksProps> = ({ section }) => {
   return (
-    <ul 
+    <ul
       className={clsx(
         'flex gap-6',
         section === 'contacts' && 'hidden xl:flex xl:flex-col',
         section === 'footer' && 'gap-4 md:gap-6'
-      )}    
+      )}
     >
       {commonData.socials.map((social) => {
         const IconComponent = iconMap[social.name as keyof typeof iconMap];
@@ -36,4 +36,4 @@ export const SocialLinks: React.FC<SocialLinksProps> = ({ section }) => {
       })}
     </ul>
   );
-}
+};

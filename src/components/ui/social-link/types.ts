@@ -4,4 +4,4 @@ export type SocialLinkProps = {
   ariaLabel: string;
   displayText?: string;
   section?: string;
-}
+};
