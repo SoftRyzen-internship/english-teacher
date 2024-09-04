@@ -2,14 +2,14 @@
 
 import { useState, useRef, useEffect } from 'react';
 
+import Quotes from '@/../public/assets/images/icons/quotes.svg';
+
 import { IReviewCardProps } from './types';
 
 import reviews from '@/data/reviews.json';
-import clsx from 'clsx';
 
 export const ReviewCard = () => {
   const {} = reviews;
-  console.log(reviews);
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isTruncated, setIsTruncated] = useState(false);
@@ -34,20 +34,25 @@ export const ReviewCard = () => {
   const toggleModal = () => setIsModalOpen(!isModalOpen);
 
   return (
-    <div className="max-h-[211px] p-6 rounded-lg bg-bgButtonInactive">
-      <h3 className="text-lg font-medium leading-normal font-montserrat text-text1Icon3 mb-4">
+    <div className="max-h-80 p-6 rounded-lg bg-bgButtonInactive md:w-[334px] md:py-8 md:px-10 xl:p-8 xl:w-[390px]">
+      <Quotes width={28} height={20} className="mb-5" />
+      <h3 className="text-lg font-medium leading-normal font-montserrat text-text1Icon3 mb-4 md:mb-7">
         Тетяна
       </h3>
       <p
         ref={textRef}
         className="font-comfortaa text-base font-semibold overflow-hidden text-ellipsis line-clamp-5"
       >
-        Дякую за вашу працю з моєю дитиною.\n Сину дуже сподобалось займатися з
+        Дякую за вашу працю з моєю дитиною. Сину дуже сподобалось займатися з
         Вами, особливо індивідуальні заняття. Моя дитина багато чому навчилася і
         зрозуміла завдяки Вам.
       </p>
       {isTruncated && (
-        <button onClick={toggleModal} className="">
+        <button
+          type="button"
+          onClick={toggleModal}
+          className="font-comfortaa text-base font-semibold text-accent5Icon1 flex ml-auto mt-4 hover:text-buttonClickPink transition-all ease duration-300"
+        >
           Читати більше
         </button>
       )}
