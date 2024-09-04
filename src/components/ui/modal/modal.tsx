@@ -24,11 +24,11 @@ export const Modal = ({
           )}
         >
           <Dialog.Close asChild>
-          <button
+            <button
               className={clsx(
-                'absolute text-black transition-all duration-300', 
-                'hover:text-buttonClickPink', 
-                'focus-visible:text-buttonClickPink', 
+                'absolute text-black transition-all duration-300',
+                'hover:text-buttonClickPink',
+                'focus-visible:text-buttonClickPink',
                 buttonClassName
               )}
             >

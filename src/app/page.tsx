@@ -94,7 +94,7 @@ export default function Home() {
             md:w-[688px] md:min-h-[700px] md:p-8 
             xl:w-[1216px] xl:min-h-[755px]"
           buttonClassName="top-[30px] right-[30px]"
-          childContentClassName="flex flex-col items-center justify-center bg-accent4"
+          childContentClassName="flex flex-col items-center justify-center"
         >
           <Dialog.Title className=" text-lg font-semibold ">Заk</Dialog.Title>
           <Dialog.Description>
