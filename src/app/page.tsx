@@ -14,6 +14,7 @@ import {
 import React from 'react';
 import { query } from '@/api/queries';
 import { QueryResult } from '@/api/types';
+import { ReviewCard } from '@/components/common/review-card/review-card';
 
 const renderOptions = [
   renderNodeRule(isHeading, ({ children, key }) => {
@@ -63,6 +64,7 @@ export default async function Home() {
   return (
     <main>
       <div className="container">
+        <ReviewCard />
         <div>
           <h1>{result.privacyPolicyPage.title}</h1>
           <StructuredText
