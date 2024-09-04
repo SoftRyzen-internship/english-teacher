@@ -58,6 +58,5 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 | `children`              | ReactNode | required, the content to be displayed inside the modal.                       |
 | `isOpen`                | boolean   | required, controls whether the modal is open or closed.                       |
 | `setIsOpen`             | function  | required, function to set the modal's open/closed state.                      |
-| `contentClassName`      | string    | optional, additional CSS classes for customizing the modal's content style.   |
-| `buttonClassName`       | string    | optional, additional CSS classes for customizing the close button style       |
-| `childContentClassName` | string    | optional, additional CSS classes for styling the inner modal content wrapper. |
+| `reviews`               | boolean   | optional, applies specific styles and behavior for reviews modal when `true`. |
+
