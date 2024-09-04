@@ -10,6 +10,7 @@ import React from 'react';
 import { skillsQuery } from '@/api/queries';
 import { SkillsQueryResult } from '@/api/types';
 import { Test } from '@/components/common/test/test';
+import { ReviewsList } from '@/components/common/reviews-list/reviews-list';
 
 export default async function Home() {
   const token = process.env.DATOCMS_READONLY_TOKEN;
@@ -25,6 +26,7 @@ export default async function Home() {
   return (
     <main>
       <div className="container">
+        <ReviewsList />
         <div>
           {result.teacherSkillsProfile.skillPlate.map((skill) => (
             <div key={skill.id}>
