@@ -1,3 +1,3 @@
 export type SocialLinksProps = {
-  sectionName: string;
+  section?: boolean;
 };

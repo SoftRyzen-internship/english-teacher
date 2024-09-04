@@ -25,21 +25,21 @@
   "socials": [
     {
       "id": 1,
-      "name": "instagram",
-      "link": "https://www.instagram.com/sergey_molchanov_psychologist",
-      "ariaLabel": "Посилання на Instagram"
-    },
-    {
-      "id": 2,
       "name": "telegram",
-      "link": "https://t.me/MolchanovSM",
+      "link": "https://t.me/yuliaenglish31",
       "ariaLabel": "Посилання на Telegram"
     },
     {
+      "id": 2,
+      "name": "mail",
+      "link": "sorokau138@gmail.com",
+      "ariaLabel": "Посилання на пошту"
+    },
+    {
       "id": 3,
-      "name": "facebook",
-      "link": "https://www.facebook.com/Molchanov.Sergey92",
-      "ariaLabel": "Посилання на Facebook"
+      "name": "instagram",
+      "link": "https://www.instagram.com/yulia_tutor.eng",
+      "ariaLabel": "Посилання на Instagram"
     }
   ]
 }
