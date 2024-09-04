@@ -9,21 +9,21 @@ export const SocialLink: React.FC<SocialLinkProps> = ({
   displayText,
   section,
 }) => {
-  return (
-    <li>
+  return (    
       <a
         href={link}
         aria-label={ariaLabel}
         target="_blank"
         rel="noopener noreferrer nofollow"
-        className="inline-flex items-center gap-4 text-accent5Icon1 transition-all duration-300 hover:text-buttonClickPink"
+        className="inline-flex items-center gap-4 text-accent5Icon1 transition-all duration-300 hover:text-buttonClickPink group max-w-max"
       >
         <IconComponent
           className={clsx(
             section === 'footer'
               ? 'w-[30px] h-[30px] md:w-[50px] md:h-[50px]'
-              : section === 'contacts' ? 'w-[40px] h-[40px]'
-              :  'w-[50px] h-[50px]'
+              : section === 'contacts'
+                ? 'w-[40px] h-[40px]'
+                : 'w-[50px] h-[50px]'
           )}
         />
         {section === 'contacts' && (
@@ -31,7 +31,6 @@ export const SocialLink: React.FC<SocialLinkProps> = ({
             {displayText}
           </span>
         )}
-      </a>
-    </li>
+      </a>  
   );
 };

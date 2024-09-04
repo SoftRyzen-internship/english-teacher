@@ -14,7 +14,7 @@ const iconMap = {
 
 export const SocialLinks: React.FC<SocialLinksProps> = ({ section }) => {
   return (
-    <ul
+    <div
       className={clsx(
         'flex gap-6',
         section === 'contacts' && 'hidden xl:flex xl:flex-col',
@@ -34,6 +34,6 @@ export const SocialLinks: React.FC<SocialLinksProps> = ({ section }) => {
           />
         );
       })}
-    </ul>
+    </div>
   );
 };
