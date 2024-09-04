@@ -66,6 +66,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 | `ariaLabel`   | string                                  | required, the ARIA label for the link, used for accessibility purposes.           |
 | `displayText` | string                                  | optional, the text to display alongside the icon, used in the 'contacts' section. |
 | `section`     | string                                  | optional, defines which section (e.g., 'contacts', 'footer') affects styling.     |
+
 - #### component Modal
 
 | Prop        | Type      | Description                                                                   |
