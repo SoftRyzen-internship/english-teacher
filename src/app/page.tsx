@@ -7,6 +7,7 @@ import { Logo } from '@/components/ui/logo/logo';
 import { Navigation } from '@/components/ui/navigation/navigation';
 import { executeQuery } from '@datocms/cda-client';
 import React from 'react';
+import { SocialLinks } from '@/components/ui/social-links/social-links';
 import { skillsQuery } from '@/api/queries';
 import { SkillsQueryResult } from '@/api/types';
 import { Test } from '@/components/common/test/test';
@@ -63,6 +64,9 @@ export default async function Home() {
           repellendus molestiae esse eveniet?
         </p>
 
+        <SocialLinks section="footer" />
+        <SocialLinks section="contacts" />
+        <SocialLinks />
         <Accordion faqs={faq.accordion} />
 
         <Test />
