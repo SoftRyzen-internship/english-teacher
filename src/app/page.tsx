@@ -19,6 +19,7 @@ import React from 'react';
 import { query } from '@/api/queries';
 import { QueryResult } from '@/api/types';
 import { Test } from '@/components/common/test/test';
+import { BenefitsList } from '@/components/common/benefits-list/benefits-list';
 
 const renderOptions = [
   renderNodeRule(isHeading, ({ children, key }) => {
@@ -113,7 +114,7 @@ export default async function Home() {
         </p>
 
         <Accordion faqs={faq.accordion} />
-
+        <BenefitsList />
         <Test />
       </div>
     </main>
