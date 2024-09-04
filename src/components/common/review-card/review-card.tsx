@@ -65,9 +65,12 @@ export const ReviewCard = ({ author, text }: IReviewCardProps) => {
             </p>
           </Dialog.Title>
 
-          <p ref={textRef} className="font-comfortaa text-base font-semibold">
+          <Dialog.Description
+            ref={textRef}
+            className="font-comfortaa text-base font-semibold"
+          >
             {text}
-          </p>
+          </Dialog.Description>
         </>
       </Modal>
     </div>
