@@ -12,7 +12,7 @@ export const ScrollButton = ({
   className,
 }: ScrollButtonProps) => {
   const styles = clsx(
-    'h-[56px] inline-flex justify-center cursor-pointer smOnly:w-full items-center min-w-[221px] rounded-[20px] text-base font-bold leading-normal transition-colors duration-300',
+    'h-[56px] inline-flex font-montserrat justify-center cursor-pointer smOnly:w-full items-center min-w-[221px] rounded-[20px] text-base font-bold leading-normal transition-colors duration-300',
     className,
     {
       'border solid px-[60px] border-text1Icon3 mdOnly:w-[351px] hover:bg-buttonHoverPink hover:border-buttonHoverPink focus:bg-buttonClickPink focus:border-buttonClickPink':

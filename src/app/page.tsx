@@ -1,4 +1,8 @@
 import { ScrollButton } from '@/components/ui/scroll-button/scroll-button';
+import faq from '@/data/fag.json';
+
+import { Accordion } from '@/components/common/accordion/accordion';
+
 import { Logo } from '@/components/ui/logo/logo';
 import { Navigation } from '@/components/ui/navigation/navigation';
 import { executeQuery } from '@datocms/cda-client';
@@ -107,6 +111,8 @@ export default async function Home() {
           voluptate, laboriosam quis quia molestias deserunt fugiat asperiores
           repellendus molestiae esse eveniet?
         </p>
+
+        <Accordion faqs={faq.accordion} />
 
         <Test />
       </div>
