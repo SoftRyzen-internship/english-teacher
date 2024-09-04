@@ -75,3 +75,10 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 | `isOpen`    | boolean   | required, controls whether the modal is open or closed.                       |
 | `setIsOpen` | function  | required, function to set the modal's open/closed state.                      |
 | `reviews`   | boolean   | optional, applies specific styles and behavior for reviews modal when `true`. |
+
+- #### component ReviewCard
+
+| Prop     | Type   | Description                                                          |
+| -------- | ------ | -------------------------------------------------------------------- |
+| `author` | string | required, the name of the author of the review.                      |
+| `text`   | string | required, the review content that will be displayed inside the card. |

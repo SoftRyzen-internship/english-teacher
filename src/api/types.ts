@@ -17,7 +17,16 @@ type TeacherSkillsProfile = {
   skillPlate: TeacherSkillPlate[];
 };
 
-export type QueryResult = {
+export type LinkNode = {
+  url: string;
+  target?: string;
+  rel?: string;
+};
+
+export type PolicyQueryResult = {
   privacyPolicyPage: PrivacyPolicyPage;
+};
+
+export type SkillsQueryResult = {
   teacherSkillsProfile: TeacherSkillsProfile;
 };

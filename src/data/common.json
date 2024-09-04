@@ -33,7 +33,7 @@
     {
       "id": 2,
       "name": "mail",
-      "link": "sorokau138@gmail.com",
+      "link": "mailto:sorokau138@gmail.com",
       "ariaLabel": "Посилання на пошту",
       "displayText": "sorokau138@gmail.com"
     },
