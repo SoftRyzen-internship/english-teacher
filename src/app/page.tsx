@@ -1,10 +1,15 @@
 import { ScrollButton } from '@/components/ui/scroll-button/scroll-button';
+import faq from '@/data/fag.json';
+
+import { Accordion } from '@/components/common/accordion/accordion';
+
 import { Logo } from '@/components/ui/logo/logo';
 import { Navigation } from '@/components/ui/navigation/navigation';
 import { executeQuery } from '@datocms/cda-client';
 import React from 'react';
 import { skillsQuery } from '@/api/queries';
 import { SkillsQueryResult } from '@/api/types';
+import { Test } from '@/components/common/test/test';
 
 export default async function Home() {
   const token = process.env.DATOCMS_READONLY_TOKEN;
@@ -55,6 +60,10 @@ export default async function Home() {
           voluptate, laboriosam quis quia molestias deserunt fugiat asperiores
           repellendus molestiae esse eveniet?
         </p>
+
+        <Accordion faqs={faq.accordion} />
+
+        <Test />
       </div>
     </main>
   );
