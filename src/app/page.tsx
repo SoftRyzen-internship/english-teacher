@@ -1,6 +1,7 @@
 import { ScrollButton } from '@/components/ui/scroll-button/scroll-button';
-
+import faq from '@/data/fag.json';
 import { Logo } from '@/components/ui/logo/logo';
+import { Accordion } from '@/components/common/accordion/accordion';
 
 export default function Home() {
   return (
@@ -32,6 +33,7 @@ export default function Home() {
           voluptate, laboriosam quis quia molestias deserunt fugiat asperiores
           repellendus molestiae esse eveniet?
         </p>
+        <Accordion faqs={faq.accordion} />
       </div>
     </main>
   );
