@@ -58,12 +58,12 @@ export default function Home() {
             md:w-[526px] md:min-h-[378px] md:p-8 md:pt-[137px]
             xl:w-[600px] xl:min-h-[390px]"
           buttonClassName="top-6 right-6 md:top-8 md:right-8"
-          childContentClassName="max-h-[calc(80vh-68px)] md:max-h-[calc(80vh-88px)] overflow-y-auto overflow-hidden bg-buttonFocusYellow"
+          childContentClassName="max-h-[calc(80vh-68px)] md:max-h-[calc(80vh-88px)] overflow-y-auto overflow-hidden "
         >
           <Dialog.Title className="absolute top-[66px] text-lg font-semibold">
             Заголовокk
           </Dialog.Title>
-          <p id="modal-description">
+          <Dialog.Description>
             Это описание модального окна.s sssssss sssssssssss ssss dssd fdvdf
             efv v edf gf dfs Lorem ipsum dolor sit amet consectetur adipisicing
             elit. Ab, architecto minima. Nihil inventore tempora minus similique
@@ -84,7 +84,7 @@ export default function Home() {
             Nihil inventore tempora minus similique eaque ea voluptate,
             laboriosam quis quia molestias deserunt fugiat asperiores
             repellendus molestiae esse eveniet?
-          </p>
+          </Dialog.Description>
         </Modal>
 
         <Modal
@@ -97,12 +97,12 @@ export default function Home() {
           childContentClassName="flex flex-col items-center justify-center bg-accent4"
         >
           <Dialog.Title className=" text-lg font-semibold ">Заk</Dialog.Title>
-          <p id="modal-description">
+          <Dialog.Description>
             Это описание Lorem ipsum dolor sit amet consectetur adipisicing
             elit. Ab, architecto minima. Nihil inventore tempora minus similique
             eaque ea voluptate, laboriosam quis quia molestias deserunt fugiat
             asperiores repellendus molestiae esse eveniet? sssssssssssss
-          </p>
+          </Dialog.Description>
         </Modal>
       </div>
     </main>
