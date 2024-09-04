@@ -51,14 +51,13 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 | `colorButton`  | boolean   | optional, determines whether the button has a colored border and background with hover and focus effects. |
 | `borderButton` | boolean   | optional, applies a solid border and color styling to the button with hover and focus effects.            |
 
-
 - #### component Modal
 
-| Prop                    | Type      | Description                                                                    |
-| ----------------------- | --------- | -----------------------------------------------------------------------------  |
-| `children`              | ReactNode | required, the content to be displayed inside the modal.                        |
-| `isOpen`                | boolean   | required, controls whether the modal is open or closed.                        |
-| `setIsOpen`             | function  | required, function to set the modal's open/closed state.                       |
-| `contentClassName`      | string    | optional, additional CSS classes for customizing the modal's content style.    |
-| `buttonClassName`       | string    | optional, additional CSS classes for customizing the close button style        |
-| `childContentClassName` | string    | optional, additional CSS classes for styling the inner modal content wrapper.  |
+| Prop                    | Type      | Description                                                                   |
+| ----------------------- | --------- | ----------------------------------------------------------------------------- |
+| `children`              | ReactNode | required, the content to be displayed inside the modal.                       |
+| `isOpen`                | boolean   | required, controls whether the modal is open or closed.                       |
+| `setIsOpen`             | function  | required, function to set the modal's open/closed state.                      |
+| `contentClassName`      | string    | optional, additional CSS classes for customizing the modal's content style.   |
+| `buttonClassName`       | string    | optional, additional CSS classes for customizing the close button style       |
+| `childContentClassName` | string    | optional, additional CSS classes for styling the inner modal content wrapper. |

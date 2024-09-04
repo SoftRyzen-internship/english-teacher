@@ -108,7 +108,7 @@ export default async function Home() {
           repellendus molestiae esse eveniet?
         </p>
 
-<Test />
+        <Test />
       </div>
     </main>
   );
