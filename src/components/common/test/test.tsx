@@ -24,11 +24,7 @@ export const Test = () => {
         Форма связи
       </button>
 
-      <Modal
-        isOpen={modalOpen}
-        setIsOpen={setModalOpen}
-        reviews
-      >
+      <Modal isOpen={modalOpen} setIsOpen={setModalOpen} reviews>
         <Dialog.Title className="absolute top-[66px] text-lg font-semibold">
           Заголовокk
         </Dialog.Title>
@@ -55,10 +51,7 @@ export const Test = () => {
         </Dialog.Description>
       </Modal>
 
-      <Modal
-        isOpen={isModalOpen}
-        setIsOpen={setIsModalOpen}
-      >
+      <Modal isOpen={isModalOpen} setIsOpen={setIsModalOpen}>
         <Dialog.Title className=" text-lg font-semibold ">Заk</Dialog.Title>
         <Dialog.Description>
           Это описание Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -70,7 +63,6 @@ export const Test = () => {
     </>
   );
 };
-
 
 // 'use client';
 
@@ -101,7 +93,7 @@ export const Test = () => {
 //       <Modal
 //         isOpen={modalOpen}
 //         setIsOpen={setModalOpen}
-//         contentClassName="w-[89%] sm:w-[420px] min-h-[434px] bg-bgButtonInactive p-6 pt-[111px] rounded-lg 
+//         contentClassName="w-[89%] sm:w-[420px] min-h-[434px] bg-bgButtonInactive p-6 pt-[111px] rounded-lg
 //             md:w-[526px] md:min-h-[378px] md:p-8 md:pt-[137px]
 //             xl:w-[600px] xl:min-h-[390px]"
 //         buttonClassName="top-6 right-6 md:top-8 md:right-8"
@@ -136,8 +128,8 @@ export const Test = () => {
 //       <Modal
 //         isOpen={isModalOpen}
 //         setIsOpen={setIsModalOpen}
-//         contentClassName="w-[89%] sm:w-[382px] min-h-[600px] bg-bg3 p-6 flex items-center justify-center 
-//             md:w-[688px] md:min-h-[700px] md:p-8 
+//         contentClassName="w-[89%] sm:w-[382px] min-h-[600px] bg-bg3 p-6 flex items-center justify-center
+//             md:w-[688px] md:min-h-[700px] md:p-8
 //             xl:w-[1216px] xl:min-h-[755px]"
 //         buttonClassName="top-[30px] right-[30px]"
 //         childContentClassName="flex flex-col items-center justify-center"
