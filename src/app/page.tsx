@@ -1,5 +1,6 @@
 import { ScrollButton } from '@/components/ui/scroll-button/scroll-button';
 import { Logo } from '@/components/ui/logo/logo';
+import { Navigation } from '@/components/ui/navigation/navigation';
 import { executeQuery } from '@datocms/cda-client';
 import { StructuredText, renderNodeRule } from 'react-datocms';
 import {
@@ -80,7 +81,7 @@ export default async function Home() {
         </div>
 
         <Logo />
-
+        <Navigation />
         <br />
         <ScrollButton borderButton={true} href="contacts">
           Записатись
