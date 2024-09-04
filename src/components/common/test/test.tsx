@@ -3,6 +3,7 @@
 import { Modal } from '@/components/ui/modal/modal';
 import * as Dialog from '@radix-ui/react-dialog';
 import { useState } from 'react';
+import { SuccessErrorMessageComponent } from '../success-error-message-component/success-error-message-component';
 
 export const Test = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -52,6 +53,10 @@ export const Test = () => {
       </Modal>
 
       <Modal isOpen={isModalOpen} setIsOpen={setIsModalOpen}>
+        <SuccessErrorMessageComponent status='success' />
+      </Modal>
+
+      {/* <Modal isOpen={isModalOpen} setIsOpen={setIsModalOpen}>
         <Dialog.Title className=" text-lg font-semibold ">Заk</Dialog.Title>
         <Dialog.Description>
           Это описание Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -59,7 +64,7 @@ export const Test = () => {
           ea voluptate, laboriosam quis quia molestias deserunt fugiat
           asperiores repellendus molestiae esse eveniet? sssssssssssss
         </Dialog.Description>
-      </Modal>
+      </Modal> */}
     </>
   );
 };
