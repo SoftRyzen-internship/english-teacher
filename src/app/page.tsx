@@ -108,6 +108,8 @@ export default async function Home() {
           repellendus molestiae esse eveniet?
         </p>
 
+        <SocialLinks section='footer'/>
+        <SocialLinks section='contacts'/>
         <SocialLinks />
       </div>
     </main>

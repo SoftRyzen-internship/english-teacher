@@ -1,30 +1,24 @@
-// import React from 'react';
+import React from 'react';
+import clsx from 'clsx';
+import { SocialLinkProps } from './types';
 
-// interface SocialLinkProps {
-//   name: string;
-//   link: string;
-//   ariaLabel: string;
-//   IconComponent: React.FC<React.SVGProps<SVGSVGElement>>;
-//   section?: string;
-// }
-
-// export const SocialLink: React.FC<SocialLinkProps> = ({
-//   name,
-//   link,
-//   ariaLabel,
-//   IconComponent,
-//   section,
-// }) => (
-//   <li className="flex items-center">
-//     <a
-//       href={link}
-//       aria-label={ariaLabel}
-//       target="_blank"
-//       rel="noopener noreferrer"
-//       className="flex items-center space-x-2"
-//     >
-//       {IconComponent && <IconComponent className="w-6 h-6" />}
-//       {section === 'contacts' && <span>{link}</span>}
-//     </a>
-//   </li>
-// );
+export const SocialLink: React.FC<SocialLinkProps> = ({  icon: IconComponent, link, ariaLabel, displayText, section }) => {
+  return (
+    <li>
+      <a
+        href={link}
+        aria-label={ariaLabel}
+        target="_blank"
+        rel="noopener noreferrer nofollow"
+        className="inline-flex items-center gap-4 text-accent5Icon1 transition-all duration-300 hover:text-buttonClickPink group"
+      >
+        <IconComponent
+          className={clsx(
+            section === 'footer' ? 'w-[30px] h-[30px] md:w-[50px] md:h-[50px]' : 'w-[50px] h-[50px]'
+          )}
+        />
+        {section === 'contacts' && <span className="text-text2 group-hover:text-buttonClickPink transition-all duration-300">{displayText}</span>}
+      </a>
+    </li>
+  );
+};

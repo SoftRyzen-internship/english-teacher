@@ -3,36 +3,37 @@ import InstagramIcon from '@/../public/assets/images/icons/socials/instagram.svg
 import MailIcon from '@/../public/assets/images/icons/socials/mail.svg';
 import { SocialLinksProps } from './types';
 import commonData from '@/data/common.json';
+import clsx from 'clsx';
+import { SocialLink } from '../social-link/social-link';
 
 const iconMap = {
-  telegram: TelegramIcon,
-  instagram: InstagramIcon,
-  mail: MailIcon,
+  telegram: TelegramIcon as React.FC<React.SVGProps<SVGSVGElement>>,
+  instagram: InstagramIcon as React.FC<React.SVGProps<SVGSVGElement>>,
+  mail: MailIcon as React.FC<React.SVGProps<SVGSVGElement>>,
 };
 
 export const SocialLinks: React.FC<SocialLinksProps> = ({ section }) => {
   return (
-    <ul className="flex gap-6">
+    <ul 
+      className={clsx(
+        'flex gap-6',
+        section === 'contacts' && 'hidden xl:flex xl:flex-col',
+        section === 'footer' && 'gap-4 md:gap-6'
+      )}    
+    >
       {commonData.socials.map((social) => {
         const IconComponent = iconMap[social.name as keyof typeof iconMap];
-
         return (
-          <li key={social.id} className="flex items-center">
-            <a
-              href={social.link}
-              aria-label={social.ariaLabel}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center space-x-2"
-            >
-              {IconComponent && (
-                <IconComponent className="w-[50px] h-[50px] fill-accent5Icon1 hover:fill-buttonClickPink" />
-              )}
-              {section && <span>{social.link}</span>}
-            </a>
-          </li>
+          <SocialLink
+            key={social.id}
+            icon={IconComponent}
+            link={social.link}
+            ariaLabel={social.ariaLabel}
+            displayText={social.displayText}
+            section={section}
+          />
         );
       })}
     </ul>
   );
-};
+}
