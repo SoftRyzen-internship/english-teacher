@@ -14,6 +14,7 @@ import {
 import React from 'react';
 import { query } from '@/api/queries';
 import { QueryResult } from '@/api/types';
+import { Test } from '@/components/common/test/test';
 
 const renderOptions = [
   renderNodeRule(isHeading, ({ children, key }) => {
@@ -106,6 +107,8 @@ export default async function Home() {
           voluptate, laboriosam quis quia molestias deserunt fugiat asperiores
           repellendus molestiae esse eveniet?
         </p>
+
+        <Test />
       </div>
     </main>
   );
