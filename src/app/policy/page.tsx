@@ -1,5 +1,6 @@
 import { policyQuery } from '@/api/queries';
 import { PolicyQueryResult } from '@/api/types';
+import { ErrorFetchDataMessage } from '@/components/common/error-fetch-data-message/error-fetch-data-message';
 import { Policy } from '@/sections/policy/policy';
 import { executeQuery } from '@datocms/cda-client';
 
@@ -19,7 +20,7 @@ const PolicyPage = async () => {
 
   return (
     <main>
-      {result ? <Policy policyData={result} /> : <p>Error loading data</p>}
+      {result ? <Policy policyData={result} /> : <ErrorFetchDataMessage />}
     </main>
   );
 };

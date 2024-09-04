@@ -52,7 +52,11 @@ const renderOptions = [
         </a>
       );
     } else {
-      return <Link href="/">{children}</Link>;
+      return (
+        <Link key={key} href="/">
+          {children}
+        </Link>
+      );
     }
   }),
   renderNodeRule(isList, ({ children, key }) => {
