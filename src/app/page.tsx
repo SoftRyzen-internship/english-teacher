@@ -1,4 +1,8 @@
 import { ScrollButton } from '@/components/ui/scroll-button/scroll-button';
+import faq from '@/data/fag.json';
+
+import { Accordion } from '@/components/common/accordion/accordion';
+
 import { Logo } from '@/components/ui/logo/logo';
 import { Navigation } from '@/components/ui/navigation/navigation';
 import { executeQuery } from '@datocms/cda-client';
@@ -15,6 +19,7 @@ import React from 'react';
 import { query } from '@/api/queries';
 import { QueryResult } from '@/api/types';
 import { SocialLinks } from '@/components/ui/social-links/social-links';
+import { Test } from '@/components/common/test/test';
 
 const renderOptions = [
   renderNodeRule(isHeading, ({ children, key }) => {
@@ -111,6 +116,9 @@ export default async function Home() {
         <SocialLinks section="footer" />
         <SocialLinks section="contacts" />
         <SocialLinks />
+        <Accordion faqs={faq.accordion} />
+
+        <Test />
       </div>
     </main>
   );
