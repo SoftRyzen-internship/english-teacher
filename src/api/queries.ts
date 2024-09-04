@@ -1,16 +1,21 @@
-export const query = `
+export const policyQuery = `
+  {
+    privacyPolicyPage {
+      title
+      text {
+        value
+      }
+    }
+  }
+`;
+
+export const skillsQuery = `
   {
     teacherSkillsProfile {
       skillPlate {
         id
         name
         number
-      }
-    }
-    privacyPolicyPage {
-      title
-      text {
-        value
       }
     }
   }
