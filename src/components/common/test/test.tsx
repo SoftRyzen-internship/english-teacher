@@ -53,7 +53,7 @@ export const Test = () => {
       </Modal>
 
       <Modal isOpen={isModalOpen} setIsOpen={setIsModalOpen}>
-        <SuccessErrorMessageComponent status='success' />
+        <SuccessErrorMessageComponent status="success" />
       </Modal>
 
       {/* <Modal isOpen={isModalOpen} setIsOpen={setIsModalOpen}>
