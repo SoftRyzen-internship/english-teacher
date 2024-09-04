@@ -1,5 +1,5 @@
 export interface IReviewCardProps {
-  //   author: string;
-  //   text: string;
-  //   className?: string;
+  // id: number;
+  author: string;
+  text: string;
 }

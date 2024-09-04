@@ -1,4 +1,8 @@
 import { ScrollButton } from '@/components/ui/scroll-button/scroll-button';
+import faq from '@/data/fag.json';
+
+import { Accordion } from '@/components/common/accordion/accordion';
+
 import { Logo } from '@/components/ui/logo/logo';
 import { Navigation } from '@/components/ui/navigation/navigation';
 import { executeQuery } from '@datocms/cda-client';
@@ -14,7 +18,8 @@ import {
 import React from 'react';
 import { query } from '@/api/queries';
 import { QueryResult } from '@/api/types';
-import { ReviewCard } from '@/components/common/review-card/review-card';
+import { Test } from '@/components/common/test/test';
+import { ReviewsList } from '@/components/common/reviews-list/reviews-list';
 
 const renderOptions = [
   renderNodeRule(isHeading, ({ children, key }) => {
@@ -64,7 +69,7 @@ export default async function Home() {
   return (
     <main>
       <div className="container">
-        <ReviewCard />
+        <ReviewsList />
         <div>
           <h1>{result.privacyPolicyPage.title}</h1>
           <StructuredText
@@ -108,6 +113,10 @@ export default async function Home() {
           voluptate, laboriosam quis quia molestias deserunt fugiat asperiores
           repellendus molestiae esse eveniet?
         </p>
+
+        <Accordion faqs={faq.accordion} />
+
+        <Test />
       </div>
     </main>
   );
