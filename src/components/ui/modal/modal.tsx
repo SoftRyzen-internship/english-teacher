@@ -19,7 +19,7 @@ export const Modal = ({
         <Dialog.Overlay className="fixed inset-0 bg-semiTransparentGray" />
         <Dialog.Content
           className={clsx(
-            'absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 max-h-[90vh]  w-[89%] ',
+            'fixed z-8 transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 max-h-[90vh]  w-[89%] ',
             contentClassName
           )}
         >

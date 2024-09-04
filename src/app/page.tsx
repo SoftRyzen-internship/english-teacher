@@ -1,24 +1,96 @@
-'use client';
-
+import { ScrollButton } from '@/components/ui/scroll-button/scroll-button';
 import { Logo } from '@/components/ui/logo/logo';
-import { Modal } from '@/components/ui/modal/modal';
-import * as Dialog from '@radix-ui/react-dialog';
-import { useState } from 'react';
+import { Navigation } from '@/components/ui/navigation/navigation';
+import { executeQuery } from '@datocms/cda-client';
+import { StructuredText, renderNodeRule } from 'react-datocms';
+import {
+  isHeading,
+  isParagraph,
+  isLink,
+  isList,
+  isListItem,
+  isRoot,
+} from 'datocms-structured-text-utils';
+import React from 'react';
+import { query } from '@/api/queries';
+import { QueryResult } from '@/api/types';
+import { Test } from '@/components/common/test/test';
 
-export default function Home() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [modalOpen, setModalOpen] = useState(false);
+const renderOptions = [
+  renderNodeRule(isHeading, ({ children, key }) => {
+    return <h2 key={key}>{children}</h2>;
+  }),
+  renderNodeRule(isParagraph, ({ children, key }) => {
+    return (
+      <p key={key} className="text-base leading-6">
+        {children}
+      </p>
+    );
+  }),
+  renderNodeRule(isLink, ({ node, children, key }) => {
+    return (
+      <a key={key} href={node.url} className="text-blue-500 underline">
+        {children}
+      </a>
+    );
+  }),
+  renderNodeRule(isList, ({ node, children, key }) => {
+    return (
+      <ul key={key} className="list-disc pl-5">
+        {children}
+      </ul>
+    );
+  }),
+  renderNodeRule(isListItem, ({ children, key }) => {
+    return (
+      <li key={key} className="mb-2">
+        {children}
+      </li>
+    );
+  }),
+];
+
+export default async function Home() {
+  const token = process.env.DATOCMS_READONLY_TOKEN;
+
+  if (!token) {
+    throw new Error('DATOCMS_READONLY_TOKEN is not defined');
+  }
+
+  const result: QueryResult = await executeQuery(query, {
+    token: token,
+  });
+
   return (
     <main>
-      <div className="container ">
+      <div className="container">
+        <div>
+          <h1>{result.privacyPolicyPage.title}</h1>
+          <StructuredText
+            data={result.privacyPolicyPage.text}
+            customNodeRules={renderOptions}
+          />
+        </div>
+
+        <div>
+          {result.teacherSkillsProfile.skillPlate.map((skill) => (
+            <div key={skill.id}>
+              <p>{skill.number}</p>
+              <p>{skill.name}</p>
+            </div>
+          ))}
+        </div>
+
         <Logo />
-        <p className="font-comfortaa bg-icon">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab,
-          architecto minima. Nihil inventore tempora minus similique eaque ea
-          voluptate, laboriosam quis quia molestias deserunt fugiat asperiores
-          repellendus molestiae esse eveniet?
-        </p>
+        <Navigation />
         <br />
+        <ScrollButton borderButton={true} href="contacts">
+          Записатись
+        </ScrollButton>
+        <br />
+        <ScrollButton colorButton={true} href="contacts">
+          Безплатна консультація
+        </ScrollButton>
 
         <p className="font-montserrat bg-accent1">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab,
@@ -27,8 +99,8 @@ export default function Home() {
           repellendus molestiae esse eveniet?
         </p>
 
-        <h2>Title h2</h2>
-        <h3>Title h3</h3>
+        <h2 className="section-title">Title h2</h2>
+        <h3 className="section-subtitle">Title h3</h3>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab,
           architecto minima. Nihil inventore tempora minus similique eaque ea
@@ -36,74 +108,7 @@ export default function Home() {
           repellendus molestiae esse eveniet?
         </p>
 
-        <button
-          onClick={() => setModalOpen(true)}
-          className="btn w-100 h-100 text-accent5Icon1 m-10"
-        >
-          форма отзыв
-        </button>
-
-        <button
-          onClick={() => setIsModalOpen(true)}
-          className="btn w-100 h-100 text-buttonFocusPink my-10
-           md:top-8 md:right-8"
-        >
-          Форма связи
-        </button>
-
-        <Modal
-          isOpen={modalOpen}
-          setIsOpen={setModalOpen}
-          contentClassName="w-[89%] sm:w-[420px] min-h-[434px] bg-bgButtonInactive p-6 pt-[111px] rounded-lg 
-            md:w-[526px] md:min-h-[378px] md:p-8 md:pt-[137px]
-            xl:w-[600px] xl:min-h-[390px]"
-          buttonClassName="top-6 right-6 md:top-8 md:right-8"
-          childContentClassName="max-h-[calc(80vh-68px)] md:max-h-[calc(80vh-88px)] overflow-y-auto overflow-hidden "
-        >
-          <Dialog.Title className="absolute top-[66px] text-lg font-semibold">
-            Заголовокk
-          </Dialog.Title>
-          <Dialog.Description>
-            Это описание модального окна.s sssssss sssssssssss ssss dssd fdvdf
-            efv v edf gf dfs Lorem ipsum dolor sit amet consectetur adipisicing
-            elit. Ab, architecto minima. Nihil inventore tempora minus similique
-            eaque ea voluptate, laboriosam quis quia molestias deserunt fugiat
-            asperiores repellendus molestiae esse eveniet? Это описание
-            модального окна.s sssssss sssssssssss ssss dssd fdvdf efv v edf gf
-            dfs Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab,
-            architecto minima. Nihil inventore tempora minus similique eaque ea
-            voluptate, laboriosam quis quia molestias deserunt fugiat asperiores
-            repellendus molestiae esse eveniet? Это описание модального окна.s
-            sssssss sssssssssss ssss dssd fdvdf efv v edf gf dfs Lorem ipsum
-            dolor sit amet consectetur adipisicing elit. Ab, architecto minima.
-            Nihil inventore tempora minus similique eaque ea voluptate,
-            laboriosam quis quia molestias deserunt fugiat asperiores
-            repellendus molestiae esse eveniet? Это описание модального окна.s
-            sssssss sssssssssss ssss dssd fdvdf efv v edf gf dfs Lorem ipsum
-            dolor sit amet consectetur adipisicing elit. Ab, architecto minima.
-            Nihil inventore tempora minus similique eaque ea voluptate,
-            laboriosam quis quia molestias deserunt fugiat asperiores
-            repellendus molestiae esse eveniet?
-          </Dialog.Description>
-        </Modal>
-
-        <Modal
-          isOpen={isModalOpen}
-          setIsOpen={setIsModalOpen}
-          contentClassName="w-[89%] sm:w-[382px] min-h-[600px] bg-bg3 p-6 flex items-center justify-center 
-            md:w-[688px] md:min-h-[700px] md:p-8 
-            xl:w-[1216px] xl:min-h-[755px]"
-          buttonClassName="top-[30px] right-[30px]"
-          childContentClassName="flex flex-col items-center justify-center"
-        >
-          <Dialog.Title className=" text-lg font-semibold ">Заk</Dialog.Title>
-          <Dialog.Description>
-            Это описание Lorem ipsum dolor sit amet consectetur adipisicing
-            elit. Ab, architecto minima. Nihil inventore tempora minus similique
-            eaque ea voluptate, laboriosam quis quia molestias deserunt fugiat
-            asperiores repellendus molestiae esse eveniet? sssssssssssss
-          </Dialog.Description>
-        </Modal>
+<Test />
       </div>
     </main>
   );
