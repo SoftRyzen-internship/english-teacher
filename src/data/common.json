@@ -44,5 +44,12 @@
       "ariaLabel": "Посилання на Instagram",
       "displayText": "yulia_tutor.eng"
     }
-  ]
+  ],
+  "burger": {
+    "burgerAriaLabel": "Кнопка відкриття модального вікна у вигляді трьох рисочок",
+    "closeBtnAriaLabel": "Кнопка закриття модального вікна у вигляді хрестика",
+    "scrollBtn": "Записатись",
+    "href": "contacts",
+    "title": "Модальне вікто з навігацією по сайту"
+  }
 }

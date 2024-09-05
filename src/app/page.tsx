@@ -12,6 +12,7 @@ import { skillsQuery } from '@/api/queries';
 import { SkillsQueryResult } from '@/api/types';
 import { Test } from '@/components/common/test/test';
 import { ReviewsList } from '@/components/common/reviews-list/reviews-list';
+import { BurgerMenu } from '@/components/common/burger-menu/burger-menu';
 
 export default async function Home() {
   const token = process.env.DATOCMS_READONLY_TOKEN;
@@ -27,6 +28,8 @@ export default async function Home() {
   return (
     <main>
       <div className="container">
+        <BurgerMenu />
+
         <ReviewsList />
         <div>
           {result.teacherSkillsProfile.skillPlate.map((skill) => (
