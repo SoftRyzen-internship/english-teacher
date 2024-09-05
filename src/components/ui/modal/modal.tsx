@@ -16,7 +16,7 @@ export const Modal = ({ children, isOpen, setIsOpen, reviews }: ModalProps) => {
             reviews
               ? 'w-[89%] sm:w-[420px] min-h-[434px] bg-bgButtonInactive p-6 pt-[111px] rounded-lg md:w-[526px] md:min-h-[378px] md:p-8 md:pt-[137px] xl:w-[600px] xl:min-h-[390px]'
               : 'w-[80%] sm:w-[382px] min-h-[600px] bg-bg3 p-6 flex items-center justify-center md:w-[688px] md:h-[700px] md:p-8 xl:w-[1216px] xl:min-h-[755px]'
-           )}
+          )}
         >
           <Dialog.Close asChild>
             <button
