@@ -8,7 +8,7 @@ import { SuccessErrorMessageComponent } from '../success-error-message-component
 export type Status = 'success' | 'error';
 
 export const Test = () => {
-  const [status, setStatus] = useState<Status>('success');
+  const [status, setStatus] = useState<Status>('error');
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
   return (

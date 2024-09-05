@@ -28,7 +28,7 @@ export const SuccessErrorMessageComponent = ({
         />
       )}
 
-      <Dialog.Title className="font-montserrat text-[32px] font-bold leading-[1.3] text-text1Icon3 text-center mb-6 smOnly:max-w-[247px] md:text-[48px] md:leading-[1.1]">
+      <Dialog.Title className="font-montserrat text-[32px] font-bold leading-[1.3] text-text1Icon3 text-center mb-6 max-w-[247px] smOnly:max-w-[247px] md:text-[48px] md:leading-[1.1]">
         {title}
       </Dialog.Title>
       <Dialog.Description className="font-montserrat text-lg font-medium text-center smOnly:max-w-[295px] mdOnly:w-[530px] md:text-[24px] leading-[1.5] ">
