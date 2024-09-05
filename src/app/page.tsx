@@ -1,5 +1,5 @@
 import { ScrollButton } from '@/components/ui/scroll-button/scroll-button';
-import faq from '@/data/fag.json';
+import faq from '@/data/faq.json';
 
 import { Accordion } from '@/components/common/accordion/accordion';
 
@@ -11,8 +11,15 @@ import { SocialLinks } from '@/components/ui/social-links/social-links';
 import { skillsQuery } from '@/api/queries';
 import { SkillsQueryResult } from '@/api/types';
 import { Test } from '@/components/common/test/test';
+
+import { BenefitsList } from '@/components/common/benefits-list/benefits-list';
+
 import { ReviewsList } from '@/components/common/reviews-list/reviews-list';
+
 import { BurgerMenu } from '@/components/common/burger-menu/burger-menu';
+
+import { Slider } from '@/components/ui/slider/slider';
+import { FAQ } from '@/sections/faq/faq';
 
 export default async function Home() {
   const token = process.env.DATOCMS_READONLY_TOKEN;
@@ -27,8 +34,14 @@ export default async function Home() {
 
   return (
     <main>
+      <FAQ />
+
       <div className="container">
         <BurgerMenu />
+
+        <h2 className="section-title text-center my-4">
+          Slider in Reviews section
+        </h2>
 
         <ReviewsList />
         <div>
@@ -39,6 +52,45 @@ export default async function Home() {
             </div>
           ))}
         </div>
+
+        <h2 className="section-title text-center my-4">
+          Example of slider in Advantages section
+        </h2>
+        <Slider section="advantages">
+          <div className="bg-slate-400 ">
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptates laudantium architecto provident minus quis? Eius illum
+              sapiente voluptas libero, dolorum commodi laborum veniam incidunt
+              ipsam id similique molestias aspernatur vitae nam dignissimos,
+              dolores labore sed. Sit reprehenderit deserunt excepturi,
+              molestiae modi esse doloribus. Doloremque eveniet quidem
+              recusandae at laudantium fugit!
+            </p>
+          </div>
+          <div className="bg-orange-400 ">
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit,
+              neque, eaque eius ipsum nihil consequatur, quod corrupti placeat
+              iure enim dolores minus sunt. A dolorum pariatur modi, cumque,
+              veritatis qui vitae distinctio porro aspernatur harum et nam
+              commodi! Et, ipsa!
+            </p>
+          </div>
+          <div className="bg-lime-400 ">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque,
+              dolorem! Doloremque explicabo repellendus adipisci veritatis
+              necessitatibus consequuntur aut dicta ex, ipsa totam delectus
+              repudiandae, nisi voluptates maiores dolores ipsum asperiores
+              voluptatem architecto! Distinctio, dignissimos inventore? Delectus
+              error, possimus tenetur officia maxime placeat dicta earum vitae
+              eos hic amet fugiat necessitatibus, deserunt assumenda
+              reprehenderit accusantium quis voluptatem quo. Placeat, quas
+              aliquid?
+            </p>
+          </div>
+        </Slider>
 
         <Logo />
         <Navigation />
@@ -71,7 +123,7 @@ export default async function Home() {
         <SocialLinks section="contacts" />
         <SocialLinks />
         <Accordion faqs={faq.accordion} />
-
+        <BenefitsList />
         <Test />
       </div>
     </main>
