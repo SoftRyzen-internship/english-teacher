@@ -15,6 +15,7 @@ import { Test } from '@/components/common/test/test';
 import { BenefitsList } from '@/components/common/benefits-list/benefits-list';
 
 import { ReviewsList } from '@/components/common/reviews-list/reviews-list';
+import { AboutInfo } from '@/components/common/about-info/about-info';
 
 export default async function Home() {
   const token = process.env.DATOCMS_READONLY_TOKEN;
@@ -30,6 +31,7 @@ export default async function Home() {
   return (
     <main>
       <div className="container">
+        <AboutInfo />
         <ReviewsList />
         <div>
           {result.teacherSkillsProfile.skillPlate.map((skill) => (
