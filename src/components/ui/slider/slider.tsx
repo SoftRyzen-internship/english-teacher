@@ -1,11 +1,13 @@
 'use client';
 
 import 'swiper/css';
-import { Children, useEffect, useState } from 'react';
+
+import { Children, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
-import { SliderProps } from './types';
 import clsx from 'clsx';
+
+import { SliderProps } from './types';
 
 import PrevButtonIcon from '@/../public/assets/images/icons/arrow-prev.svg';
 import NextButtonIcon from '@/../public/assets/images/icons/arrow-next.svg';
@@ -27,7 +29,7 @@ export const Slider = ({ section, children }: SliderProps) => {
     advantages: {},
     reviews: {
       breakpoints: {
-        688: {
+        768: {
           slidesPerView: 2,
         },
       },
