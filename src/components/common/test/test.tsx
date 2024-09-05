@@ -63,8 +63,6 @@ export const Test = () => {
         <SuccessErrorMessageComponent status={status} />
       </Modal>
 
-
-
       {/* <InputField
           id={formData.inputs[0].id}
           label={formData.inputs[0].label}
@@ -92,25 +90,25 @@ export const Test = () => {
           placeholder={formData.inputs[2].placeholder}
         /> */}
 
-{formData.inputs.map((input) => (
-      <InputField
-        key={input.id}
-        id={input.id}
-        label={input.label}
-        type={input.type}
-        name={input.name}
-        placeholder={input.placeholder}
-        autoComplete={input.autoComplete}
-        mask={input.mask}
-      />
-    ))}
+      {formData.inputs.map((input) => (
+        <InputField
+          key={input.id}
+          id={input.id}
+          label={input.label}
+          type={input.type}
+          name={input.name}
+          placeholder={input.placeholder}
+          autoComplete={input.autoComplete}
+          mask={input.mask}
+        />
+      ))}
 
       <Textarea
-  id={formData.textarea.id}
-  label={formData.textarea.label}
-  name={formData.textarea.name}
-  placeholder={formData.textarea.placeholder}
-/>
+        id={formData.textarea.id}
+        label={formData.textarea.label}
+        name={formData.textarea.name}
+        placeholder={formData.textarea.placeholder}
+      />
       <Checkbox
         id={formData.checkbox.id}
         label={formData.checkbox.label}

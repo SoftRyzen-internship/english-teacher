@@ -7,7 +7,7 @@ interface InputFieldProps {
   type: string;
   name: string;
   placeholder: string;
-  autoComplete?: string; 
+  autoComplete?: string;
   mask?: string;
 }
 
@@ -16,9 +16,9 @@ export const InputField: React.FC<InputFieldProps> = ({
   label,
   type,
   name,
-  placeholder, 
+  placeholder,
   autoComplete,
-  mask, 
+  mask,
 }) => {
   return (
     <div className="flex flex-col gap-1.5 mb-6 md:mb-10">
@@ -33,7 +33,7 @@ export const InputField: React.FC<InputFieldProps> = ({
           name={name}
           placeholder={placeholder}
           autoComplete={autoComplete}
-          type="tel" 
+          type="tel"
           className={clsx(
             'w-full p-4 rounded-[10px] bg-veryLightGray text-text1Icon3',
             'focus:outline-none focus:bg-bgButtonInactive'

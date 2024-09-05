@@ -5,7 +5,6 @@ interface TextareaProps {
   label: string;
   name: string;
   placeholder: string;
- 
 }
 
 export const Textarea: React.FC<TextareaProps> = ({
@@ -13,7 +12,6 @@ export const Textarea: React.FC<TextareaProps> = ({
   label,
   name,
   placeholder,
-
 }) => {
   return (
     <div className="flex flex-col gap-1.5 mb-6 md:mb-10">
@@ -24,7 +22,6 @@ export const Textarea: React.FC<TextareaProps> = ({
         id={id}
         name={name}
         placeholder={placeholder}
-    
         className={clsx(
           'w-full h-[150px] p-4 rounded-[10px] bg-veryLightGray md:h-[167px] ',
           'focus:outline-none focus:bg-bgButtonInactive',
@@ -37,4 +34,4 @@ export const Textarea: React.FC<TextareaProps> = ({
 };
 
 // buttonFocusYellow
-// bg-veryLightGray 
+// bg-veryLightGray

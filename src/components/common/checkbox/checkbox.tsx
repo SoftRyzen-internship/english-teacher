@@ -6,13 +6,12 @@ interface CheckboxProps {
   type: string;
 }
 
-export const Checkbox: React.FC<CheckboxProps>  = ({
-  id,
-  label,
-  type,
-}) => {
+export const Checkbox: React.FC<CheckboxProps> = ({ id, label, type }) => {
   return (
-    <label htmlFor={id} className="relative inline-flex items-center gap-3 cursor-pointer">
+    <label
+      htmlFor={id}
+      className="relative inline-flex items-center gap-3 cursor-pointer"
+    >
       <div className="relative w-6 h-6">
         <input
           type={type}
