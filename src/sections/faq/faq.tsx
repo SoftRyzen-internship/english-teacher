@@ -5,7 +5,7 @@ import { QuestionMarks } from '@/components/common/question-marks.tsx/question-m
 
 export const FAQ = () => {
   return (
-    <section id="faq" className="pt-6 pb-[50px] md:py-[50px] xl:py-[80px] ">
+    <section id="faq" className="py-[50px] xl:py-[80px] ">
       <div className="container relative">
         <QuestionMarks />
         <h2 className="section-title text-center mb-[30px] xl:mb-[54px] xl:w-[546px] xl:mx-auto">
