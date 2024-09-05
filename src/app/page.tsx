@@ -1,7 +1,7 @@
 import { ScrollButton } from '@/components/ui/scroll-button/scroll-button';
 import faq from '@/data/faq.json';
 
-// import { Accordion } from '@/components/common/accordion/accordion';
+import { Accordion } from '@/components/common/accordion/accordion';
 
 import { Logo } from '@/components/ui/logo/logo';
 import { Navigation } from '@/components/ui/navigation/navigation';
@@ -73,7 +73,7 @@ export default async function Home() {
         <SocialLinks section="footer" />
         <SocialLinks section="contacts" />
         <SocialLinks />
-        {/* <Accordion faqs={faq.accordion} /> */}
+        <Accordion faqs={faq.accordion} />
         <BenefitsList />
         <Test />
       </div>
