@@ -21,5 +21,28 @@
       "to": "contacts",
       "name": "Контакти"
     }
+  ],
+  "socials": [
+    {
+      "id": 1,
+      "name": "telegram",
+      "link": "https://t.me/yuliaenglish31",
+      "ariaLabel": "Посилання на Telegram",
+      "displayText": "@yuliaenglish31"
+    },
+    {
+      "id": 2,
+      "name": "mail",
+      "link": "mailto:sorokau138@gmail.com",
+      "ariaLabel": "Посилання на пошту",
+      "displayText": "sorokau138@gmail.com"
+    },
+    {
+      "id": 3,
+      "name": "instagram",
+      "link": "https://www.instagram.com/yulia_tutor.eng",
+      "ariaLabel": "Посилання на Instagram",
+      "displayText": "yulia_tutor.eng"
+    }
   ]
 }
