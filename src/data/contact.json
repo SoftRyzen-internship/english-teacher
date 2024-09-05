@@ -1,0 +1,44 @@
+{
+  "title": "Онлайн-англійська для школярів",
+  "text": "Запишіться уже сьогодні та отримайте безплатну консультацію",
+  "inputs": [
+    {
+      "id": "username",
+      "label": "Ім’я *",
+      "type": "text",
+      "name": "username",
+      "placeholder": "Іван Іванов",
+      "autoComplete": "name"
+    },
+    {
+      "id": "phone",
+      "label": "Телефон *",
+      "type": "tel",
+      "name": "phone",
+      "placeholder": "+380988888545",
+      "autoComplete": "tel",
+      "mask": "+38 999 999 99 99"
+    },
+    {
+      "id": "email",
+      "label": "Пошта *",
+      "type": "email",
+      "name": "email",
+      "placeholder": "ivanovivan@gmail.com",
+      "autoComplete": "email"
+    }
+  ],
+  "textarea": {
+    "id": "comment",
+    "label": "Залиште повідомлення *",
+    "type": "textarea",
+    "name": "comment",
+    "placeholder": "Залиште повідомлення"
+  },
+  "checkbox": {
+    "id": "checked",
+    "label": "Даю згоду на обробку персональних даних",
+    "type": "checkbox",
+    "name": "checked"
+  }
+}
