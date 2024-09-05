@@ -51,6 +51,22 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 | `colorButton`  | boolean   | optional, determines whether the button has a colored border and background with hover and focus effects. |
 | `borderButton` | boolean   | optional, applies a solid border and color styling to the button with hover and focus effects.            |
 
+- #### component SocialLinks
+
+| Prop      | Type   | Description                                                                   |
+| --------- | ------ | ----------------------------------------------------------------------------- |
+| `section` | string | optional, determines the style and layout depending on which page section is. |
+
+- #### component SocialLink
+
+| Prop          | Type                                    | Description                                                                       |
+| ------------- | --------------------------------------- | --------------------------------------------------------------------------------- |
+| `icon`        | React.FC<React.SVGProps<SVGSVGElement>> | required, the SVG icon component for the social media platform.                   |
+| `link`        | string                                  | required, the URL to the social media page.                                       |
+| `ariaLabel`   | string                                  | required, the ARIA label for the link, used for accessibility purposes.           |
+| `displayText` | string                                  | optional, the text to display alongside the icon, used in the 'contacts' section. |
+| `section`     | string                                  | optional, defines which section (e.g., 'contacts', 'footer') affects styling.     |
+
 - #### component Modal
 
 | Prop        | Type      | Description                                                                   |
@@ -59,3 +75,10 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 | `isOpen`    | boolean   | required, controls whether the modal is open or closed.                       |
 | `setIsOpen` | function  | required, function to set the modal's open/closed state.                      |
 | `reviews`   | boolean   | optional, applies specific styles and behavior for reviews modal when `true`. |
+
+- #### component ReviewCard
+
+| Prop     | Type   | Description                                                          |
+| -------- | ------ | -------------------------------------------------------------------- |
+| `author` | string | required, the name of the author of the review.                      |
+| `text`   | string | required, the review content that will be displayed inside the card. |
