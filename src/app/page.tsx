@@ -17,6 +17,7 @@ import { BenefitsList } from '@/components/common/benefits-list/benefits-list';
 import { ReviewsList } from '@/components/common/reviews-list/reviews-list';
 import { Slider } from '@/components/ui/slider/slider';
 import { FAQ } from '@/sections/faq/faq';
+import { SkillsList } from '@/components/common/skills-list/skills-list';
 
 export default async function Home() {
   const token = process.env.DATOCMS_READONLY_TOKEN;
@@ -38,14 +39,7 @@ export default async function Home() {
           Slider in Reviews section
         </h2>
         <ReviewsList />
-        <div>
-          {result.teacherSkillsProfile.skillPlate.map((skill) => (
-            <div key={skill.id}>
-              <p>{skill.number}</p>
-              <p>{skill.name}</p>
-            </div>
-          ))}
-        </div>
+        {result && <SkillsList skillsData={result} />}
 
         <h2 className="section-title text-center my-4">
           Example of slider in Advantages section
