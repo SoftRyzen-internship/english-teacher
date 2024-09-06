@@ -1,26 +1,21 @@
+'use client';
+
 import { Slider } from '@/components/ui/slider/slider';
 import { ReviewCard } from '../review-card/review-card';
 
-import list from '@/data/reviews.json';
+import reviewsData from '@/data/reviews.json';
+import { useDeviceType } from '@/hooks/use-device-type';
 
 export const ReviewsList = () => {
-  const { reviews } = list;
-  return (
-    <div className="flex gap-6 flex-wrap xl:flex-nowrap">
-      <Slider section="reviews">
-        {reviews.map((review) => (
-          <ReviewCard
-            key={review.id}
-            author={review.author}
-            text={review.text}
-          />
-        ))}
-      </Slider>
-      {/* {reviews.map((review) => (
-        <li key={review.id}>
-          <ReviewCard author={review.author} text={review.text} />
-        </li>
-      ))} */}
-    </div>
+  const { isDesktop } = useDeviceType();
+
+  const cards = reviewsData.cards.map((review) => (
+    <ReviewCard key={review.id} author={review.author} text={review.text} />
+  ));
+
+  return isDesktop ? (
+    <div className="xl:flex xl:gap-6">{cards}</div>
+  ) : (
+    <Slider section="reviews">{cards}</Slider>
   );
 };
