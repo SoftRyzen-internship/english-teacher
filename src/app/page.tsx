@@ -6,6 +6,7 @@ import { BurgerMenu } from '@/components/common/burger-menu/burger-menu';
 import { Slider } from '@/components/ui/slider/slider';
 import { FAQ } from '@/sections/faq/faq';
 import { AboutInfo } from '@/components/common/about-info/about-info';
+import { Benefits } from '@/sections/benefits/benefits';
 
 export default async function Home() {
   const token = process.env.DATOCMS_READONLY_TOKEN;
@@ -20,8 +21,8 @@ export default async function Home() {
 
   return (
     <main>
+      <Benefits />
       <FAQ />
-
       <div className="container">
         <BurgerMenu />
 
