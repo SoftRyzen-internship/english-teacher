@@ -9,7 +9,7 @@ interface TextareaProps {
   name: string;
   placeholder: string;
   errors: FieldErrors;
-  register: any; 
+  register: any;
 }
 
 export const Textarea: React.FC<TextareaProps> = ({
@@ -20,7 +20,7 @@ export const Textarea: React.FC<TextareaProps> = ({
   errors,
   register,
 }) => {
-  const [charCount, setCharCount] = useState(0); 
+  const [charCount, setCharCount] = useState(0);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     setCharCount(e.target.value.length);
@@ -36,19 +36,19 @@ export const Textarea: React.FC<TextareaProps> = ({
         name={name}
         placeholder={placeholder}
         {...register(name)}
-        maxLength={300} 
+        maxLength={300}
         onChange={handleInputChange}
         className={clsx(
           'w-full h-[150px] p-4 rounded-[10px] bg-veryLightGray md:h-[167px] ',
           'focus:outline-none focus:bg-bgButtonInactive',
           'resize-none',
           'text-text1Icon3',
-           (charCount === 300 || errors[name]) ? 'border border-error' : ''
+          charCount === 300 || errors[name] ? 'border border-error' : ''
         )}
       />
       {(charCount === 300 || errors[name]) && (
         <p className="absolute bottom-[-24px] flex gap-0.5 text-sm font-medium text-error ">
-         <ErrIcon  width={17} hanging={18}/> {errors[name]?.message as string}
+          <ErrIcon width={17} hanging={18} /> {errors[name]?.message as string}
         </p>
       )}
     </div>

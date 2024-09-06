@@ -24,8 +24,8 @@ export const InputField: React.FC<InputFieldProps> = ({
   register,
   placeholder,
   autoComplete,
-  mask, 
-  errors
+  mask,
+  errors,
 }) => {
   return (
     <div className="relative flex flex-col gap-1.5 mb-6 md:mb-10">
@@ -45,7 +45,7 @@ export const InputField: React.FC<InputFieldProps> = ({
           className={clsx(
             'w-full p-4 rounded-[10px] bg-veryLightGray text-text1Icon3',
             'focus:outline-none focus:bg-bgButtonInactive',
-            errors[name] && 'border border-error' 
+            errors[name] && 'border border-error'
           )}
         />
       ) : (
@@ -59,13 +59,13 @@ export const InputField: React.FC<InputFieldProps> = ({
           className={clsx(
             'w-full p-4 rounded-[10px] bg-veryLightGray text-text1Icon3',
             'focus:outline-none focus:bg-bgButtonInactive',
-            errors[name] && 'border border-error' 
+            errors[name] && 'border border-error'
           )}
         />
       )}
       {errors[name] && (
         <p className="absolute bottom-[-24px] flex gap-0.5 text-sm font-medium text-error ">
-         <ErrIcon  width={17} hanging={18}/> {errors[name]?.message as string}
+          <ErrIcon width={17} hanging={18} /> {errors[name]?.message as string}
         </p>
       )}
     </div>

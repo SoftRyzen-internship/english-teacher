@@ -13,12 +13,9 @@ import { useForm } from 'react-hook-form';
 import { validationSchema } from '@/utils/validation';
 export type Status = 'success' | 'error';
 
-
-
 import * as yup from 'yup';
 import clsx from 'clsx';
 import { Button } from '../button/button';
-
 
 export type FormData = yup.InferType<typeof validationSchema>;
 
@@ -27,17 +24,17 @@ export const Test = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const {
-    register,  
+    register,
     handleSubmit,
-    formState: { errors }, 
+    formState: { errors },
   } = useForm<FormData>({
     mode: 'onSubmit',
-    resolver: yupResolver(validationSchema),  
+    resolver: yupResolver(validationSchema),
   });
-  
+
   const onSubmit = (data: any) => {
     console.log('Form Data:', data);
-    setIsModalOpen(true);  
+    setIsModalOpen(true);
     setStatus('success');
   };
 
@@ -84,12 +81,10 @@ export const Test = () => {
           label={formData.checkbox.label}
           type={formData.checkbox.type}
           name={formData.checkbox.name}
-          register={register} 
+          register={register}
           errors={errors}
         />
-        <Button>
-          Отправить
-        </Button>
+        <Button>Отправить</Button>
       </form>
     </>
   );

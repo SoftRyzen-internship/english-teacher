@@ -19,16 +19,11 @@ export const validationSchema = yup.object().shape({
     ),
   email: yup
     .string()
-    .required('Пошта обов’язкова') 
+    .required('Пошта обов’язкова')
     .matches(
       /^[A-Za-z0-9._%+-]{2,}@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/,
       'Введена адреса недійсна.'
     ),
-  comment: yup
-    .string()
-    .max(300, 'У тексті має бути не більше 300 символів.'),
-  checked: yup
-    .boolean()
-    .required()
-    .oneOf([true]),
+  comment: yup.string().max(300, 'У тексті має бути не більше 300 символів.'),
+  checked: yup.boolean().required().oneOf([true]),
 });
