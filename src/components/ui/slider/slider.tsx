@@ -26,7 +26,6 @@ export type SectionSettings = {
 
 export const Slider = ({ section, children }: SliderProps) => {
   const swiperSettings: SectionSettings = {
-    advantages: {},
     reviews: {
       breakpoints: {
         768: {
@@ -91,7 +90,7 @@ export const Slider = ({ section, children }: SliderProps) => {
             'w-[75px] flex justify-center items-center',
             'font-montserrat font-medium text-[24px] leading-[1.5]',
             {
-              block: section === 'advantages',
+              block: section === 'benefits',
               'block md:hidden': section === 'reviews',
             }
           )}

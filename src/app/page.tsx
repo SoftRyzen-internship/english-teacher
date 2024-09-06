@@ -12,14 +12,13 @@ import { skillsQuery } from '@/api/queries';
 import { SkillsQueryResult } from '@/api/types';
 import { Test } from '@/components/common/test/test';
 
-import { BenefitsList } from '@/components/common/benefits-list/benefits-list';
-
 import { ReviewsList } from '@/components/common/reviews-list/reviews-list';
 
 import { BurgerMenu } from '@/components/common/burger-menu/burger-menu';
 
 import { Slider } from '@/components/ui/slider/slider';
 import { FAQ } from '@/sections/faq/faq';
+import { Benefits } from '@/sections/benefits/benefits';
 
 export default async function Home() {
   const token = process.env.DATOCMS_READONLY_TOKEN;
@@ -34,8 +33,8 @@ export default async function Home() {
 
   return (
     <main>
+      <Benefits />
       <FAQ />
-
       <div className="container">
         <BurgerMenu />
 
@@ -123,7 +122,7 @@ export default async function Home() {
         <SocialLinks section="contacts" />
         <SocialLinks />
         <Accordion faqs={faq.accordion} />
-        <BenefitsList />
+
         <Test />
       </div>
     </main>
