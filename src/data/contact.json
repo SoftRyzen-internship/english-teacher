@@ -40,5 +40,38 @@
     "label": "Даю згоду на обробку персональних даних",
     "type": "checkbox",
     "name": "checked"
-  }
+  },
+  "sendButton": "Записатись",
+  
+    "validation": {
+      "username": {
+        "required": { "message": "Ваше ім’я обов’язкове" },
+        "minLength": { "value": 2, "message": "Мінімум 2 символи" },
+        "maxLength": { "value": 30, "message": "Максимум 30 символів" },
+        "regExp": {
+          "value": "^(?!.*(?:[ -]{2,}| -| - |^[ -]|^-))[A-Za-zА-Яа-яЁёІіЇїЄєҐґ'ʼ` -]+$",
+          "message": "Максимальна довжина 30 символів."
+        }
+      },
+      "phone": {
+        "required": { "message": "Номер телефону обов’язковий" },
+        "regExp": {
+          "value": "^\\+38\\s?\\d{3}\\s?\\d{3}\\s?\\d{2}\\s?\\d{2}$",
+          "message": "Номер телефону обов’язковий"
+        }
+      },
+      "email": {
+        "required": { "message": "Пошта обов’язкова" },
+        "regExp": {
+          "value": "^[A-Za-z0-9._%+-]{2,}@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$",
+          "message": "Введена адреса недійсна."
+        }
+      },
+      "comment": {
+        "maxLength": { "value": 300, "message": "У тексті має бути не більше 300 символів." }
+      },
+      "checked": {
+        "value": true
+      }
+    }  
 }

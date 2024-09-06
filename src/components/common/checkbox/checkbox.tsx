@@ -18,7 +18,7 @@ export const Checkbox: React.FC<CheckboxProps> = ({
   register,
   errors,
 }) => {
-  console.log(errors[name]);
+  // console.log(errors[name]);
 
   return (
     <div className="relative mb-6 md:mb-10">

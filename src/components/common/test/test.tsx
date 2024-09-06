@@ -1,7 +1,6 @@
 'use client';
 
 import { Modal } from '@/components/ui/modal/modal';
-import * as Dialog from '@radix-ui/react-dialog';
 import { useState } from 'react';
 import { SuccessErrorMessageComponent } from '../success-error-message-component/success-error-message-component';
 import { yupResolver } from '@hookform/resolvers/yup';
@@ -14,7 +13,6 @@ import { validationSchema } from '@/utils/validation';
 export type Status = 'success' | 'error';
 
 import * as yup from 'yup';
-import clsx from 'clsx';
 import { Button } from '../button/button';
 
 export type FormData = yup.InferType<typeof validationSchema>;
@@ -27,8 +25,10 @@ export const Test = () => {
     register,
     handleSubmit,
     formState: { errors },
+    watch,
+    reset,
   } = useForm<FormData>({
-    mode: 'onSubmit',
+    mode: 'onChange',
     resolver: yupResolver(validationSchema),
   });
 
@@ -39,19 +39,7 @@ export const Test = () => {
   };
 
   return (
-    <>
-      <button
-        onClick={() => setIsModalOpen(true)}
-        className="btn w-100 h-100 text-buttonFocusPink my-10
-           md:top-8 md:right-8"
-      >
-        Форма связи
-      </button>
-
-      <Modal isOpen={isModalOpen} setIsOpen={setIsModalOpen}>
-        <SuccessErrorMessageComponent status={status} />
-      </Modal>
-
+    <>    
       <form onSubmit={handleSubmit(onSubmit)}>
         {formData.inputs.map((input) => (
           <InputField
@@ -84,8 +72,21 @@ export const Test = () => {
           register={register}
           errors={errors}
         />
-        <Button>Отправить</Button>
+        <Button>{formData.sendButton}</Button>
       </form>
+
+
+      <button
+        onClick={() => setIsModalOpen(true)}
+        className="btn w-100 h-100 text-buttonFocusPink my-10
+           md:top-8 md:right-8"
+      >
+        Форма связи
+      </button>
+
+      <Modal isOpen={isModalOpen} setIsOpen={setIsModalOpen}>
+        <SuccessErrorMessageComponent status={status} />
+      </Modal>
     </>
   );
 };
