@@ -30,7 +30,7 @@ export default async function Home() {
   return (
     <main>
       <div className="container">
-        <ReviewsList />
+        {/* <ReviewsList />
         <div>
           {result.teacherSkillsProfile.skillPlate.map((skill) => (
             <div key={skill.id}>
@@ -71,7 +71,7 @@ export default async function Home() {
         <SocialLinks section="contacts" />
         <SocialLinks />
         <Accordion faqs={faq.accordion} />
-        <BenefitsList />
+        <BenefitsList /> */}
         <Test />
       </div>
     </main>
