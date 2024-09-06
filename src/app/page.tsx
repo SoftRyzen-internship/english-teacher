@@ -1,25 +1,11 @@
-import { ScrollButton } from '@/components/ui/scroll-button/scroll-button';
-import faq from '@/data/faq.json';
-
-import { Accordion } from '@/components/common/accordion/accordion';
-
-import { Logo } from '@/components/ui/logo/logo';
-import { Navigation } from '@/components/ui/navigation/navigation';
 import { executeQuery } from '@datocms/cda-client';
-import React from 'react';
-import { SocialLinks } from '@/components/ui/social-links/social-links';
 import { skillsQuery } from '@/api/queries';
 import { SkillsQueryResult } from '@/api/types';
-import { Test } from '@/components/common/test/test';
-
-import { BenefitsList } from '@/components/common/benefits-list/benefits-list';
-
 import { ReviewsList } from '@/components/common/reviews-list/reviews-list';
-
 import { BurgerMenu } from '@/components/common/burger-menu/burger-menu';
-
 import { Slider } from '@/components/ui/slider/slider';
 import { FAQ } from '@/sections/faq/faq';
+import { AboutInfo } from '@/components/common/about-info/about-info';
 
 export default async function Home() {
   const token = process.env.DATOCMS_READONLY_TOKEN;
@@ -39,19 +25,13 @@ export default async function Home() {
       <div className="container">
         <BurgerMenu />
 
+        <AboutInfo />
+
         <h2 className="section-title text-center my-4">
           Slider in Reviews section
         </h2>
 
         <ReviewsList />
-        <div>
-          {result.teacherSkillsProfile.skillPlate.map((skill) => (
-            <div key={skill.id}>
-              <p>{skill.number}</p>
-              <p>{skill.name}</p>
-            </div>
-          ))}
-        </div>
 
         <h2 className="section-title text-center my-4">
           Example of slider in Advantages section
@@ -91,40 +71,6 @@ export default async function Home() {
             </p>
           </div>
         </Slider>
-
-        <Logo />
-        <Navigation />
-        <br />
-        <ScrollButton borderButton={true} href="contacts">
-          Записатись
-        </ScrollButton>
-        <br />
-        <ScrollButton colorButton={true} href="contacts">
-          Безплатна консультація
-        </ScrollButton>
-
-        <p className="font-montserrat bg-accent1">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab,
-          architecto minima. Nihil inventore tempora minus similique eaque ea
-          voluptate, laboriosam quis quia molestias deserunt fugiat asperiores
-          repellendus molestiae esse eveniet?
-        </p>
-
-        <h2 className="section-title">Title h2</h2>
-        <h3 className="section-subtitle">Title h3</h3>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab,
-          architecto minima. Nihil inventore tempora minus similique eaque ea
-          voluptate, laboriosam quis quia molestias deserunt fugiat asperiores
-          repellendus molestiae esse eveniet?
-        </p>
-
-        <SocialLinks section="footer" />
-        <SocialLinks section="contacts" />
-        <SocialLinks />
-        <Accordion faqs={faq.accordion} />
-        <BenefitsList />
-        <Test />
       </div>
     </main>
   );
