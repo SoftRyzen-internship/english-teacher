@@ -15,6 +15,9 @@ import { Test } from '@/components/common/test/test';
 import { BenefitsList } from '@/components/common/benefits-list/benefits-list';
 
 import { ReviewsList } from '@/components/common/reviews-list/reviews-list';
+
+import { BurgerMenu } from '@/components/common/burger-menu/burger-menu';
+
 import { Slider } from '@/components/ui/slider/slider';
 import { FAQ } from '@/sections/faq/faq';
 
@@ -34,9 +37,12 @@ export default async function Home() {
       <FAQ />
 
       <div className="container">
+        <BurgerMenu />
+
         <h2 className="section-title text-center my-4">
           Slider in Reviews section
         </h2>
+
         <ReviewsList />
         <div>
           {result.teacherSkillsProfile.skillPlate.map((skill) => (
