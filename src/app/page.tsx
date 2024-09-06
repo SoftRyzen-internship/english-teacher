@@ -7,6 +7,7 @@ import { Slider } from '@/components/ui/slider/slider';
 import { FAQ } from '@/sections/faq/faq';
 import { AboutInfo } from '@/components/common/about-info/about-info';
 import { Benefits } from '@/sections/benefits/benefits';
+import { TelegramButton } from '@/components/ui/test-button';
 
 export default async function Home() {
   const token = process.env.DATOCMS_READONLY_TOKEN;
@@ -25,6 +26,8 @@ export default async function Home() {
       <FAQ />
       <div className="container">
         <BurgerMenu />
+
+        <TelegramButton>Press me</TelegramButton>
 
         <AboutInfo />
 
