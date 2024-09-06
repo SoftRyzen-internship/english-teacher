@@ -11,6 +11,7 @@ import { SliderProps } from './types';
 
 import PrevButtonIcon from '@/../public/assets/images/icons/arrow-prev.svg';
 import NextButtonIcon from '@/../public/assets/images/icons/arrow-next.svg';
+import { useDeviceType } from '@/hooks/use-device-type';
 
 export type SwiperSettings = {
   breakpoints?: {
@@ -25,6 +26,8 @@ export type SectionSettings = {
 };
 
 export const Slider = ({ section, children }: SliderProps) => {
+  const { isTablet } = useDeviceType();
+
   const swiperSettings: SectionSettings = {
     reviews: {
       breakpoints: {
@@ -43,6 +46,9 @@ export const Slider = ({ section, children }: SliderProps) => {
 
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(slides.length);
+
+  const lastPage =
+    section === 'reviews' && isTablet ? totalPages - 1 : totalPages;
 
   return (
     <>
@@ -102,9 +108,9 @@ export const Slider = ({ section, children }: SliderProps) => {
             `swiper-button-next-${section} w-[50px] h-[50px] rounded-full flex items-center justify-center`,
             {
               'bg-buttonFocusPink text-text3 cursor-default':
-                currentPage === totalPages,
+                currentPage === lastPage,
               'bg-accent5Icon1 hover:bg-buttonHoverPink focus:bg-buttonClickPink':
-                currentPage !== totalPages,
+                currentPage !== lastPage,
             }
           )}
         >
