@@ -5,11 +5,11 @@ import { SkillsCard } from '../skills-card/skills-card';
 
 export const SkillsList = ({ skillsData }: SkillsListProps) => {
   return (
-    <ul className="">
-      {skillsData.teacherSkillsProfile.skillPlate.map((skill) => (
+    <ul className="flex flex-col gap-5 justify-center items-center">
+      {skillsData.teacherSkillsProfile.skillPlate.map((skill, index) => (
         <SkillsCard
           key={skill.id}
-          id={skill.id}
+          index={index}
           number={skill.number}
           name={skill.name}
         />

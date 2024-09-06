@@ -1,5 +1,5 @@
 export type SkillsCardProps = {
-  id: string;
+  index: number;
   name: string;
   number: number;
 };
