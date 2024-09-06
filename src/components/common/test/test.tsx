@@ -39,7 +39,7 @@ export const Test = () => {
   };
 
   return (
-    <>    
+    <>
       <form onSubmit={handleSubmit(onSubmit)}>
         {formData.inputs.map((input) => (
           <InputField
@@ -74,7 +74,6 @@ export const Test = () => {
         />
         <Button>{formData.sendButton}</Button>
       </form>
-
 
       <button
         onClick={() => setIsModalOpen(true)}

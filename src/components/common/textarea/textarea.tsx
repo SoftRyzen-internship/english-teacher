@@ -19,7 +19,7 @@ export const Textarea: React.FC<TextareaProps> = ({
   errors,
   register,
 }) => {
-  console.log(errors)
+  console.log(errors);
   return (
     <div className="relative flex flex-col gap-1.5 mb-6 md:mb-10">
       <label htmlFor={id} className="">
@@ -38,7 +38,7 @@ export const Textarea: React.FC<TextareaProps> = ({
           errors[name] ? 'border border-error' : ''
         )}
       />
-      { errors[name] && (
+      {errors[name] && (
         <p className="absolute bottom-[-24px] flex gap-0.5 text-sm font-medium text-error ">
           <ErrIcon width={17} hanging={18} /> {errors[name]?.message as string}
         </p>
