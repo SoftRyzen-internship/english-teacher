@@ -7,6 +7,7 @@ import { Slider } from '@/components/ui/slider/slider';
 import { FAQ } from '@/sections/faq/faq';
 import { AboutInfo } from '@/components/common/about-info/about-info';
 import { Benefits } from '@/sections/benefits/benefits';
+import { Test } from '@/components/common/test/test';
 
 export default async function Home() {
   const token = process.env.DATOCMS_READONLY_TOKEN;
@@ -24,6 +25,8 @@ export default async function Home() {
       <Benefits />
       <FAQ />
       <div className="container">
+
+       
         <BurgerMenu />
 
         <AboutInfo />
@@ -72,6 +75,7 @@ export default async function Home() {
             </p>
           </div>
         </Slider>
+        <Test />
       </div>
     </main>
   );

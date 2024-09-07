@@ -74,7 +74,8 @@
       }
     },
     "checked": {
-      "value": true
+      "value": true,
+      "message": "Підтвердіть згоду на обробку даних"
     }
   }
 }

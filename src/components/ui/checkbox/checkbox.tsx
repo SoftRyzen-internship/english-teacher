@@ -1,5 +1,6 @@
 import clsx from 'clsx';
 import { CheckboxProps } from './type';
+import { ErrorMessage } from '../error-message/error-message';
 
 export const Checkbox: React.FC<CheckboxProps> = ({
   id,
@@ -39,6 +40,7 @@ export const Checkbox: React.FC<CheckboxProps> = ({
           {label}
         </span>
       </label>
+      <ErrorMessage message={errors[name]?.message as string} />
     </div>
   );
 };

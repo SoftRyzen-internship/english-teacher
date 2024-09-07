@@ -4,7 +4,17 @@ export type CheckboxProps = {
   id: string;
   label: string;
   type: string;
-  name: string;
-  register: UseFormRegister<any>;
+  name: Name;
+  register: UseFormRegister<FormData>;
   errors: FieldErrors;
+};
+
+export type Name = 'username' | 'phone' | 'comment' | 'checked' | 'email';
+
+export type FormData = {
+  username: string;
+  phone: string;
+  email: string;
+  comment?: string;
+  checked: boolean;
 };

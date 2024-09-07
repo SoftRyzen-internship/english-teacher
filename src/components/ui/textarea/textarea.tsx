@@ -18,7 +18,6 @@ export const Textarea: React.FC<TextareaProps> = ({
       </label>
       <textarea
         id={id}
-        name={name}
         placeholder={placeholder}
         {...register(name)}
         className={clsx(

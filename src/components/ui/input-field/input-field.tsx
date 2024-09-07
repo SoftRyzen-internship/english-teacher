@@ -24,7 +24,6 @@ export const InputField: React.FC<InputFieldProps> = ({
         <InputMask
           mask={mask}
           id={id}
-          name={name}
           {...register(name)}
           placeholder={placeholder}
           autoComplete={autoComplete}
@@ -39,7 +38,6 @@ export const InputField: React.FC<InputFieldProps> = ({
         <input
           type={type}
           id={id}
-          name={name}
           {...register(name)}
           placeholder={placeholder}
           autoComplete={autoComplete}

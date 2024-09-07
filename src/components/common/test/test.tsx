@@ -14,6 +14,7 @@ export type Status = 'success' | 'error';
 
 import * as yup from 'yup';
 import { Button } from '../../ui/button/button';
+import { Name } from '@/components/ui/input-field/types';
 
 export type FormData = yup.InferType<typeof validationSchema>;
 
@@ -28,7 +29,7 @@ export const Test = () => {
     watch,
     reset,
   } = useForm<FormData>({
-    mode: 'onChange',
+    mode: 'onSubmit',
     resolver: yupResolver(validationSchema),
   });
 
@@ -36,6 +37,7 @@ export const Test = () => {
     console.log('Form Data:', data);
     setIsModalOpen(true);
     setStatus('success');
+    reset()
   };
 
   return (
@@ -47,7 +49,7 @@ export const Test = () => {
             id={input.id}
             label={input.label}
             type={input.type}
-            name={input.name}
+            name={input.name as Name}
             register={register}
             placeholder={input.placeholder}
             autoComplete={input.autoComplete}
@@ -59,7 +61,7 @@ export const Test = () => {
         <Textarea
           id={formData.textarea.id}
           label={formData.textarea.label}
-          name={formData.textarea.name}
+          name={formData.textarea.name as Name}
           placeholder={formData.textarea.placeholder}
           errors={errors}
           register={register}
@@ -68,7 +70,7 @@ export const Test = () => {
           id={formData.checkbox.id}
           label={formData.checkbox.label}
           type={formData.checkbox.type}
-          name={formData.checkbox.name}
+          name={formData.checkbox.name  as Name}
           register={register}
           errors={errors}
         />

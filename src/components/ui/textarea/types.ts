@@ -1,10 +1,20 @@
-import { FieldErrors } from 'react-hook-form';
+import { UseFormRegister, FieldErrors } from 'react-hook-form';
 
 export type TextareaProps = {
   id: string;
   label: string;
-  name: string;
+  name: Name;
   placeholder: string;
   errors: FieldErrors;
-  register: any;
+  register: UseFormRegister<FormData>;
+};
+
+export type Name = 'username' | 'phone' | 'comment' | 'checked' | 'email';
+
+export type FormData = {
+  username: string;
+  phone: string;
+  email: string;
+  comment?: string;
+  checked: boolean;
 };

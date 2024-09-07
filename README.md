@@ -103,7 +103,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 | `id`          | string               | required, the unique identifier for the textarea.                        |
 | `label`       | string               | required, the label text displayed above the textarea.                   |
 | `name`        | string               | required, the name attribute for the textarea, used for form submission. |
-| `register`    | UseFormRegister<any> | required, register function from react-hook-form for input registration. |
+| `register`    | function             | required, function from `react-hook-form` to register the checkbox input.|
 | `placeholder` | string               | required, placeholder text for the textarea.                             |
 | `errors`      | FieldErrors          | required, object containing form validation errors from react-hook-form. |
 
@@ -115,7 +115,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 | `label`        | string      | required, the label text to be displayed for the input field.                                          |
 | `type`         | string      | required, the type of input (e.g., `text`, `email`, `tel`).                                            |
 | `name`         | string      | required, name attribute for the input field.                                                          |
-| `register`     | function    | required, function from `react-hook-form` to register the input.                                       |
+| `register`     | function    | required, function from `react-hook-form` to register the checkbox input.                              |
 | `errors`       | FieldErrors | required, object containing error information from react-hook-form, used to display validation errors. |
 | `placeholder`  | string      | optional, placeholder text for the input field.                                                        |
 | `autoComplete` | string      | optional, autoComplete attribute for the input field.                                                  |
@@ -129,5 +129,5 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 | `label`    | string               | required, the label text that will be displayed next to the checkbox.    |
 | `type`     | string               | required, the type of input, should be `'checkbox'`.                     |
 | `name`     | string               | required, the name attribute for the checkbox input.                     |
-| `register` | UseFormRegister<any> | required, register function from react-hook-form for input registration. |
+| `register` | function             | required, function from `react-hook-form` to register the checkbox input.|
 | `errors`   | FieldErrors          | required, object containing form validation errors from react-hook-form. |
