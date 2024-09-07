@@ -5,7 +5,7 @@ export type InputFieldProps = {
   label: string;
   type: string;
   name: Name;
-  register:  UseFormRegister<FormData>;
+  register: UseFormRegister<FormData>;
   placeholder: string;
   autoComplete?: string;
   mask?: string;

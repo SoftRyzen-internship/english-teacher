@@ -25,8 +25,6 @@ export default async function Home() {
       <Benefits />
       <FAQ />
       <div className="container">
-
-       
         <BurgerMenu />
 
         <AboutInfo />

@@ -37,7 +37,7 @@ export const Test = () => {
     console.log('Form Data:', data);
     setIsModalOpen(true);
     setStatus('success');
-    reset()
+    reset();
   };
 
   return (
@@ -70,7 +70,7 @@ export const Test = () => {
           id={formData.checkbox.id}
           label={formData.checkbox.label}
           type={formData.checkbox.type}
-          name={formData.checkbox.name  as Name}
+          name={formData.checkbox.name as Name}
           register={register}
           errors={errors}
         />

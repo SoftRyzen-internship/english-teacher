@@ -98,14 +98,14 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 - #### component TextareaField
 
-| Prop          | Type                 | Description                                                              |
-| ------------- | -------------------- | ------------------------------------------------------------------------ |
-| `id`          | string               | required, the unique identifier for the textarea.                        |
-| `label`       | string               | required, the label text displayed above the textarea.                   |
-| `name`        | string               | required, the name attribute for the textarea, used for form submission. |
-| `register`    | function             | required, function from `react-hook-form` to register the checkbox input.|
-| `placeholder` | string               | required, placeholder text for the textarea.                             |
-| `errors`      | FieldErrors          | required, object containing form validation errors from react-hook-form. |
+| Prop          | Type        | Description                                                               |
+| ------------- | ----------- | ------------------------------------------------------------------------- |
+| `id`          | string      | required, the unique identifier for the textarea.                         |
+| `label`       | string      | required, the label text displayed above the textarea.                    |
+| `name`        | string      | required, the name attribute for the textarea, used for form submission.  |
+| `register`    | function    | required, function from `react-hook-form` to register the checkbox input. |
+| `placeholder` | string      | required, placeholder text for the textarea.                              |
+| `errors`      | FieldErrors | required, object containing form validation errors from react-hook-form.  |
 
 - #### component InputField
 
@@ -123,11 +123,11 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 - #### component CheckboxField
 
-| Prop       | Type                 | Description                                                              |
-| ---------- | -------------------- | ------------------------------------------------------------------------ |
-| `id`       | string               | required, unique identifier for the checkbox input field.                |
-| `label`    | string               | required, the label text that will be displayed next to the checkbox.    |
-| `type`     | string               | required, the type of input, should be `'checkbox'`.                     |
-| `name`     | string               | required, the name attribute for the checkbox input.                     |
-| `register` | function             | required, function from `react-hook-form` to register the checkbox input.|
-| `errors`   | FieldErrors          | required, object containing form validation errors from react-hook-form. |
+| Prop       | Type        | Description                                                               |
+| ---------- | ----------- | ------------------------------------------------------------------------- |
+| `id`       | string      | required, unique identifier for the checkbox input field.                 |
+| `label`    | string      | required, the label text that will be displayed next to the checkbox.     |
+| `type`     | string      | required, the type of input, should be `'checkbox'`.                      |
+| `name`     | string      | required, the name attribute for the checkbox input.                      |
+| `register` | function    | required, function from `react-hook-form` to register the checkbox input. |
+| `errors`   | FieldErrors | required, object containing form validation errors from react-hook-form.  |
