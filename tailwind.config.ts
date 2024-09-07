@@ -45,6 +45,7 @@ const config: Config = {
         textClick: '#353535',
         text2: '#484848',
         semiTransparentGray: '#82828299',
+        veryLightGray: '#faf9f9',
       },
       fontFamily: {
         montserrat: 'var(--font-montserrat), sans-serif',
