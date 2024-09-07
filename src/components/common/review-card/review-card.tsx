@@ -39,14 +39,14 @@ export const ReviewCard = ({ author, text }: IReviewCardProps) => {
   }, []);
 
   return (
-    <div className="max-h-80 p-6 rounded-lg bg-bgButtonInactive md:w-[334px] md:py-8 md:px-10 xl:p-8 xl:w-[390px]">
+    <div className="h-[366px] md:h-[358px] xl:h-[319px] p-6 rounded-lg bg-bgButtonInactive md:w-[334px] md:py-8 md:px-10 xl:p-8 xl:w-[390px]">
       <Quotes width={28} height={20} className="mb-5" />
       <h3 className="text-lg font-medium leading-normal font-montserrat text-text1Icon3 mb-4 md:mb-7">
         {author}
       </h3>
       <p
         ref={textRef}
-        className="font-comfortaa text-base font-semibold overflow-hidden text-ellipsis line-clamp-5"
+        className="font-comfortaa text-base font-semibold overflow-hidden text-ellipsis line-clamp-8 md:line-clamp-6 xl:line-clamp-5"
       >
         {text}
       </p>
@@ -54,7 +54,7 @@ export const ReviewCard = ({ author, text }: IReviewCardProps) => {
         <button
           type="button"
           onClick={() => openModalWithReview({ author, text })}
-          className="font-comfortaa text-base font-semibold text-accent5Icon1 flex ml-auto mt-4 hover:text-buttonClickPink transition-all ease duration-300"
+          className="font-comfortaa text-base font-semibold text-accent5Icon1 flex ml-auto mt-[19px] md:mt-[33px] xl:mt-[30px] hover:text-buttonClickPink transition-colors ease duration-300"
         >
           {reviews.button}
         </button>
