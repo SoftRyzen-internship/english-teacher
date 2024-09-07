@@ -19,19 +19,8 @@ export const BenefitsList = () => {
   ));
 
   return isDesktop ? (
-    <div className="xl:flex xl:flex-wrap xl:gap-6">{cards}</div>
+    <div className="xl:flex xl:gap-6">{cards}</div>
   ) : (
     <Slider section="benefits">{cards}</Slider>
   );
 };
-
-<div className="xl:flex xl:flex-wrap xl:gap-6">
-  {benefitsData.cards.map((item) => (
-    <BenefitsCard
-      key={item.id}
-      title={item.title}
-      name={item.name}
-      text={item.text}
-    />
-  ))}
-</div>;

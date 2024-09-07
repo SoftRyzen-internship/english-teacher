@@ -60,6 +60,9 @@ const config: Config = {
           xl: '32px',
         },
       },
+      lineClamp: {
+        8: '8',
+      },
       backgroundImage: {},
     },
   },

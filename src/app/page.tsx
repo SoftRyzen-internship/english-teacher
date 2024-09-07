@@ -8,6 +8,7 @@ import { FAQ } from '@/sections/faq/faq';
 import { AboutInfo } from '@/components/common/about-info/about-info';
 import { Benefits } from '@/sections/benefits/benefits';
 import { Test } from '@/components/common/test/test';
+import { Reviews } from '@/sections/reviews/reviews';
 
 export default async function Home() {
   const token = process.env.DATOCMS_READONLY_TOKEN;
@@ -23,6 +24,7 @@ export default async function Home() {
   return (
     <main>
       <Benefits />
+      <Reviews />
       <FAQ />
       <div className="container">
         <BurgerMenu />
