@@ -15,6 +15,7 @@ export type Status = 'success' | 'error';
 import * as yup from 'yup';
 import { Button } from '../../ui/button/button';
 import { Name } from '@/components/ui/input-field/types';
+import { sendMessageToTelegram } from '@/actions/send-message-to-telegram';
 
 export type FormData = yup.InferType<typeof validationSchema>;
 
@@ -33,8 +34,9 @@ export const Test = () => {
     resolver: yupResolver(validationSchema),
   });
 
-  const onSubmit = (data: any) => {
-    console.log('Form Data:', data);
+  const onSubmit = ({ username, phone, comment }: FormData) => {
+    const message = `Ім'я: ${username}\n\nТелефон: ${phone}\n\nПовідомлення: ${comment}\n`;
+    sendMessageToTelegram(message)
     setIsModalOpen(true);
     setStatus('success');
     reset();
