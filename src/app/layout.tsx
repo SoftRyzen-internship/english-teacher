@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Comfortaa, Montserrat } from 'next/font/google';
 import './globals.css';
 import clsx from 'clsx';
+import { Header } from '@/layout/header/header';
 
 export const metadata: Metadata = {
   title: 'Motivation School',
@@ -58,6 +59,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={clsx(montserrat.variable, comfortaa.variable)}>
+        <Header />
         {children}
       </body>
     </html>

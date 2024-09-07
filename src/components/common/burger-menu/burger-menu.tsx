@@ -27,14 +27,17 @@ export const BurgerMenu = () => {
         <Dialog.Overlay className="fixed z-10 inset-0 bg-semiTransparentGray" />
         <Dialog.Content
           aria-describedby={undefined}
-          className=" bg-white  w-full h-full fixed z-10 top-0 right-0 py-4 px-5  md:py-5 md:w-[462px] md:h-[510px] "
+          className=" bg-white  w-full h-full fixed z-10 top-0 right-0 py-5 px-5  md:py-5 md:w-[462px] md:h-[510px] "
         >
           <VisuallyHidden asChild>
             <Dialog.Title>{data.burger.title}</Dialog.Title>
           </VisuallyHidden>
 
           <div className="flex flex-col gap-11 smOnly:max-w-[440px] relative smOnly:mx-auto md:gap-10 md:pt-[62px]">
-            <Dialog.Close asChild className="absolute top-0 right-0 md:right-5">
+            <Dialog.Close
+              asChild
+              className="absolute top-[18px] right-0 md:right-5"
+            >
               <button
                 type="button"
                 aria-label={data.burger.closeBtnAriaLabel}
