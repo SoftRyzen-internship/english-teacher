@@ -9,6 +9,7 @@ import { AboutInfo } from '@/components/common/about-info/about-info';
 import { Benefits } from '@/sections/benefits/benefits';
 import { Test } from '@/components/common/test/test';
 import { Reviews } from '@/sections/reviews/reviews';
+import { TelegramButton } from '@/components/ui/test-button';
 
 export default async function Home() {
   const token = process.env.DATOCMS_READONLY_TOKEN;
@@ -28,6 +29,8 @@ export default async function Home() {
       <FAQ />
       <div className="container">
         <BurgerMenu />
+
+        <TelegramButton>Press me</TelegramButton>
 
         <AboutInfo />
 
