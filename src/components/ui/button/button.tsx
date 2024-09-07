@@ -1,9 +1,5 @@
 import clsx from 'clsx';
-
-interface ButtonProps {
-  type?: 'button' | 'submit' | 'reset';
-  children: React.ReactNode;
-}
+import { ButtonProps } from './types';
 
 export const Button: React.FC<ButtonProps> = ({
   type = 'submit',

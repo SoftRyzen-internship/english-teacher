@@ -5,15 +5,15 @@ import { useState } from 'react';
 import { SuccessErrorMessageComponent } from '../success-error-message-component/success-error-message-component';
 import { yupResolver } from '@hookform/resolvers/yup';
 import formData from '@/data/contact.json';
-import { Checkbox } from '../checkbox/checkbox';
-import { Textarea } from '../textarea/textarea';
-import { InputField } from '../input-field/input-field';
+import { Checkbox } from '../../ui/checkbox/checkbox';
+import { Textarea } from '../../ui/textarea/textarea';
+import { InputField } from '../../ui/input-field/input-field';
 import { useForm } from 'react-hook-form';
 import { validationSchema } from '@/utils/validation';
 export type Status = 'success' | 'error';
 
 import * as yup from 'yup';
-import { Button } from '../button/button';
+import { Button } from '../../ui/button/button';
 
 export type FormData = yup.InferType<typeof validationSchema>;
 

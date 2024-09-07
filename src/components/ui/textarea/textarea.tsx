@@ -1,15 +1,6 @@
 import clsx from 'clsx';
-import { FieldErrors } from 'react-hook-form';
-import ErrIcon from '@/../public/assets/images/icons/err-sign.svg';
-
-interface TextareaProps {
-  id: string;
-  label: string;
-  name: string;
-  placeholder: string;
-  errors: FieldErrors;
-  register: any;
-}
+import { ErrorMessage } from '../../ui/error-message/error-message';
+import { TextareaProps } from './types';
 
 export const Textarea: React.FC<TextareaProps> = ({
   id,
@@ -38,11 +29,7 @@ export const Textarea: React.FC<TextareaProps> = ({
           errors[name] ? 'border border-error' : ''
         )}
       />
-      {errors[name] && (
-        <p className="absolute bottom-[-24px] flex gap-0.5 text-sm font-medium text-error ">
-          <ErrIcon width={17} hanging={18} /> {errors[name]?.message as string}
-        </p>
-      )}
+      <ErrorMessage message={errors[name]?.message as string} />
     </div>
   );
 };

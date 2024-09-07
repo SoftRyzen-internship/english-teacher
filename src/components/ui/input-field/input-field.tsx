@@ -1,20 +1,7 @@
 import clsx from 'clsx';
 import InputMask from 'react-input-mask-next';
-import { FieldErrors, UseFormRegister } from 'react-hook-form';
-
-import ErrIcon from '@/../public/assets/images/icons/err-sign.svg';
-
-interface InputFieldProps {
-  id: string;
-  label: string;
-  type: string;
-  name: string;
-  register: any;
-  placeholder: string;
-  autoComplete?: string;
-  mask?: string;
-  errors: FieldErrors;
-}
+import { ErrorMessage } from '../error-message/error-message';
+import { InputFieldProps } from './types';
 
 export const InputField: React.FC<InputFieldProps> = ({
   id,
@@ -63,11 +50,7 @@ export const InputField: React.FC<InputFieldProps> = ({
           )}
         />
       )}
-      {errors[name] && (
-        <p className="absolute bottom-[-24px] flex gap-0.5 text-sm font-medium text-error ">
-          <ErrIcon width={17} hanging={18} /> {errors[name]?.message as string}
-        </p>
-      )}
+      <ErrorMessage message={errors[name]?.message as string} />
     </div>
   );
 };

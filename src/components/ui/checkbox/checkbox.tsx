@@ -1,14 +1,5 @@
 import clsx from 'clsx';
-import { UseFormRegister, FieldErrors } from 'react-hook-form';
-
-interface CheckboxProps {
-  id: string;
-  label: string;
-  type: string;
-  name: string;
-  register: UseFormRegister<any>;
-  errors: FieldErrors;
-}
+import { CheckboxProps } from './type';
 
 export const Checkbox: React.FC<CheckboxProps> = ({
   id,
@@ -18,8 +9,6 @@ export const Checkbox: React.FC<CheckboxProps> = ({
   register,
   errors,
 }) => {
-  // console.log(errors[name]);
-
   return (
     <div className="relative mb-6 md:mb-10">
       <label
