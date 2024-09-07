@@ -25,7 +25,7 @@ export const Textarea: React.FC<TextareaProps> = ({
           'focus:outline-none focus:bg-bgButtonInactive',
           'resize-none',
           'text-text1Icon3',
-            errors[name] ? 'border border-error' : 'border border-transparent'
+          errors[name] ? 'border border-error' : 'border border-transparent'
         )}
       />
       <ErrorMessage message={errors[name]?.message as string} />

@@ -44,7 +44,7 @@ export const InputField: React.FC<InputFieldProps> = ({
           className={clsx(
             'w-full p-4 rounded-[10px] bg-veryLightGray text-text1Icon3',
             'focus:outline-none focus:bg-bgButtonInactive',
-              errors[name] ? 'border border-error' : 'border border-transparent'
+            errors[name] ? 'border border-error' : 'border border-transparent'
           )}
         />
       )}
