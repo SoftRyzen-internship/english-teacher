@@ -7,4 +7,4 @@ export type CheckboxProps = {
   name: string;
   register: UseFormRegister<any>;
   errors: FieldErrors;
-}
+};

@@ -10,4 +10,4 @@ export type InputFieldProps = {
   autoComplete?: string;
   mask?: string;
   errors: FieldErrors;
-}
+};

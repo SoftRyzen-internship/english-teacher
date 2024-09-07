@@ -7,4 +7,4 @@ export type TextareaProps = {
   placeholder: string;
   errors: FieldErrors;
   register: any;
-}
+};
