@@ -34,8 +34,8 @@ export const Test = () => {
     resolver: yupResolver(validationSchema),
   });
 
-  const onSubmit = ({ username, phone, comment }: FormData) => {
-    const message = `Ім'я: ${username}\n\nТелефон: ${phone}\n\nПовідомлення: ${comment}\n`;
+  const onSubmit = ({ username, phone, comment, email }: FormData) => {
+    const message = `Ім'я: ${username}\n\nТелефон: ${phone}\n\nПошта: ${email}\n\nПовідомлення: ${comment}\n`;
     sendMessageToTelegram(message);
     setIsModalOpen(true);
     setStatus('success');
