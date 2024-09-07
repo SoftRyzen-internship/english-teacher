@@ -36,7 +36,7 @@ export const Test = () => {
 
   const onSubmit = ({ username, phone, comment }: FormData) => {
     const message = `Ім'я: ${username}\n\nТелефон: ${phone}\n\nПовідомлення: ${comment}\n`;
-    sendMessageToTelegram(message)
+    sendMessageToTelegram(message);
     setIsModalOpen(true);
     setStatus('success');
     reset();
