@@ -50,7 +50,10 @@ export const ContactForm = () => {
           {formData.inputs.map((input) => (
             <li
               key={input.id}
-              className={clsx('col-span-1', input.name === 'email' && 'md:col-span-2')}
+              className={clsx(
+                'col-span-1',
+                input.name === 'email' && 'md:col-span-2'
+              )}
             >
               <InputField
                 id={input.id}
