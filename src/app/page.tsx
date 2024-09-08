@@ -10,6 +10,7 @@ import { Benefits } from '@/sections/benefits/benefits';
 import { Test } from '@/components/common/test/test';
 import { Reviews } from '@/sections/reviews/reviews';
 import { TelegramButton } from '@/components/ui/test-button';
+import { ContactForm } from '@/components/common/contact-form/contact-form';
 
 export default async function Home() {
   const token = process.env.DATOCMS_READONLY_TOKEN;
@@ -24,11 +25,11 @@ export default async function Home() {
 
   return (
     <main>
-      <Benefits />
+      {/* <Benefits />
       <Reviews />
-      <FAQ />
+      <FAQ /> */}
       <div className="container">
-        <BurgerMenu />
+        {/* <BurgerMenu />
 
         <TelegramButton>Press me</TelegramButton>
 
@@ -78,7 +79,8 @@ export default async function Home() {
             </p>
           </div>
         </Slider>
-        <Test />
+        <Test /> */}
+        <ContactForm />
       </div>
     </main>
   );
