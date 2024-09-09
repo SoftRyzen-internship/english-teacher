@@ -23,7 +23,8 @@ export const Checkbox: React.FC<CheckboxProps> = ({
             {...register(name)}
             className={clsx(
               'peer cursor-pointer w-5 h-5 rounded appearance-none border',
-              errors[name] ? 'border-error' : 'border-text3'
+              errors[name] ? 'border-error' : 'border-text3',
+              'focus:ring-2 focus:ring-stokeDisabled'
             )}
           />
           <span
@@ -32,7 +33,8 @@ export const Checkbox: React.FC<CheckboxProps> = ({
               'peer-checked:bg-accent2 peer-checked:border-none',
               'flex justify-center items-center peer-checked:before:block peer-checked:before:w-3 peer-checked:before:h-1.5 peer-checked:before:border-l-[1.5px] peer-checked:before:border-b-[1.5px] peer-checked:before:border-white peer-checked:before:rotate-[-45deg]',
               'peer-checked:before:translate-y-[-2px]',
-              errors[name] ? 'border-error' : 'border-text3'
+              errors[name] ? 'border-error' : 'border-text3',
+              'peer-focus:ring-2 peer-focus:ring-stokeDisabled peer-focus:border-none'
             )}
           />
         </div>

@@ -25,6 +25,7 @@
     "react-datocms": "^7.0.1",
     "react-dom": "^18",
     "react-hook-form": "^7.53.0",
+    "react-hook-form-persist": "^3.0.0",
     "react-input-mask-next": "^3.0.0-alpha.12",
     "yup": "^1.4.0",
     "react-scroll": "^1.9.0",
