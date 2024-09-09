@@ -15,6 +15,7 @@ import { Button } from '../../ui/button/button';
 import { sendMessageToTelegram } from '@/actions/send-message-to-telegram';
 import clsx from 'clsx';
 import { FormData, Name, Status } from './types';
+import useFormPersist from 'react-hook-form-persist';
 
 export const ContactForm = () => {
   const [status, setStatus] = useState<Status>('success');
@@ -25,10 +26,17 @@ export const ContactForm = () => {
     handleSubmit,
     formState: { errors },
     watch,
+    setValue,
     reset,
   } = useForm<FormData>({
     mode: 'onSubmit',
     resolver: yupResolver(validationSchema),
+  });
+
+  useFormPersist('contactForm', {
+    watch, 
+    setValue, 
+    exclude: ['checked'], 
   });
 
   const onSubmit = async ({ username, phone, comment, email }: FormData) => {
