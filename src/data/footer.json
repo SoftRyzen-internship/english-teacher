@@ -1,0 +1,34 @@
+{
+  "links": {
+    "title": "Створено при підтримці",
+    "linksList": [
+      {
+        "id": "1",
+        "href": "https://goit.global/ua/",
+        "ariaLabel": "Відвідати вебсайт GoIT",
+        "icon": "goit",
+        "width": 67,
+        "height": 19
+      },
+      {
+        "id": "2",
+        "href": "https://spilno.group",
+        "ariaLabel": "Відвідати вебсайт Spilno",
+        "icon": "softryzen",
+        "width": 134,
+        "height": 19
+      }
+    ]
+  },
+  "anotherPageTitle": {
+    "home": {
+      "title": "Головна",
+      "href": "/"
+    },
+    "policy": {
+      "title": "Політика конфіденційності",
+      "href": "/policy"
+    }
+  },
+  "copyright": "© 2024 SPILNO. Всі права захищені."
+}
