@@ -3,7 +3,7 @@ import { Comfortaa, Montserrat } from 'next/font/google';
 import './globals.css';
 import clsx from 'clsx';
 import { Header } from '@/layout/header/header';
-import { Footer } from '@/layout/Footer/footer';
+import { Footer } from '@/layout/ooter/footer';
 
 export const metadata: Metadata = {
   title: 'Motivation School',
