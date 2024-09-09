@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "@datocms/cda-client": "^0.2.2",
+    "@hookform/resolvers": "^3.9.0",
     "@radix-ui/react-accordion": "^1.2.0",
     "@radix-ui/react-dialog": "^1.1.1",
     "@radix-ui/react-visually-hidden": "^1.1.0",
@@ -23,6 +24,10 @@
     "react": "^18",
     "react-datocms": "^7.0.1",
     "react-dom": "^18",
+    "react-hook-form": "^7.53.0",
+    "react-hook-form-persist": "^3.0.0",
+    "react-input-mask-next": "^3.0.0-alpha.12",
+    "yup": "^1.4.0",
     "react-scroll": "^1.9.0",
     "swiper": "^11.1.12"
   },

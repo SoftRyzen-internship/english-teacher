@@ -1,0 +1,81 @@
+{
+  "title": "Онлайн-англійська для школярів",
+  "text": "Запишіться уже сьогодні та отримайте безплатну консультацію",
+  "inputs": [
+    {
+      "id": "username",
+      "label": "Ім’я *",
+      "type": "text",
+      "name": "username",
+      "placeholder": "Іван Іванов",
+      "autoComplete": "name"
+    },
+    {
+      "id": "phone",
+      "label": "Телефон *",
+      "type": "tel",
+      "name": "phone",
+      "placeholder": "+380988888545",
+      "autoComplete": "tel",
+      "mask": "+38 999 999 99 99"
+    },
+    {
+      "id": "email",
+      "label": "Пошта *",
+      "type": "email",
+      "name": "email",
+      "placeholder": "ivanovivan@gmail.com",
+      "autoComplete": "email"
+    }
+  ],
+  "textarea": {
+    "id": "comment",
+    "label": "Залиште повідомлення *",
+    "type": "textarea",
+    "name": "comment",
+    "placeholder": "Залиште повідомлення"
+  },
+  "checkbox": {
+    "id": "checked",
+    "label": "Даю згоду на обробку персональних даних",
+    "type": "checkbox",
+    "name": "checked"
+  },
+  "sendButton": "Записатись",
+
+  "validation": {
+    "username": {
+      "required": { "message": "Ваше ім’я обов’язкове." },
+      "minLength": { "value": 2, "message": "Мінімум 2 символи." },
+      "maxLength": { "value": 30, "message": "Максимум 30 символів." },
+      "regExp": {
+        "value": "^(?!.*(?:[ -]{2,}| -| - |^[ -]|^-))[A-Za-zА-Яа-яЁёІіЇїЄєҐґ'ʼ` -]+$",
+        "message": "Введіть правильне ім'я."
+      }
+    },
+    "phone": {
+      "required": { "message": "Номер телефону обов’язковий" },
+      "regExp": {
+        "value": "^\\+38\\s?\\d{3}\\s?\\d{3}\\s?\\d{2}\\s?\\d{2}$",
+        "message": "Номер телефону обов’язковий."
+      }
+    },
+    "email": {
+      "required": { "message": "Пошта обов’язкова" },
+      "regExp": {
+        "value": "^[A-Za-z0-9._%+-]{1,}@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$",
+        "message": "Введена адреса недійсна."
+      }
+    },
+    "comment": {
+      "maxLength": {
+        "value": 300,
+        "message": "У тексті має бути не більше 300 символів."
+      }
+    },
+    "checked": {
+      "value": true,
+      "message": "Підтвердіть згоду."
+    }
+  }
+}

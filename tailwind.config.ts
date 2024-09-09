@@ -45,6 +45,7 @@ const config: Config = {
         textClick: '#353535',
         text2: '#484848',
         semiTransparentGray: '#82828299',
+        veryLightGray: '#faf9f9',
       },
       fontFamily: {
         montserrat: 'var(--font-montserrat), sans-serif',
@@ -58,6 +59,9 @@ const config: Config = {
           md: '40px',
           xl: '32px',
         },
+      },
+      lineClamp: {
+        8: '8',
       },
       backgroundImage: {},
     },
