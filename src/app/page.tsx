@@ -5,6 +5,11 @@ import { ReviewsList } from '@/components/common/reviews-list/reviews-list';
 import { BurgerMenu } from '@/components/common/burger-menu/burger-menu';
 import { Slider } from '@/components/ui/slider/slider';
 import { FAQ } from '@/sections/faq/faq';
+
+import { SkillsList } from '@/components/common/skills-list/skills-list';
+import { fetchData } from '@/api/api';
+import { Skills } from '@/sections/skills/skills';
+
 import { AboutInfo } from '@/components/common/about-info/about-info';
 import { Benefits } from '@/sections/benefits/benefits';
 // import { Test } from '@/components/common/test/test';
@@ -13,20 +18,17 @@ import { TelegramButton } from '@/components/ui/test-button';
 import { ContactForm } from '@/components/common/contact-form/contact-form';
 
 export default async function Home() {
-  const token = process.env.DATOCMS_READONLY_TOKEN;
+  let result: SkillsQueryResult | null = null;
 
-  if (!token) {
-    throw new Error('DATOCMS_READONLY_TOKEN is not defined');
-  }
-
-  const result: SkillsQueryResult = await executeQuery(skillsQuery, {
-    token: token,
-  });
+  result = (await fetchData(skillsQuery)) as SkillsQueryResult;
 
   return (
     <main>
+      {result && <Skills skillsData={result} />}
+
       <Benefits />
       <Reviews />
+
       <FAQ />
       <div className="container">
         <BurgerMenu />

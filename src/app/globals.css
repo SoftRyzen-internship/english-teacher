@@ -50,3 +50,20 @@ img {
     font-size: 16px;
   }
 }
+.girl {
+  @apply bg-no-repeat bg-bottom;
+  @media (min-width: 768px) {
+    background-image: url('/assets/images/webp/skills/tablet/girl.webp');
+    background-size: 468px 274px;
+    @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url('/assets/images/webp/skills/tablet/girl-2x.webp');
+    }
+  }
+  @media (min-width: 1280px) {
+    background-image: url('/assets/images/webp/skills/desktop/girl.webp');
+    background-size: 810px 479px;
+    @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url('/assets/images/webp/skills/desktop/girl-2x.webp');
+    }
+  }
+}
