@@ -1,4 +1,5 @@
 import type { Config } from 'tailwindcss';
+import type { PluginAPI } from 'tailwindcss/types/config';
 
 const config: Config = {
   content: [
@@ -63,9 +64,41 @@ const config: Config = {
       lineClamp: {
         8: '8',
       },
-      backgroundImage: {},
+      backgroundImage: {
+        'contact-ellipses': `url('/public/assets/images/icons/bg-ellipse/ellipse-yellow.svg'), 
+                             url('/public/assets/images/icons/bg-ellipse/ellipse-blue.svg'), 
+                             url('/public/assets/images/icons/bg-ellipse/ellipse-red.svg')`,
+      },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addComponents }: PluginAPI) {
+      addComponents({
+        '.bg-contact': {
+          backgroundColor: '#F4EDF8',
+          backgroundImage: `url("/assets/images/icons/bg-ellipse/ellipse-blue.svg"), 
+                            url("/assets/images/icons/bg-ellipse/ellipse-red.svg"), 
+                            url("/assets/images/icons/bg-ellipse/ellipse-yellow.svg")`,
+          backgroundSize: 'auto, auto, auto',
+          backgroundPosition:
+            'bottom -210px right -250px, top -180px right -250px, center center',
+          backgroundRepeat: 'no-repeat',
+        },
+
+        '@media (min-width: 768px)': {
+          '.bg-contact': {
+            backgroundPosition:
+              'bottom -100px right -150px, top -130px right -100px, center left',
+          },
+        },
+
+        '@media (min-width: 1280px)': {
+          '.bg-contact': {
+            backgroundPosition: 'center bottom, right top, left bottom',
+          },
+        },
+      });
+    },
+  ],
 };
 export default config;

@@ -8,7 +8,7 @@ import { Skills } from '@/sections/skills/skills';
 
 import { Benefits } from '@/sections/benefits/benefits';
 import { Reviews } from '@/sections/reviews/reviews';
-import { ContactForm } from '@/components/common/contact-form/contact-form';
+import { Contact } from '@/sections/contact/contact';
 
 export default async function Home() {
   let result: SkillsQueryResult | null = null;
@@ -21,9 +21,7 @@ export default async function Home() {
       <Benefits />
       <Reviews />
       <FAQ />
-      <div className="container">
-        <ContactForm />
-      </div>
+      <Contact />
     </main>
   );
 }
