@@ -21,20 +21,17 @@ import { BurgerMenu } from '@/components/common/burger-menu/burger-menu';
 import { Slider } from '@/components/ui/slider/slider';
 import { FAQ } from '@/sections/faq/faq';
 import { SkillsList } from '@/components/common/skills-list/skills-list';
+import { fetchData } from '@/api/api';
+import { Skills } from '@/sections/skills/skills';
 
 export default async function Home() {
-  const token = process.env.DATOCMS_READONLY_TOKEN;
+  let result: SkillsQueryResult | null = null;
 
-  if (!token) {
-    throw new Error('DATOCMS_READONLY_TOKEN is not defined');
-  }
-
-  const result: SkillsQueryResult = await executeQuery(skillsQuery, {
-    token: token,
-  });
+  result = (await fetchData(skillsQuery)) as SkillsQueryResult;
 
   return (
     <main>
+      {result && <Skills skillsData={result} />}
       <FAQ />
 
       <div className="container">
@@ -45,7 +42,6 @@ export default async function Home() {
         </h2>
 
         <ReviewsList />
-        {result && <SkillsList skillsData={result} />}
 
         <h2 className="section-title text-center my-4">
           Example of slider in Advantages section
