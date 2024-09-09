@@ -10,16 +10,14 @@ import { Textarea } from '../../ui/textarea/textarea';
 import { InputField } from '../../ui/input-field/input-field';
 import { useForm } from 'react-hook-form';
 import { validationSchema } from '@/utils/validation';
-export type Status = 'success' | 'error';
 
-import * as yup from 'yup';
 import { Button } from '../../ui/button/button';
-import { Name } from '@/components/ui/input-field/types';
 import { sendMessageToTelegram } from '@/actions/send-message-to-telegram';
+import clsx from 'clsx';
+import { FormData, Name, Status } from './types';
+import useFormPersist from 'react-hook-form-persist';
 
-export type FormData = yup.InferType<typeof validationSchema>;
-
-export const Test = () => {
+export const ContactForm = () => {
   const [status, setStatus] = useState<Status>('success');
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -28,38 +26,57 @@ export const Test = () => {
     handleSubmit,
     formState: { errors },
     watch,
+    setValue,
     reset,
   } = useForm<FormData>({
     mode: 'onSubmit',
     resolver: yupResolver(validationSchema),
   });
 
-  const onSubmit = ({ username, phone, comment, email }: FormData) => {
-    const message = `Ім'я: ${username}\n\nТелефон: ${phone}\n\nПошта: ${email}\n\nПовідомлення: ${comment}\n`;
-    sendMessageToTelegram(message);
-    setIsModalOpen(true);
-    setStatus('success');
-    reset();
-  };
+  useFormPersist('contactForm', {
+    watch,
+    setValue,
+    exclude: ['checked'],
+  });
 
+  const onSubmit = async ({ username, phone, comment, email }: FormData) => {
+    try {
+      const message = `Ім'я: ${username}\n\nТелефон: ${phone}\n\nПошта: ${email}\n\nПовідомлення: ${comment}\n`;
+      sendMessageToTelegram(message);
+      setStatus('success');
+      reset();
+    } catch (error) {
+      setStatus('error');
+    } finally {
+      setIsModalOpen(true);
+    }
+  };
   return (
     <>
-      <form onSubmit={handleSubmit(onSubmit)}>
-        {formData.inputs.map((input) => (
-          <InputField
-            key={input.id}
-            id={input.id}
-            label={input.label}
-            type={input.type}
-            name={input.name as Name}
-            register={register}
-            placeholder={input.placeholder}
-            autoComplete={input.autoComplete}
-            mask={input.mask}
-            errors={errors}
-          />
-        ))}
-
+      <form onSubmit={handleSubmit(onSubmit)} className="xl:w-[596px]">
+        <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-9">
+          {formData.inputs.map((input) => (
+            <li
+              key={input.id}
+              className={clsx(
+                'col-span-1',
+                input.name === 'email' && 'md:col-span-2'
+              )}
+            >
+              <InputField
+                id={input.id}
+                label={input.label}
+                type={input.type}
+                name={input.name as Name}
+                register={register}
+                placeholder={input.placeholder}
+                autoComplete={input.autoComplete}
+                mask={input.mask}
+                errors={errors}
+              />
+            </li>
+          ))}
+        </ul>
         <Textarea
           id={formData.textarea.id}
           label={formData.textarea.label}
@@ -78,15 +95,6 @@ export const Test = () => {
         />
         <Button>{formData.sendButton}</Button>
       </form>
-
-      <button
-        onClick={() => setIsModalOpen(true)}
-        className="btn w-100 h-100 text-buttonFocusPink my-10
-           md:top-8 md:right-8"
-      >
-        Форма связи
-      </button>
-
       <Modal isOpen={isModalOpen} setIsOpen={setIsModalOpen}>
         <SuccessErrorMessageComponent status={status} />
       </Modal>

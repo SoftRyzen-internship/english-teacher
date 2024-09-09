@@ -1,28 +1,21 @@
-import { ScrollButton } from '@/components/ui/scroll-button/scroll-button';
-import faq from '@/data/faq.json';
-
-import { Accordion } from '@/components/common/accordion/accordion';
-
-import { Logo } from '@/components/ui/logo/logo';
-import { Navigation } from '@/components/ui/navigation/navigation';
 import { executeQuery } from '@datocms/cda-client';
-import React from 'react';
-import { SocialLinks } from '@/components/ui/social-links/social-links';
 import { skillsQuery } from '@/api/queries';
 import { SkillsQueryResult } from '@/api/types';
-import { Test } from '@/components/common/test/test';
-
-import { BenefitsList } from '@/components/common/benefits-list/benefits-list';
-
 import { ReviewsList } from '@/components/common/reviews-list/reviews-list';
-
 import { BurgerMenu } from '@/components/common/burger-menu/burger-menu';
-
 import { Slider } from '@/components/ui/slider/slider';
 import { FAQ } from '@/sections/faq/faq';
+
 import { SkillsList } from '@/components/common/skills-list/skills-list';
 import { fetchData } from '@/api/api';
 import { Skills } from '@/sections/skills/skills';
+
+import { AboutInfo } from '@/components/common/about-info/about-info';
+import { Benefits } from '@/sections/benefits/benefits';
+// import { Test } from '@/components/common/test/test';
+import { Reviews } from '@/sections/reviews/reviews';
+import { TelegramButton } from '@/components/ui/test-button';
+import { ContactForm } from '@/components/common/contact-form/contact-form';
 
 export default async function Home() {
   let result: SkillsQueryResult | null = null;
@@ -32,10 +25,17 @@ export default async function Home() {
   return (
     <main>
       {result && <Skills skillsData={result} />}
-      <FAQ />
 
+      <Benefits />
+      <Reviews />
+
+      <FAQ />
       <div className="container">
         <BurgerMenu />
+
+        <TelegramButton>Press me</TelegramButton>
+
+        <AboutInfo />
 
         <h2 className="section-title text-center my-4">
           Slider in Reviews section
@@ -81,40 +81,8 @@ export default async function Home() {
             </p>
           </div>
         </Slider>
-
-        <Logo />
-        <Navigation />
-        <br />
-        <ScrollButton borderButton={true} href="contacts">
-          Записатись
-        </ScrollButton>
-        <br />
-        <ScrollButton colorButton={true} href="contacts">
-          Безплатна консультація
-        </ScrollButton>
-
-        <p className="font-montserrat bg-accent1">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab,
-          architecto minima. Nihil inventore tempora minus similique eaque ea
-          voluptate, laboriosam quis quia molestias deserunt fugiat asperiores
-          repellendus molestiae esse eveniet?
-        </p>
-
-        <h2 className="section-title">Title h2</h2>
-        <h3 className="section-subtitle">Title h3</h3>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab,
-          architecto minima. Nihil inventore tempora minus similique eaque ea
-          voluptate, laboriosam quis quia molestias deserunt fugiat asperiores
-          repellendus molestiae esse eveniet?
-        </p>
-
-        <SocialLinks section="footer" />
-        <SocialLinks section="contacts" />
-        <SocialLinks />
-        <Accordion faqs={faq.accordion} />
-        <BenefitsList />
-        <Test />
+        {/* <Test /> */}
+        <ContactForm />
       </div>
     </main>
   );

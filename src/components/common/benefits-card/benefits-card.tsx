@@ -6,12 +6,12 @@ import Book from '@/../public/assets/images/icons/advantages/educational-bonuses
 
 export const BenefitsCard = ({ title, name, text }: BenefitsCardProps) => {
   return (
-    <li className="bg-bgButtonInactive rounded-2xl flex flex-col p-6 md:p-10 md:px-11 text-left gap-[18px] mt-5 md:w-[511px] md:mx-auto md:gap-5 xl:w-[389px] xl:gap-6">
+    <div className="bg-bgButtonInactive rounded-2xl flex flex-col p-6 md:p-10 md:px-11 text-left gap-[18px] md:w-[511px] md:mx-auto md:gap-5 xl:w-full xl:gap-6">
       {name === 'student' && <Student width={70} height={64} />}
       {name === 'bell' && <Bell width={49} height={64} />}
       {name === 'book' && <Book width={74} height={64} />}
       <h3 className="section-subtitle xl:min-h-[72px]">{title}</h3>
       <p className="min-h-[263px] md:min-h-[163px] xl:min-h-60">{text}</p>
-    </li>
+    </div>
   );
 };
