@@ -6,7 +6,7 @@ export const Contact = () => {
     <section id="contacts" className="py-[50px] xl:py-[80px] bg-contact">
       <div className="container flex flex-col items-center gap-[30px] md:gap-[50px] xl:flex-row xl:gap-[86px] xl:items-start">
         <ContactInfoBlock />
-        <ContactForm  />
+        <ContactForm />
       </div>
     </section>
   );

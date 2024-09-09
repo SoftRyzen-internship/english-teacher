@@ -5,8 +5,8 @@ import contactData from '@/data/contact.json';
 
 export const ContactInfoBlock = () => {
   const { title, text } = contactData;
-  const [firstWord, lastWord] = title.split('-англійська для ');  
-  
+  const [firstWord, lastWord] = title.split('-англійська для ');
+
   return (
     <div className="xl:max-w-[534px]">
       <h2
