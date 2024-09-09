@@ -4,7 +4,7 @@ import { SocialLinks } from '@/components/ui/social-links/social-links';
 import contactData from '@/data/contact.json';
 
 export const ContactInfoBlock = () => {
-  const { title, text } = contactData;
+  const { title, text, separator } = contactData;
   const [firstWord, lastWord] = title.split('-англійська для ');
 
   return (
@@ -15,7 +15,7 @@ export const ContactInfoBlock = () => {
           'md:text-[48px] mdOnly:w-[610px] xl:mb-[30px] xl:text-left'
         )}
       >
-        <span className="highlight">{firstWord}</span>-англійська для
+        <span className="highlight">{firstWord}</span>{separator}
         <span className="highlight ml-2 pl-1.5 pr-2">{lastWord}</span>
       </h2>
       <p className="text-[12px] leading-[1.5] smOnly:text-center md:text-[18px] md:font-medium xl:mb-10">
