@@ -67,3 +67,14 @@ img {
     }
   }
 }
+
+
+.highlight {
+  @apply relative inline-block;
+}
+
+.highlight::before {
+  content: '';
+  @apply absolute left-0 top-0 w-full h-[110%] bg-accent1 z-[-1];
+  clip-path: polygon(0 0, 100% 10%, 100% 80%, 0 100%);
+}

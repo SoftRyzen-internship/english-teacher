@@ -16,6 +16,7 @@ import { Benefits } from '@/sections/benefits/benefits';
 import { Reviews } from '@/sections/reviews/reviews';
 import { TelegramButton } from '@/components/ui/test-button';
 import { ContactForm } from '@/components/common/contact-form/contact-form';
+import { Contact } from '@/sections/contact/contact';
 
 export default async function Home() {
   let result: SkillsQueryResult | null = null;
@@ -24,6 +25,7 @@ export default async function Home() {
 
   return (
     <main>
+      <Contact />
       {result && <Skills skillsData={result} />}
 
       <Benefits />
@@ -82,7 +84,7 @@ export default async function Home() {
           </div>
         </Slider>
         {/* <Test /> */}
-        <ContactForm />
+        {/* <ContactForm /> */}
       </div>
     </main>
   );
