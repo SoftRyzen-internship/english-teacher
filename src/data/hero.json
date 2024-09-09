@@ -6,5 +6,9 @@
     "title2": "віку"
   },
   "subtitle": "З нами англійську можна вивчати в зручний час та із будь-якої точки світу",
-  "button": { "name": "Безплатна консультація", "href": "contacts" }
+  "button": { "name": "Безплатна консультація", "href": "contacts" },
+  "img": {
+    "src": "/assets/images/webp/hero/hero@2x.webp",
+    "alt": "дівчинка із рюкзаком"
+  }
 }
