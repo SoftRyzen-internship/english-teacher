@@ -34,9 +34,9 @@ export const ContactForm = () => {
   });
 
   useFormPersist('contactForm', {
-    watch, 
-    setValue, 
-    exclude: ['checked'], 
+    watch,
+    setValue,
+    exclude: ['checked'],
   });
 
   const onSubmit = async ({ username, phone, comment, email }: FormData) => {
