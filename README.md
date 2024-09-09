@@ -131,3 +131,10 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 | `name`     | string      | required, the name attribute for the checkbox input.                      |
 | `register` | function    | required, function from `react-hook-form` to register the checkbox input. |
 | `errors`   | FieldErrors | required, object containing form validation errors from react-hook-form.  |
+
+- #### component Slider
+
+| Prop       | Type      | Description                                                                                        |
+| ---------- | --------- | -------------------------------------------------------------------------------------------------- |
+| `section`  | string    | required, specifies the section for slider settings. Possible values are `benefits` and `reviews`. |
+| `children` | ReactNode | required, the content to be displayed inside the slider.                                           |

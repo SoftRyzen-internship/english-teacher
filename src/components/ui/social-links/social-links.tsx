@@ -18,7 +18,7 @@ export const SocialLinks: React.FC<SocialLinksProps> = ({ section }) => {
       className={clsx(
         'flex gap-6',
         section === 'contacts' && 'hidden xl:flex xl:flex-col',
-        section === 'footer' && 'gap-4 md:gap-6',
+        section === 'footer' && 'gap-4 md:gap-6 smOnly:mt-[18px] h-fit',
         section === 'mob-menu' && 'justify-center md:justify-start'
       )}
     >
