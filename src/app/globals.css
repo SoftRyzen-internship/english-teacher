@@ -59,11 +59,22 @@ img {
       background-image: url('/assets/images/webp/skills/tablet/girl-2x.webp');
     }
   }
-  @media (min-width: 1280px) {
+}
+@media (min-width: 1280px) {
+  .girl {
     background-image: url('/assets/images/webp/skills/desktop/girl.webp');
     background-size: 810px 479px;
     @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
       background-image: url('/assets/images/webp/skills/desktop/girl-2x.webp');
     }
   }
+}
+.highlight {
+  @apply relative inline-block z-[1];
+}
+
+.highlight::before {
+  content: '';
+  @apply absolute left-0 top-0 w-full h-[110%] bg-accent1 z-[-1];
+  clip-path: polygon(0 0, 100% 10%, 100% 80%, 0 100%);
 }

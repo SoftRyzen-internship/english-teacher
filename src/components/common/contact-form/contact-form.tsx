@@ -42,7 +42,7 @@ export const ContactForm = () => {
   const onSubmit = async ({ username, phone, comment, email }: FormData) => {
     try {
       const message = `Ім'я: ${username}\n\nТелефон: ${phone}\n\nПошта: ${email}\n\nПовідомлення: ${comment}\n`;
-      sendMessageToTelegram(message);
+      await sendMessageToTelegram(message);
       setStatus('success');
       reset();
     } catch (error) {
@@ -53,7 +53,7 @@ export const ContactForm = () => {
   };
   return (
     <>
-      <form onSubmit={handleSubmit(onSubmit)} className="xl:w-[596px]">
+      <form onSubmit={handleSubmit(onSubmit)} className="w-full xl:w-[596px]">
         <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-9">
           {formData.inputs.map((input) => (
             <li
