@@ -9,6 +9,7 @@ export const ScrollButton = ({
   colorButton,
   borderButton,
   href,
+  onClick,
   className,
 }: ScrollButtonProps) => {
   const styles = clsx(
@@ -30,6 +31,7 @@ export const ScrollButton = ({
       offset={0}
       duration={500}
       className={styles}
+      onClick={onClick}
     >
       {children}
     </ScrollLink>

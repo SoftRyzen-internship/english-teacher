@@ -77,7 +77,7 @@ const renderOptions = [
 
 export const Policy = ({ policyData }: PolicyProps) => {
   return (
-    <section className="pt-[29px] md:pt-[34px] xl:pt-16 pb-[50px] xl:pb-20">
+    <section className="pt-[129px] md:pt-[134px] xl:pt-[164px] pb-[50px] xl:pb-20">
       <div className="container xl:px-[135px]">
         <h1 className="section-title text-left mb-[30px] xl:mb-16 md:text-[48px] md:leading-[1.1]">
           {policyData.privacyPolicyPage.title}
