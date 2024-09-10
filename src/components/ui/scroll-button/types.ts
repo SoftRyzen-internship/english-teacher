@@ -3,5 +3,6 @@ export type ScrollButtonProps = {
   colorButton?: boolean;
   borderButton?: boolean;
   children: React.ReactNode;
+  onClick?: () => void;
   className?: string;
 };

@@ -9,9 +9,12 @@ import { Logo } from '@/components/ui/logo/logo';
 import { ScrollButton } from '@/components/ui/scroll-button/scroll-button';
 import { SocialLinks } from '@/components/ui/social-links/social-links';
 import { VisuallyHidden } from '@radix-ui/react-visually-hidden';
+import { useIsHomePage } from '@/hooks/use-is-home-page';
+import Link from 'next/link';
 
 export const BurgerMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const home = useIsHomePage();
   return (
     <Dialog.Root open={isOpen} onOpenChange={setIsOpen}>
       <Dialog.Trigger asChild>
@@ -48,10 +51,24 @@ export const BurgerMenu = () => {
             </Dialog.Close>
             <Logo className="md:hidden" />
 
-            <Navigation />
-            <ScrollButton href={data.burger.href} borderButton={true}>
-              {data.burger.scrollBtn}
-            </ScrollButton>
+            <Navigation onClick={() => setIsOpen(false)} />
+            {home ? (
+              <ScrollButton
+                href={data.burger.href}
+                borderButton={true}
+                onClick={() => setIsOpen(false)}
+              >
+                {data.burger.scrollBtn}
+              </ScrollButton>
+            ) : (
+              <Link
+                href={`/#${data.burger.href}`}
+                onClick={() => setIsOpen(false)}
+                className="h-[56px] inline-flex font-montserrat justify-center cursor-pointer smOnly:w-full items-center min-w-[221px] rounded-[20px] text-base font-bold leading-normal transition-colors duration-300 border solid px-[60px] border-text1Icon3 mdOnly:w-[351px] hover:bg-buttonHoverPink hover:border-buttonHoverPink focus:bg-buttonClickPink focus:border-buttonClickPink"
+              >
+                {data.burger.scrollBtn}
+              </Link>
+            )}
             <SocialLinks section="mob-menu" />
           </div>
         </Dialog.Content>
