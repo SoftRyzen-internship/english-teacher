@@ -16,6 +16,7 @@ import { Benefits } from '@/sections/benefits/benefits';
 import { Reviews } from '@/sections/reviews/reviews';
 import { TelegramButton } from '@/components/ui/test-button';
 import { ContactForm } from '@/components/common/contact-form/contact-form';
+import { About } from '@/sections/about/about';
 
 export default async function Home() {
   let result: SkillsQueryResult | null = null;
@@ -27,6 +28,7 @@ export default async function Home() {
       {result && <Skills skillsData={result} />}
 
       <Benefits />
+      <About />
       <Reviews />
 
       <FAQ />
