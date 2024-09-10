@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 export const About = () => {
   return (
-    <section className="pt-[50px] md:py-[50px] xl:py-[80px]">
+    <section id="about" className="pt-[50px] md:py-[50px] xl:py-[80px]">
       <div className="container flex flex-col gap-[30px] md:gap-10 xl:flex-row xl:justify-between">
         <div className="flex flex-col gap-[30px] md:gap-10 xl:justify-center xl:gap-[30px]">
           <AboutInfo />

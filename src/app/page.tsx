@@ -12,6 +12,7 @@ import { Reviews } from '@/sections/reviews/reviews';
 import { About } from '@/sections/about/about';
 
 import { Contact } from '@/sections/contact/contact';
+import { Hero } from '@/sections/hero/hero';
 
 export default async function Home() {
   let result: SkillsQueryResult | null = null;
@@ -20,6 +21,7 @@ export default async function Home() {
 
   return (
     <main>
+      <Hero />
       {result && <Skills skillsData={result} />}
       <Benefits />
       <About />

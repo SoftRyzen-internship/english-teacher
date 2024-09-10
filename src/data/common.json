@@ -1,5 +1,5 @@
 {
-  "header": { "button": "Записатись", "href": "/" },
+  "header": { "button": "Записатись", "href": "contacts" },
   "navList": [
     {
       "id": 1,

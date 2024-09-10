@@ -65,6 +65,10 @@ const config: Config = {
         8: '8',
       },
       backgroundImage: {
+        'hero-ellipses': `url('/public/assets/images/icons/bg-hero/turquoise-30.svg'), 
+                          url('/public/assets/images/icons/bg-hero/turquoise-100.svg'),
+                          url('/public/assets/images/icons/bg-hero/red.svg'),
+                          url('/public/assets/images/icons/bg-hero/yellow.svg')`,
         'contact-ellipses': `url('/public/assets/images/icons/bg-ellipse/ellipse-yellow.svg'), 
                              url('/public/assets/images/icons/bg-ellipse/ellipse-blue.svg'), 
                              url('/public/assets/images/icons/bg-ellipse/ellipse-red.svg')`,
@@ -74,6 +78,29 @@ const config: Config = {
   plugins: [
     function ({ addComponents }: PluginAPI) {
       addComponents({
+        '.hero-ellipses': {
+          backgroundColor: '#F4EDF8',
+          backgroundImage: `url('/assets/images/icons/bg-hero/turquoise-30.svg'), 
+                            url('/assets/images/icons/bg-hero/turquoise-100.svg'),
+                            url('/assets/images/icons/bg-hero/red.svg'),
+                            url('/assets/images/icons/bg-hero/yellow.svg')`,
+          backgroundSize: 'auto, auto, auto, auto',
+          backgroundPosition:
+            'top -200px left -163px, top -150px right -120px, left 200px bottom -100px, right 200px bottom -100px',
+          backgroundRepeat: 'no-repeat',
+        },
+        '@screen md': {
+          '.hero-ellipses': {
+            backgroundPosition:
+              'top -200px left -163px, top -150px right -120px, left 280px bottom -100px, right 240px bottom -100px',
+          },
+        },
+        '@screen xl': {
+          '.hero-ellipses': {
+            backgroundPosition:
+              'top -120px left -89px, top 60px right 420px, right -100px top -110px, left 141px bottom -100px',
+          },
+        },
         '.bg-contact': {
           backgroundColor: '#F4EDF8',
           backgroundImage: `url("/assets/images/icons/bg-ellipse/ellipse-blue.svg"), 
