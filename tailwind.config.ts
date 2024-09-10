@@ -84,11 +84,23 @@ const config: Config = {
             'bottom -210px right -250px, top -180px right -250px, center center',
           backgroundRepeat: 'no-repeat',
         },
-
+        '.about-bg': {
+          backgroundColor: '#F4EDF8',
+          backgroundImage: `url("/assets/images/icons/about-bg/mobile/ellipse-pink.svg"),
+            url("/assets/images/icons/about-bg/mobile/ellipse-yellow.svg"),
+             url("/assets/images/icons/about-bg/mobile/ellipse-blue.svg")`,
+          backgroundSize: 'auto, auto, auto',
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition:
+            'right -250px top -100px , left -150px  bottom -350px, right -300px top -200px',
+        },
         '@media (min-width: 768px)': {
           '.bg-contact': {
             backgroundPosition:
               'bottom -100px right -150px, top -130px right -100px, center left',
+          },
+          '.about-bg': {
+            backgroundPosition: 'right  top , left  bottom , right  center ',
           },
         },
 

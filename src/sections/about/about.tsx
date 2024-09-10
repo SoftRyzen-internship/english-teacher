@@ -18,7 +18,7 @@ export const About = () => {
             {data.button}
           </ScrollButton>
         </div>
-        <div className="about-bg relative  flex justify-center h-[340px] rounded-2xl bg-bgDefault md:h-[609px] xl:h-[714px] xl:w-[596px]">
+        <div className="about-bg relative  flex justify-center h-[340px] rounded-2xl md:h-[609px] xl:h-[714px] xl:w-[596px]">
           <Image
             src={data.image.src}
             alt={data.image.alt}
