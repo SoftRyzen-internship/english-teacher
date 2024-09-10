@@ -11,7 +11,7 @@ export const About = () => {
         <div className="flex flex-col gap-[30px] md:gap-10 xl:justify-center xl:gap-[30px]">
           <AboutInfo />
           <ScrollButton
-            className="md:mx-auto"
+            className="md:mx-auto xl:ml-0"
             colorButton={true}
             href={data.href}
           >
