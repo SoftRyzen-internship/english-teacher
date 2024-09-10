@@ -69,7 +69,7 @@ img {
 }
 
 .highlight {
-  @apply relative inline-block;
+  @apply relative inline-block z-[1];
 }
 
 .highlight::before {

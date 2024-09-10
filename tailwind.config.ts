@@ -1,4 +1,5 @@
 import type { Config } from 'tailwindcss';
+import type { PluginAPI } from 'tailwindcss/types/config';
 
 const config: Config = {
   content: [
@@ -63,9 +64,68 @@ const config: Config = {
       lineClamp: {
         8: '8',
       },
-      backgroundImage: {},
+      backgroundImage: {
+        'hero-ellipses': `url('/public/assets/images/icons/bg-hero/turquoise-30.svg'), 
+                          url('/public/assets/images/icons/bg-hero/turquoise-100.svg'),
+                          url('/public/assets/images/icons/bg-hero/red.svg'),
+                          url('/public/assets/images/icons/bg-hero/yellow.svg')`,
+        'contact-ellipses': `url('/public/assets/images/icons/bg-ellipse/ellipse-yellow.svg'), 
+                             url('/public/assets/images/icons/bg-ellipse/ellipse-blue.svg'), 
+                             url('/public/assets/images/icons/bg-ellipse/ellipse-red.svg')`,
+      },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addComponents }: PluginAPI) {
+      addComponents({
+        '.hero-ellipses': {
+          backgroundColor: '#F4EDF8',
+          backgroundImage: `url('/assets/images/icons/bg-hero/turquoise-30.svg'), 
+                            url('/assets/images/icons/bg-hero/turquoise-100.svg'),
+                            url('/assets/images/icons/bg-hero/red.svg'),
+                            url('/assets/images/icons/bg-hero/yellow.svg')`,
+          backgroundSize: 'auto, auto, auto, auto',
+          backgroundPosition:
+            'top -200px left -163px, top -150px right -120px, left 200px bottom -100px, right 200px bottom -100px',
+          backgroundRepeat: 'no-repeat',
+        },
+        '@screen md': {
+          '.hero-ellipses': {
+            backgroundPosition:
+              'top -200px left -163px, top -150px right -120px, left 280px bottom -100px, right 240px bottom -100px',
+          },
+        },
+        '@screen xl': {
+          '.hero-ellipses': {
+            backgroundPosition:
+              'top -120px left -89px, top 60px right 420px, right -100px top -110px, left 141px bottom -100px',
+          },
+        },
+        '.bg-contact': {
+          backgroundColor: '#F4EDF8',
+          backgroundImage: `url("/assets/images/icons/bg-ellipse/ellipse-blue.svg"), 
+                            url("/assets/images/icons/bg-ellipse/ellipse-red.svg"), 
+                            url("/assets/images/icons/bg-ellipse/ellipse-yellow.svg")`,
+          backgroundSize: 'auto, auto, auto',
+          backgroundPosition:
+            'bottom -210px right -250px, top -180px right -250px, center center',
+          backgroundRepeat: 'no-repeat',
+        },
+
+        '@media (min-width: 768px)': {
+          '.bg-contact': {
+            backgroundPosition:
+              'bottom -100px right -150px, top -130px right -100px, center left',
+          },
+        },
+
+        '@media (min-width: 1280px)': {
+          '.bg-contact': {
+            backgroundPosition: 'center bottom, right top, left bottom',
+          },
+        },
+      });
+    },
+  ],
 };
 export default config;

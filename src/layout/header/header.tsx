@@ -13,7 +13,7 @@ export const Header = () => {
   const { header } = data;
 
   return (
-    <header className="absolute w-full">
+    <header className="absolute w-full z-[3]">
       <div className="container flex justify-between items-center py-5">
         <Logo />
         {isDesktop && (
