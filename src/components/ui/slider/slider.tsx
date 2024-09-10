@@ -79,6 +79,7 @@ export const Slider = ({ section, children }: SliderProps) => {
         )}
       >
         <button
+          type="button"
           className={clsx(
             `swiper-button-prev-${section} w-[50px] h-[50px] rounded-full flex items-center justify-center`,
             {
@@ -104,6 +105,7 @@ export const Slider = ({ section, children }: SliderProps) => {
           {currentPage} / {totalPages}
         </div>
         <button
+          type="button"
           className={clsx(
             `swiper-button-next-${section} w-[50px] h-[50px] rounded-full flex items-center justify-center`,
             {
