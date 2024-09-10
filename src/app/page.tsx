@@ -8,6 +8,9 @@ import { Skills } from '@/sections/skills/skills';
 
 import { Benefits } from '@/sections/benefits/benefits';
 import { Reviews } from '@/sections/reviews/reviews';
+
+import { About } from '@/sections/about/about';
+
 import { Contact } from '@/sections/contact/contact';
 
 export default async function Home() {
@@ -19,6 +22,7 @@ export default async function Home() {
     <main>
       {result && <Skills skillsData={result} />}
       <Benefits />
+      <About />
       <Reviews />
       <FAQ />
       <Contact />
