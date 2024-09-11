@@ -13,6 +13,8 @@ import PrevButtonIcon from '@/../public/assets/images/icons/arrow-prev.svg';
 import NextButtonIcon from '@/../public/assets/images/icons/arrow-next.svg';
 import { useDeviceType } from '@/hooks/use-device-type';
 
+import common from '@/data/common.json';
+
 export type SwiperSettings = {
   breakpoints?: {
     [key: number]: {
@@ -27,6 +29,8 @@ export type SectionSettings = {
 
 export const Slider = ({ section, children }: SliderProps) => {
   const { isTablet } = useDeviceType();
+
+  const { sliderButton } = common;
 
   const swiperSettings: SectionSettings = {
     reviews: {
@@ -101,6 +105,7 @@ export const Slider = ({ section, children }: SliderProps) => {
               'block md:hidden': section === 'reviews',
             }
           )}
+          aria-label={sliderButton.ariaLabelPrev}
         >
           {currentPage} / {totalPages}
         </div>
@@ -115,6 +120,7 @@ export const Slider = ({ section, children }: SliderProps) => {
                 currentPage !== lastPage,
             }
           )}
+          aria-label={sliderButton.ariaLabelNext}
         >
           <NextButtonIcon />
         </button>

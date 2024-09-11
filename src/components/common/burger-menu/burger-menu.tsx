@@ -15,6 +15,7 @@ import Link from 'next/link';
 export const BurgerMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
   const home = useIsHomePage();
+
   return (
     <Dialog.Root open={isOpen} onOpenChange={setIsOpen}>
       <Dialog.Trigger asChild>
