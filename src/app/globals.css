@@ -54,14 +54,12 @@ img {
   @apply bg-no-repeat bg-bottom;
 }
 
-
 @media (min-width: 768px) {
   .girl {
     background-image: url('/assets/images/webp/skills/tablet/girl.webp');
     background-size: 468px 274px;
   }
 }
-
 
 @media (min-width: 768px) and (min-resolution: 192dpi),
   (min-width: 768px) and (min-resolution: 2dppx) {
@@ -70,14 +68,12 @@ img {
   }
 }
 
-
 @media (min-width: 1280px) {
   .girl {
     background-image: url('/assets/images/webp/skills/desktop/girl.webp');
     background-size: 810px 479px;
   }
 }
-
 
 @media (min-width: 1280px) and (min-resolution: 192dpi),
   (min-width: 1280px) and (min-resolution: 2dppx) {
