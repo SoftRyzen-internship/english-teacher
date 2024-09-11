@@ -14,15 +14,14 @@ export const Checkbox: React.FC<CheckboxProps> = ({
     <div className="relative mb-6 md:mb-10">
       <label
         htmlFor={id}
-        className="relative inline-flex items-center gap-3 cursor-pointer"
+        className="relative inline-flex items-center gap-3 md:gap-4 cursor-pointer"
       >
-        <div className="relative w-6 h-6">
           <input
             type={type}
             id={id}
             {...register(name)}
             className={clsx(
-              'peer cursor-pointer w-5 h-5 rounded appearance-none border',
+              'peer cursor-pointer w-6 h-6 rounded opacity-0 appearance-none border ',
               errors[name] ? 'border-error' : 'border-text3',
               'focus:ring-2 focus:ring-stokeDisabled'
             )}
@@ -37,7 +36,6 @@ export const Checkbox: React.FC<CheckboxProps> = ({
               'peer-focus:ring-2 peer-focus:ring-stokeDisabled peer-focus:border-none'
             )}
           />
-        </div>
         <span className="text-[12px] leading-[1.5] md:text-[18px] md:font-medium xl:text-[16px] xl:font-semibold">
           {label}
         </span>

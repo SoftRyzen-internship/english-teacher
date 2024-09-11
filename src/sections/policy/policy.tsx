@@ -13,7 +13,7 @@ import Link from 'next/link';
 const renderOptions = [
   renderNodeRule(isHeading, ({ children, key }) => {
     return (
-      <h2 key={key} className="section-subtitle mt-[30px] xl:mt-[60px] mb-5">
+      <h2 key={key} className="section-subtitle mt-[30px] xl:mt-[60px] mb-5 md:mb-7">
         {children}
       </h2>
     );
