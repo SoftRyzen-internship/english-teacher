@@ -1,5 +1,6 @@
-import ErrIcon from '@/../public/assets/images/icons/err-sign.svg';
 import { ErrorMessageProps } from './types';
+
+import ErrIcon from '@/../public/assets/images/icons/err-sign.svg';
 
 export const ErrorMessage: React.FC<ErrorMessageProps> = ({ message }) => {
   if (!message) return null;

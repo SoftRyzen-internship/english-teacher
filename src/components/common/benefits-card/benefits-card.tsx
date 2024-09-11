@@ -1,5 +1,7 @@
 import React from 'react';
+
 import { BenefitsCardProps } from './types';
+
 import Student from '@/../public/assets/images/icons/advantages/individual-lessons.svg';
 import Bell from '@/../public/assets/images/icons/advantages/bell.svg';
 import Book from '@/../public/assets/images/icons/advantages/educational-bonuses.svg';

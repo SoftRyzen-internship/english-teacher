@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 import { StructuredText, renderNodeRule } from 'react-datocms';
 import {
   isHeading,
@@ -7,13 +9,16 @@ import {
   isListItem,
   isRoot,
 } from 'datocms-structured-text-utils';
+
 import { PolicyProps } from './types';
-import Link from 'next/link';
 
 const renderOptions = [
   renderNodeRule(isHeading, ({ children, key }) => {
     return (
-      <h2 key={key} className="section-subtitle mt-[30px] xl:mt-[60px] mb-5">
+      <h2
+        key={key}
+        className="section-subtitle mt-[30px] xl:mt-[60px] mb-5 md:mb-7"
+      >
         {children}
       </h2>
     );
@@ -47,13 +52,21 @@ const renderOptions = [
 
     if (isEmail) {
       return (
-        <a key={key} href={node.url}>
+        <a
+          key={key}
+          href={node.url}
+          className="text-text3 hover:text-buttonClickPink focus:text-buttonClickPink"
+        >
           {children}
         </a>
       );
     } else {
       return (
-        <Link key={key} href="/">
+        <Link
+          key={key}
+          href="/"
+          className="text-text3 hover:text-buttonClickPink focus:text-buttonClickPink"
+        >
           {children}
         </Link>
       );

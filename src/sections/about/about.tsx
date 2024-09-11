@@ -1,8 +1,11 @@
+import React from 'react';
+
+import Image from 'next/image';
+
 import { AboutInfo } from '@/components/common/about-info/about-info';
 import { ScrollButton } from '@/components/ui/scroll-button/scroll-button';
-import React from 'react';
+
 import data from '@/data/about.json';
-import Image from 'next/image';
 
 export const About = () => {
   return (

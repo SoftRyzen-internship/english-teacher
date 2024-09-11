@@ -1,7 +1,9 @@
 import React from 'react';
+
 import { Accordion } from '@/components/common/accordion/accordion';
-import faq from '@/data/faq.json';
 import { QuestionMarks } from '@/components/common/question-marks.tsx/question-marks';
+
+import faq from '@/data/faq.json';
 
 export const FAQ = () => {
   return (

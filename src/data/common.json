@@ -1,4 +1,5 @@
 {
+  "logo": { "ariaLabel": "Логотип Motivation School" },
   "header": { "button": "Записатись", "href": "contacts" },
   "navList": [
     {
@@ -66,5 +67,9 @@
     "scrollBtn": "Записатись",
     "href": "contacts",
     "title": "Модальне вікто з навігацією по сайту"
+  },
+  "sliderButton": {
+    "ariaLabelPrev": "кнопка до попереднього слайду",
+    "ariaLabelNext": "кнопка до наступного слайду"
   }
 }

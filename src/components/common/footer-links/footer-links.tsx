@@ -1,8 +1,11 @@
 import Link from 'next/link';
+
+import { LinkKey } from '@/layout/footer/types';
+
 import GoItIcon from '@/../../public/assets/images/icons/partners/goit.svg';
 import SoftRyzenIcon from '@/../../public/assets/images/icons/partners/softryzen.svg';
+
 import footerData from '@/data/footer.json';
-import { LinkKey } from '@/layout/footer/types';
 
 const iconComponents = {
   goit: GoItIcon,

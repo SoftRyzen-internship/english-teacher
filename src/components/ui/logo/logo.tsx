@@ -6,9 +6,16 @@ import LogoIcon from '@/../public/assets/images/icons/logo.svg';
 
 import { LogoProps } from './types';
 
+import common from '@/data/common.json';
+
 export const Logo = ({ className }: LogoProps) => {
+  const { ariaLabel } = common.logo;
   return (
-    <Link href="/" className={clsx('inline-block', className)}>
+    <Link
+      href="/"
+      className={clsx('inline-block', className)}
+      aria-label={ariaLabel}
+    >
       <LogoIcon
         width={142}
         height={60}

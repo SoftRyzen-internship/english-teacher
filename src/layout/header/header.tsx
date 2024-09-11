@@ -8,6 +8,7 @@ import { Navigation } from '@/components/ui/navigation/navigation';
 import { ScrollButton } from '@/components/ui/scroll-button/scroll-button';
 
 import { useDeviceType } from '@/hooks/use-device-type';
+
 import { useIsHomePage } from '@/hooks/use-is-home-page';
 
 import data from '@/data/common.json';

@@ -1,5 +1,7 @@
 import clsx from 'clsx';
+
 import { ErrorMessage } from '../../ui/error-message/error-message';
+
 import { TextareaProps } from './types';
 
 export const Textarea: React.FC<TextareaProps> = ({
@@ -10,7 +12,6 @@ export const Textarea: React.FC<TextareaProps> = ({
   errors,
   register,
 }) => {
-  console.log(errors);
   return (
     <div className="relative flex flex-col gap-1.5 mb-6 md:mb-10">
       <label htmlFor={id} className="">

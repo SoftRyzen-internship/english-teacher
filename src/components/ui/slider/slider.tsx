@@ -1,17 +1,20 @@
 'use client';
 
-import 'swiper/css';
-
 import { Children, useState } from 'react';
+
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
+import 'swiper/css';
 import clsx from 'clsx';
 
 import { SliderProps } from './types';
 
+import { useDeviceType } from '@/hooks/use-device-type';
+
 import PrevButtonIcon from '@/../public/assets/images/icons/arrow-prev.svg';
 import NextButtonIcon from '@/../public/assets/images/icons/arrow-next.svg';
-import { useDeviceType } from '@/hooks/use-device-type';
+
+import common from '@/data/common.json';
 
 export type SwiperSettings = {
   breakpoints?: {
@@ -27,6 +30,8 @@ export type SectionSettings = {
 
 export const Slider = ({ section, children }: SliderProps) => {
   const { isTablet } = useDeviceType();
+
+  const { sliderButton } = common;
 
   const swiperSettings: SectionSettings = {
     reviews: {
@@ -79,6 +84,7 @@ export const Slider = ({ section, children }: SliderProps) => {
         )}
       >
         <button
+          type="button"
           className={clsx(
             `swiper-button-prev-${section} w-[50px] h-[50px] rounded-full flex items-center justify-center`,
             {
@@ -100,10 +106,12 @@ export const Slider = ({ section, children }: SliderProps) => {
               'block md:hidden': section === 'reviews',
             }
           )}
+          aria-label={sliderButton.ariaLabelPrev}
         >
           {currentPage} / {totalPages}
         </div>
         <button
+          type="button"
           className={clsx(
             `swiper-button-next-${section} w-[50px] h-[50px] rounded-full flex items-center justify-center`,
             {
@@ -113,6 +121,7 @@ export const Slider = ({ section, children }: SliderProps) => {
                 currentPage !== lastPage,
             }
           )}
+          aria-label={sliderButton.ariaLabelNext}
         >
           <NextButtonIcon />
         </button>
