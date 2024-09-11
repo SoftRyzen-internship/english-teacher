@@ -1,4 +1,5 @@
 import { ReviewsList } from '@/components/common/reviews-list/reviews-list';
+
 import reviewsData from '@/data/reviews.json';
 
 export const Reviews = () => {

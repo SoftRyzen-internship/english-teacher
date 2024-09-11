@@ -1,21 +1,24 @@
 'use client';
 
-import { Modal } from '@/components/ui/modal/modal';
 import { useState } from 'react';
-import { SuccessErrorMessageComponent } from '../success-error-message-component/success-error-message-component';
+
+import { useForm } from 'react-hook-form';
+import useFormPersist from 'react-hook-form-persist';
 import { yupResolver } from '@hookform/resolvers/yup';
-import formData from '@/data/contact.json';
+import clsx from 'clsx';
+
+import { Modal } from '@/components/ui/modal/modal';
 import { Checkbox } from '../../ui/checkbox/checkbox';
 import { Textarea } from '../../ui/textarea/textarea';
 import { InputField } from '../../ui/input-field/input-field';
-import { useForm } from 'react-hook-form';
-import { validationSchema } from '@/utils/validation';
-
+import { SuccessErrorMessageComponent } from '../success-error-message-component/success-error-message-component';
 import { Button } from '../../ui/button/button';
+
 import { sendMessageToTelegram } from '@/actions/send-message-to-telegram';
-import clsx from 'clsx';
+import { validationSchema } from '@/utils/validation';
 import { FormData, Name, Status } from './types';
-import useFormPersist from 'react-hook-form-persist';
+
+import formData from '@/data/contact.json';
 
 export const ContactForm = () => {
   const [status, setStatus] = useState<Status>('success');

@@ -1,9 +1,12 @@
 'use client';
 
-import { ScrollButton } from '@/components/ui/scroll-button/scroll-button';
-import hero from '@/data/hero.json';
-import { useDeviceType } from '@/hooks/use-device-type';
 import Image from 'next/image';
+
+import { ScrollButton } from '@/components/ui/scroll-button/scroll-button';
+
+import { useDeviceType } from '@/hooks/use-device-type';
+
+import hero from '@/data/hero.json';
 
 export const Hero = () => {
   const { isDesktop } = useDeviceType();

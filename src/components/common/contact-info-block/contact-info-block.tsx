@@ -1,6 +1,9 @@
 import React from 'react';
+
 import clsx from 'clsx';
+
 import { SocialLinks } from '@/components/ui/social-links/social-links';
+
 import contactData from '@/data/contact.json';
 
 export const ContactInfoBlock = () => {

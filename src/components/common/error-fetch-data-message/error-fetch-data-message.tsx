@@ -1,4 +1,5 @@
 import ErrorIcon from '@/../public/assets/images/icons/modals/err.svg';
+
 import data from '@/data/policy.json';
 
 export const ErrorFetchDataMessage = () => {

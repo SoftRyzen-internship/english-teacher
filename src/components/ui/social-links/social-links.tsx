@@ -1,10 +1,13 @@
-import TelegramIcon from '@/../public/assets/images/icons/socials/telegram.svg';
-import InstagramIcon from '@/../public/assets/images/icons/socials/instagram.svg';
-import MailIcon from '@/../public/assets/images/icons/socials/mail.svg';
-import { SocialLinksProps } from './types';
-import commonData from '@/data/common.json';
 import clsx from 'clsx';
+
 import { SocialLink } from '../social-link/social-link';
+
+import { SocialLinksProps } from './types';
+
+import MailIcon from '@/../public/assets/images/icons/socials/mail.svg';
+import InstagramIcon from '@/../public/assets/images/icons/socials/instagram.svg';
+import TelegramIcon from '@/../public/assets/images/icons/socials/telegram.svg';
+import commonData from '@/data/common.json';
 
 const iconMap = {
   telegram: TelegramIcon as React.FC<React.SVGProps<SVGSVGElement>>,

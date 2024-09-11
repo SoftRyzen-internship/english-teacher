@@ -1,9 +1,13 @@
 'use client';
+
 import React, { useState } from 'react';
-import { AccordionProps } from './types';
+
 import * as FAQ from '@radix-ui/react-accordion';
-import Arrow from '@/../public/assets/images/icons/arrow-down.svg';
 import clsx from 'clsx';
+
+import { AccordionProps } from './types';
+
+import Arrow from '@/../public/assets/images/icons/arrow-down.svg';
 
 export const Accordion = ({ faqs }: AccordionProps) => {
   const [openItem, setOpenItem] = useState<string>('item-2');

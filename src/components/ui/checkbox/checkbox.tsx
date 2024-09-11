@@ -1,6 +1,8 @@
 import clsx from 'clsx';
-import { CheckboxProps } from './type';
+
 import { ErrorMessage } from '../error-message/error-message';
+
+import { CheckboxProps } from './type';
 
 export const Checkbox: React.FC<CheckboxProps> = ({
   id,

@@ -1,4 +1,5 @@
 import { BenefitsList } from '@/components/common/benefits-list/benefits-list';
+
 import benefitsData from '@/data/benefits.json';
 
 export const Benefits = () => {

@@ -1,5 +1,7 @@
 import React from 'react';
+
 import clsx from 'clsx';
+
 import { SocialLinkProps } from './types';
 
 export const SocialLink: React.FC<SocialLinkProps> = ({

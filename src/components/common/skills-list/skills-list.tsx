@@ -1,7 +1,8 @@
 import React from 'react';
 
-import { SkillsListProps } from './types';
 import { SkillsCard } from '../skills-card/skills-card';
+
+import { SkillsListProps } from './types';
 
 export const SkillsList = ({ skillsData }: SkillsListProps) => {
   return (

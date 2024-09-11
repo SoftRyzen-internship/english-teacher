@@ -1,6 +1,8 @@
 import clsx from 'clsx';
 import InputMask from 'react-input-mask-next';
+
 import { ErrorMessage } from '../error-message/error-message';
+
 import { InputFieldProps } from './types';
 
 export const InputField: React.FC<InputFieldProps> = ({
