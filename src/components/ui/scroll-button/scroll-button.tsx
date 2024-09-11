@@ -1,8 +1,12 @@
 'use client';
+
 import React from 'react';
-import { Link as ScrollLink } from 'react-scroll';
-import { ScrollButtonProps } from './types';
+
 import clsx from 'clsx';
+
+import { Link as ScrollLink } from 'react-scroll';
+
+import { ScrollButtonProps } from './types';
 
 export const ScrollButton = ({
   children,

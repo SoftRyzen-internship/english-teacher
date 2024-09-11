@@ -1,8 +1,10 @@
 import * as Dialog from '@radix-ui/react-dialog';
+
 import { SuccessErrorMessageComponentProps } from './types';
-import commonData from '@/data/common.json';
+
 import SuccessImg from '@/../public/assets/images/icons/modals/success.svg';
 import ErrorImg from '@/../public/assets/images/icons/modals/err.svg';
+import commonData from '@/data/common.json';
 
 const { successErrorMessage } = commonData;
 

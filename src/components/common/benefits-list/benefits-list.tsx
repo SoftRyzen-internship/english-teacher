@@ -1,10 +1,13 @@
 'use client';
 
 import React from 'react';
-import benefitsData from '@/data/benefits.json';
-import { BenefitsCard } from '../benefits-card/benefits-card';
-import { useDeviceType } from '@/hooks/use-device-type';
+
 import { Slider } from '@/components/ui/slider/slider';
+import { BenefitsCard } from '../benefits-card/benefits-card';
+
+import { useDeviceType } from '@/hooks/use-device-type';
+
+import benefitsData from '@/data/benefits.json';
 
 export const BenefitsList = () => {
   const { isDesktop } = useDeviceType();

@@ -1,6 +1,8 @@
 import React from 'react';
-import { SkillsCardProps } from './types';
+
 import clsx from 'clsx';
+
+import { SkillsCardProps } from './types';
 
 export const SkillsCard = ({ name, number, index }: SkillsCardProps) => {
   return (

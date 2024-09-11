@@ -1,9 +1,10 @@
 import * as Dialog from '@radix-ui/react-dialog';
 
-import Quotes from '@/../public/assets/images/icons/quotes.svg';
 import { Modal } from '@/components/ui/modal/modal';
 
 import { IReviewModalProps } from './types';
+
+import Quotes from '@/../public/assets/images/icons/quotes.svg';
 
 export const ReviewModal = ({
   isOpen,

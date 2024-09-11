@@ -1,6 +1,7 @@
-import footerData from '@/data/footer.json';
 import { FooterLinks } from '../footer-links/footer-links';
 import { AnotherPageLink } from '../another-page-link/another-page-link';
+
+import footerData from '@/data/footer.json';
 
 export const FooterBottomSection = () => {
   return (

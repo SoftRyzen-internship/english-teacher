@@ -2,7 +2,9 @@
 
 import * as Dialog from '@radix-ui/react-dialog';
 import clsx from 'clsx';
+
 import { ModalProps } from './types';
+
 import CloseIcon from '@/../public/assets/images/icons/ico-x.svg';
 
 export const Modal = ({ children, isOpen, setIsOpen, reviews }: ModalProps) => {

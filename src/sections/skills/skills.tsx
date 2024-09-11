@@ -1,6 +1,8 @@
+import React from 'react';
+
 import { SkillsList } from '@/components/common/skills-list/skills-list';
 import { SkillsListProps } from '@/components/common/skills-list/types';
-import React from 'react';
+
 import data from '@/data/skills.json';
 
 export const Skills = ({ skillsData }: SkillsListProps) => {
