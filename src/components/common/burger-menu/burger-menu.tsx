@@ -22,6 +22,8 @@ export const BurgerMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
   const home = useIsHomePage();
 
+  const handleClick = () => setIsOpen(false);
+
   return (
     <Dialog.Root open={isOpen} onOpenChange={setIsOpen}>
       <Dialog.Trigger asChild>
@@ -58,19 +60,19 @@ export const BurgerMenu = () => {
             </Dialog.Close>
             <Logo className="md:hidden" />
 
-            <Navigation onClick={() => setIsOpen(false)} />
+            <Navigation onClick={handleClick} />
             {home ? (
               <ScrollButton
                 href={data.burger.href}
                 borderButton={true}
-                onClick={() => setIsOpen(false)}
+                onClick={handleClick}
               >
                 {data.burger.scrollBtn}
               </ScrollButton>
             ) : (
               <Link
                 href={`/#${data.burger.href}`}
-                onClick={() => setIsOpen(false)}
+                onClick={handleClick}
                 className="h-[56px] inline-flex font-montserrat justify-center cursor-pointer smOnly:w-full items-center min-w-[221px] rounded-[20px] text-base font-bold leading-normal transition-colors duration-300 border solid px-[60px] border-text1Icon3 mdOnly:w-[351px] hover:bg-buttonHoverPink hover:border-buttonHoverPink focus:bg-buttonClickPink focus:border-buttonClickPink"
               >
                 {data.burger.scrollBtn}

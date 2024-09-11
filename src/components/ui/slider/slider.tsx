@@ -93,6 +93,7 @@ export const Slider = ({ section, children }: SliderProps) => {
                 currentPage !== 1,
             }
           )}
+          aria-label={sliderButton.ariaLabelPrev}
         >
           <PrevButtonIcon />
         </button>
@@ -106,7 +107,6 @@ export const Slider = ({ section, children }: SliderProps) => {
               'block md:hidden': section === 'reviews',
             }
           )}
-          aria-label={sliderButton.ariaLabelPrev}
         >
           {currentPage} / {totalPages}
         </div>
