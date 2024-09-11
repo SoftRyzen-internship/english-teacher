@@ -55,6 +55,7 @@ const renderOptions = [
         <a
           key={key}
           href={node.url}
+          rel="nofollow"
           className="text-text3 hover:text-buttonClickPink focus:text-buttonClickPink"
         >
           {children}
