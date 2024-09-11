@@ -1,7 +1,9 @@
 'use client';
 
 import Link from 'next/link';
+
 import { useIsHomePage } from '@/hooks/use-is-home-page';
+
 import footerData from '@/data/footer.json';
 
 export const AnotherPageLink = () => {

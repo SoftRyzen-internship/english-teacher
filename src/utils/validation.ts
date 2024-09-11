@@ -1,4 +1,5 @@
 import * as yup from 'yup';
+
 import contactData from '@/data/contact.json';
 
 const { username, phone, comment, checked, email } = contactData.validation;

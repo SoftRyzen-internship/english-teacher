@@ -2,11 +2,11 @@
 
 import { useState, useRef, useEffect } from 'react';
 
-import Quotes from '@/../public/assets/images/icons/quotes.svg';
 import { ReviewModal } from '../review-modal/review-modal';
 
 import { IReviewCardProps } from './types';
 
+import Quotes from '@/../public/assets/images/icons/quotes.svg';
 import reviews from '@/data/reviews.json';
 
 export const ReviewCard = ({ author, text }: IReviewCardProps) => {

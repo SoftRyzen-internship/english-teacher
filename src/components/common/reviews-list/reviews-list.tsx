@@ -3,8 +3,9 @@
 import { Slider } from '@/components/ui/slider/slider';
 import { ReviewCard } from '../review-card/review-card';
 
-import reviewsData from '@/data/reviews.json';
 import { useDeviceType } from '@/hooks/use-device-type';
+
+import reviewsData from '@/data/reviews.json';
 
 export const ReviewsList = () => {
   const { isDesktop } = useDeviceType();

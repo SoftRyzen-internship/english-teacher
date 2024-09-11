@@ -1,16 +1,22 @@
 'use client';
+
 import React, { useState } from 'react';
+
+import Link from 'next/link';
+
 import * as Dialog from '@radix-ui/react-dialog';
+import { VisuallyHidden } from '@radix-ui/react-visually-hidden';
+
+import { Navigation } from '@/components/ui/navigation/navigation';
+import { ScrollButton } from '@/components/ui/scroll-button/scroll-button';
+import { SocialLinks } from '@/components/ui/social-links/social-links';
+import { Logo } from '@/components/ui/logo/logo';
+
+import { useIsHomePage } from '@/hooks/use-is-home-page';
+
 import Burger from '@/../public/assets/images/icons/burger.svg';
 import IconClose from '@/../public/assets/images/icons/ico-x.svg';
 import data from '@/data/common.json';
-import { Navigation } from '@/components/ui/navigation/navigation';
-import { Logo } from '@/components/ui/logo/logo';
-import { ScrollButton } from '@/components/ui/scroll-button/scroll-button';
-import { SocialLinks } from '@/components/ui/social-links/social-links';
-import { VisuallyHidden } from '@radix-ui/react-visually-hidden';
-import { useIsHomePage } from '@/hooks/use-is-home-page';
-import Link from 'next/link';
 
 export const BurgerMenu = () => {
   const [isOpen, setIsOpen] = useState(false);

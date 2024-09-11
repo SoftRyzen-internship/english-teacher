@@ -3,9 +3,9 @@
 import Link from 'next/link';
 import { Link as ScrollLink } from 'react-scroll';
 
-import { useIsHomePage } from '@/hooks/use-is-home-page';
-
 import { INavigationProps } from './types';
+
+import { useIsHomePage } from '@/hooks/use-is-home-page';
 
 import nav from '@/data/common.json';
 

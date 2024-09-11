@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 import { StructuredText, renderNodeRule } from 'react-datocms';
 import {
   isHeading,
@@ -7,8 +9,8 @@ import {
   isListItem,
   isRoot,
 } from 'datocms-structured-text-utils';
+
 import { PolicyProps } from './types';
-import Link from 'next/link';
 
 const renderOptions = [
   renderNodeRule(isHeading, ({ children, key }) => {

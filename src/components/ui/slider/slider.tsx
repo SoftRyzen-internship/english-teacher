@@ -1,17 +1,18 @@
 'use client';
 
-import 'swiper/css';
-
 import { Children, useState } from 'react';
+
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
+import 'swiper/css';
 import clsx from 'clsx';
 
 import { SliderProps } from './types';
 
+import { useDeviceType } from '@/hooks/use-device-type';
+
 import PrevButtonIcon from '@/../public/assets/images/icons/arrow-prev.svg';
 import NextButtonIcon from '@/../public/assets/images/icons/arrow-next.svg';
-import { useDeviceType } from '@/hooks/use-device-type';
 
 import common from '@/data/common.json';
 
