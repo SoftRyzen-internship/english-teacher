@@ -47,13 +47,21 @@ const renderOptions = [
 
     if (isEmail) {
       return (
-        <a key={key} href={node.url}>
+        <a
+          key={key}
+          href={node.url}
+          className="text-text3 hover:text-buttonClickPink focus:text-buttonClickPink"
+        >
           {children}
         </a>
       );
     } else {
       return (
-        <Link key={key} href="/">
+        <Link
+          key={key}
+          href="/"
+          className="text-text3 hover:text-buttonClickPink focus:text-buttonClickPink"
+        >
           {children}
         </Link>
       );
