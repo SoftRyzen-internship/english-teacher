@@ -25,7 +25,7 @@ export const Checkbox: React.FC<CheckboxProps> = ({
           className={clsx(
             'peer cursor-pointer w-6 h-6 rounded opacity-0 appearance-none border ',
             errors[name] ? 'border-error' : 'border-text3',
-            'focus:ring-2 focus:ring-stokeDisabled'
+            'hover:ring-2 hover:border-none focus:ring-2 focus:ring-stokeDisabled'
           )}
         />
         <span
@@ -35,7 +35,7 @@ export const Checkbox: React.FC<CheckboxProps> = ({
             'flex justify-center items-center peer-checked:before:block peer-checked:before:w-3 peer-checked:before:h-1.5 peer-checked:before:border-l-[1.5px] peer-checked:before:border-b-[1.5px] peer-checked:before:border-white peer-checked:before:rotate-[-45deg]',
             'peer-checked:before:translate-y-[-2px]',
             errors[name] ? 'border-error' : 'border-text3',
-            'peer-focus:ring-2 peer-focus:ring-stokeDisabled peer-focus:border-none'
+            'peer-hover:ring-2  peer-hover:ring-stokeDisabled  peer-hover:border-none   peer-focus:ring-2 peer-focus:ring-stokeDisabled peer-focus:border-none'
           )}
         />
         <span className="text-[12px] leading-[1.5] md:text-[18px] md:font-medium xl:text-[16px] xl:font-semibold">
