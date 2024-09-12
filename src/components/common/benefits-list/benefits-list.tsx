@@ -5,11 +5,11 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 import { Slider } from '@/components/ui/slider/slider';
-import BenefitsCard from '../benefits-card/benefits-card';
 
 import { useDeviceType } from '@/hooks/use-device-type';
 
 import benefitsData from '@/data/benefits.json';
+import { BenefitsCard } from '../benefits-card/benefits-card';
 
 gsap.registerPlugin(ScrollTrigger);
 

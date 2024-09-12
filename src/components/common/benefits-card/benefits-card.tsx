@@ -25,4 +25,4 @@ const BenefitsCard = forwardRef<HTMLDivElement, BenefitsCardProps>(
 
 BenefitsCard.displayName = 'BenefitsCard';
 
-export default BenefitsCard;
+export { BenefitsCard };
