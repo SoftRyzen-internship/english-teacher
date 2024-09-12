@@ -133,7 +133,8 @@ const config: Config = {
 
         '@media (min-width: 1280px)': {
           '.bg-contact': {
-            backgroundPosition: 'center bottom, top -82px left calc(100vw / 2 + 200px ), right calc(100vw / 2 + 200px ) center ',
+            backgroundPosition:
+              'center bottom, top -82px left calc(100vw / 2 + 200px ), right calc(100vw / 2 + 200px ) center ',
           },
         },
       });
