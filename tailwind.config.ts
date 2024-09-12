@@ -108,7 +108,7 @@ const config: Config = {
                             url("/assets/images/icons/bg-ellipse/ellipse-yellow.svg")`,
           backgroundSize: 'auto, auto, auto',
           backgroundPosition:
-            'bottom -210px right -250px, top -180px right -250px, center center',
+            'bottom -210px left calc(100vw / 3 ), top -180px left calc(100vw / 3 ), center center',
           backgroundRepeat: 'no-repeat',
         },
         '.about-bg': {
@@ -124,7 +124,7 @@ const config: Config = {
         '@media (min-width: 768px)': {
           '.bg-contact': {
             backgroundPosition:
-              'bottom -100px right -150px, top -130px right -100px, center left',
+              'bottom -100px left calc(100vw / 2 ), top -132px left calc(100vw / 2 ), center right calc(100vw / 2.3 )',
           },
           '.about-bg': {
             backgroundPosition: 'right  top , left  bottom , right  center ',
@@ -133,7 +133,7 @@ const config: Config = {
 
         '@media (min-width: 1280px)': {
           '.bg-contact': {
-            backgroundPosition: 'center bottom, right top, left bottom',
+            backgroundPosition: 'center bottom, top -82px left calc(100vw / 2 + 200px ), right calc(100vw / 2 + 200px ) center ',
           },
         },
       });
