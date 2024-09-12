@@ -1,4 +1,4 @@
-export interface IReviewCardProps {
+export type ReviewsCardProps = {
   author: string;
   text: string;
-}
+};
