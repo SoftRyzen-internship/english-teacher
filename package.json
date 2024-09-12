@@ -19,6 +19,7 @@
     "@radix-ui/react-dialog": "^1.1.1",
     "@radix-ui/react-visually-hidden": "^1.1.0",
     "clsx": "^2.1.1",
+    "gsap": "^3.12.5",
     "next": "14.2.7",
     "prettier": "^3.3.3",
     "react": "^18",
@@ -27,9 +28,9 @@
     "react-hook-form": "^7.53.0",
     "react-hook-form-persist": "^3.0.0",
     "react-input-mask-next": "^3.0.0-alpha.12",
-    "yup": "^1.4.0",
     "react-scroll": "^1.9.0",
-    "swiper": "^11.1.12"
+    "swiper": "^11.1.12",
+    "yup": "^1.4.0"
   },
   "devDependencies": {
     "@svgr/webpack": "^8.1.0",
