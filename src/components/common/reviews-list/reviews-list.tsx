@@ -5,11 +5,11 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 import { Slider } from '@/components/ui/slider/slider';
-import ReviewCard from '../review-card/review-card';
 
 import { useDeviceType } from '@/hooks/use-device-type';
 
 import reviewsData from '@/data/reviews.json';
+import { ReviewsCard } from '../review-card/review-card';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -44,7 +44,7 @@ export const ReviewsList = () => {
   }, [isDesktop]);
 
   const cards = reviewsData.cards.map((item, index) => (
-    <ReviewCard
+    <ReviewsCard
       key={item.id}
       author={item.author}
       text={item.text}
