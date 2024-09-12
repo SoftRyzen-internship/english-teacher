@@ -86,19 +86,19 @@ const config: Config = {
                             url('/assets/images/icons/bg-hero/yellow.svg')`,
           backgroundSize: 'auto, auto, auto, auto',
           backgroundPosition:
-            'top -200px left -163px, top -150px right -120px, left 200px bottom -100px, right 200px bottom -100px',
+            'top -120px right calc(100vw / 2 - 224px), top -200px left calc(100vw / 2 - 160px), left calc(100vw / 2 - 220px) bottom -100px, right calc(100vw / 2 - 200px) bottom -100px',
           backgroundRepeat: 'no-repeat',
         },
         '@screen md': {
           '.hero-ellipses': {
             backgroundPosition:
-              'top -200px left -163px, top -150px right -120px, left 280px bottom -100px, right 240px bottom -100px',
+              'top -160px right calc(100vw / 2 - 160px), top -150px left calc(100vw / 2 + 24px), left calc(100vw / 2 - 80px) bottom -100px, right calc(100vw / 2 - 60px) bottom -220px',
           },
         },
         '@screen xl': {
           '.hero-ellipses': {
             backgroundPosition:
-              'top -120px left -89px, top 60px right 420px, right -100px top -110px, left 141px bottom -100px',
+              'top -120px right calc(100vw / 2 + 110px), top 60px left calc(100vw / 2 - 236px), left calc(100vw / 2 + 227px) top -110px, right calc(100vw / 2 + 141px) bottom -100px',
           },
         },
         '.bg-contact': {
