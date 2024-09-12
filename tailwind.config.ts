@@ -86,19 +86,19 @@ const config: Config = {
                             url('/assets/images/icons/bg-hero/yellow.svg')`,
           backgroundSize: 'auto, auto, auto, auto',
           backgroundPosition:
-            'top -200px left -163px, top -150px right -120px, left 200px bottom -100px, right 200px bottom -100px',
+            'top -120px right calc(100vw / 2 - 224px), top -200px left calc(100vw / 2 - 160px), left calc(100vw / 2 - 220px) bottom -100px, right calc(100vw / 2 - 200px) bottom -100px',
           backgroundRepeat: 'no-repeat',
         },
         '@screen md': {
           '.hero-ellipses': {
             backgroundPosition:
-              'top -200px left -163px, top -150px right -120px, left 280px bottom -100px, right 240px bottom -100px',
+              'top -160px right calc(100vw / 2 - 160px), top -150px left calc(100vw / 2 + 24px), left calc(100vw / 2 - 80px) bottom -100px, right calc(100vw / 2 - 60px) bottom -220px',
           },
         },
         '@screen xl': {
           '.hero-ellipses': {
             backgroundPosition:
-              'top -120px left -89px, top 60px right 420px, right -100px top -110px, left 141px bottom -100px',
+              'top -120px right calc(100vw / 2 + 110px), top 60px left calc(100vw / 2 - 236px), left calc(100vw / 2 + 227px) top -110px, right calc(100vw / 2 + 141px) bottom -100px',
           },
         },
         '.bg-contact': {
@@ -108,7 +108,7 @@ const config: Config = {
                             url("/assets/images/icons/bg-ellipse/ellipse-yellow.svg")`,
           backgroundSize: 'auto, auto, auto',
           backgroundPosition:
-            'bottom -210px right -250px, top -180px right -250px, center center',
+            'bottom -210px left calc(100vw / 3 ), top -180px left calc(100vw / 3 ), center center',
           backgroundRepeat: 'no-repeat',
         },
         '.about-bg': {
@@ -124,7 +124,7 @@ const config: Config = {
         '@media (min-width: 768px)': {
           '.bg-contact': {
             backgroundPosition:
-              'bottom -100px right -150px, top -130px right -100px, center left',
+              'bottom -100px left calc(100vw / 2 ), top -132px left calc(100vw / 2 ), center right calc(100vw / 2.3 )',
           },
           '.about-bg': {
             backgroundPosition: 'right  top , left  bottom , right  center ',
@@ -133,7 +133,8 @@ const config: Config = {
 
         '@media (min-width: 1280px)': {
           '.bg-contact': {
-            backgroundPosition: 'center bottom, right top, left bottom',
+            backgroundPosition:
+              'center bottom, top -82px left calc(100vw / 2 + 200px ), right calc(100vw / 2 + 200px ) center ',
           },
         },
       });
