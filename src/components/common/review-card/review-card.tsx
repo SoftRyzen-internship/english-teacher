@@ -78,4 +78,4 @@ const ReviewsCard = forwardRef<HTMLDivElement, ReviewsCardProps>(
 
 ReviewsCard.displayName = 'ReviewsCard';
 
-export default ReviewsCard;
+export { ReviewsCard };
