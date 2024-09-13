@@ -4,39 +4,28 @@ import { useEffect, useRef } from 'react';
 
 import Image from 'next/image';
 
-import gsap from 'gsap';
-
 import { ScrollButton } from '@/components/ui/scroll-button/scroll-button';
 
 import { useDeviceType } from '@/hooks/use-device-type';
+import { animationHero } from '@/utils/animation';
 
 import hero from '@/data/hero.json';
 
 export const Hero = () => {
   const { isDesktop } = useDeviceType();
   const { mainTitle, subtitle, button, img } = hero;
-  const span1 = useRef(null);
-  const h1 = useRef(null);
-  const span2 = useRef(null);
-  const text = useRef(null);
-  const btn = useRef(null);
+
+  const h1 = useRef<HTMLHeadingElement | null>(null);
+  const span1 = useRef<HTMLSpanElement | null>(null);
+  const span2 = useRef<HTMLSpanElement | null>(null);
+  const text = useRef<HTMLParagraphElement | null>(null);
+  const btn = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    if (isDesktop) {
-      gsap.set(
-        [span1.current, h1.current, span2.current, text.current, btn.current],
-        {
-          x: '-200%',
-          opacity: 0,
-        }
-      );
-
-      gsap.to(span1.current, { x: 0, opacity: 1, duration: 0.5, delay: 0.3 });
-      gsap.to(h1.current, { x: 0, opacity: 1, duration: 0.5, delay: 0.3 });
-      gsap.to(span2.current, { x: 0, opacity: 1, duration: 0.5, delay: 0.3 });
-      gsap.to(text.current, { x: 0, opacity: 1, duration: 0.5, delay: 0.5 });
-      gsap.to(btn.current, { x: 0, opacity: 1, duration: 0.5, delay: 0.8 });
-    }
+    animationHero({
+      elements: [span1, h1, span2, text, btn],
+      isDesktop,
+    });
   }, [isDesktop]);
 
   return (

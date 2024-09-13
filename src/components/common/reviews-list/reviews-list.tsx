@@ -1,15 +1,17 @@
 'use client';
 
 import React, { useEffect, useRef } from 'react';
+
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 import { Slider } from '@/components/ui/slider/slider';
+import { ReviewsCard } from '../review-card/review-card';
 
 import { useDeviceType } from '@/hooks/use-device-type';
+import { optionsCard } from '@/utils/animation';
 
 import reviewsData from '@/data/reviews.json';
-import { ReviewsCard } from '../review-card/review-card';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -21,23 +23,7 @@ export const ReviewsList = () => {
     if (isDesktop) {
       reviewsCardsRef.current.forEach((card, index) => {
         if (card) {
-          gsap.fromTo(
-            card,
-            { opacity: 0, x: 100 },
-            {
-              opacity: 1,
-              x: 0,
-              duration: 0.5,
-              scrollTrigger: {
-                trigger: card,
-                start: 'top 80%',
-                end: 'bottom 20%',
-                toggleActions: 'play none none reverse',
-                once: true,
-              },
-              delay: index * 0.6,
-            }
-          );
+          gsap.from(card, optionsCard({ card, index }));
         }
       });
     }
